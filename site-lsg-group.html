@@ -518,15 +518,10 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da LSG Group</p>
-      <div class="empty-state" id="tab3EmptyState">
-        <i class="fa-regular fa-circle-play"></i>
-        <h3>Aba liberada após a reunião de Demo</h3>
-        <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
-      </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content" style="display:block;">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">A confirmar</div><div class="label">custo de reposição por turnover no time operacional</div></div>
+          <div class="stat-card"><div class="num">A confirmar</div><div class="label">horas extras geradas por absenteísmo</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -534,8 +529,10 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Metas acompanhadas em planilha, só com os gestores, sem revisão periódica ao longo do ano</td><td class="feat-name">Metas</td><td>Ciclo digital, com acompanhamento contínuo em vez de revisão única no fim do ano</td></tr>
+              <tr><td>Avaliação, PDI e calibração ainda não existem — hoje o dado fica só no SuccessFactors, sem apoio de decisão</td><td class="feat-name">Avaliações e Nine Box</td><td>Calibração por arrastar o colaborador entre quadrantes, direto na ferramenta</td></tr>
+              <tr><td>Sucessão não estruturada, sem organograma formal</td><td class="feat-name">Carreira &amp; Sucessão</td><td>Organograma de sucessão visível e atualizado para a liderança</td></tr>
+              <tr><td>Cálculo de bônus manual, sem vínculo claro com resultado de meta ou avaliação</td><td class="feat-name">Remuneração Variável</td><td>Cálculo automático do bônus a partir da regra configurada, cruzando meta e avaliação</td></tr>
             </tbody>
           </table>
         </div>
@@ -685,7 +682,7 @@
       <p class="section-sub">Jornada de compra da LSG Group</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Even Santana</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Metas, AD, PDI e Nine Box aplicados ao contexto multi-país</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">11/08 · 10h</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Metas, AD, PDI e Nine Box aplicados ao contexto multi-país</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Este semestre</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Even apresenta o projeto internamente</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
@@ -714,7 +711,11 @@
   "pilaresDestaque": [],
   "comparativo": null,
   "investimento": null,
-  "cronogramaMacro": []
+  "cronogramaMacro": [
+    {"data": "11/08", "titulo": "Demonstração personalizada"},
+    {"data": "Este semestre", "titulo": "Apresentação para diretoria"},
+    {"data": "Início de 2027", "titulo": "Assinatura e kickoff"}
+  ]
 }
 </script>
 
