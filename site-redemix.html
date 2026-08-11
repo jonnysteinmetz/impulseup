@@ -398,10 +398,7 @@
       <div class="divider-v"></div>
       <div>
         <span class="for-label">Para</span>
-        <label class="logo-upload-slot" id="clientLogoSlot">
-          <span id="clientLogoText">logo do cliente</span>
-          <input type="file" accept="image/*" id="clientLogoInput">
-        </label>
+        <img class="client-logo" id="clientLogoImg" src="data:image/png;base64,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" alt="Logo Redemix">
       </div>
     </div>
   </div>
@@ -583,18 +580,18 @@
     <section class="tab-panel" id="tab-4">
       <h1 class="section-title">Diferenciais impulseup</h1>
       <p class="section-sub">Comparativo com base nos critérios mais importantes para este projeto</p>
-      <p style="font-size:13px;color:var(--color-fg-muted);margin-bottom:16px;"><i class="fa-regular fa-circle-info"></i> Nenhum concorrente específico foi confirmado ainda na conversa (Redemix citou Qt Rocks, Yellow Fire e Loft apenas no contexto de flexibilidade do nine-box) — comparativo abaixo é contra "Outras soluções" com resultado mediano, até confirmação dos concorrentes reais com o closer.</p>
+      <p style="font-size:13px;color:var(--color-fg-muted);margin-bottom:16px;"><i class="fa-regular fa-circle-info"></i> Concorrentes indicados por Jonny: Elofy e Qulture Rocks (QR). A coluna Qulture Rocks usa o dado real cadastrado na RFP impulseup; a coluna Elofy está marcada como "A confirmar" até termos o critério real levantado com o cliente ou em base própria — nunca estimado.</p>
       <div id="tab4TableWrap" style="margin-top:8px;overflow-x:auto;">
         <table class="rfp-table" id="tab4Table">
-          <tr><th>Critério</th><th class="iup-col">impulseup</th><th>Outras soluções</th></tr>
-<tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-<tr><td><div class="feat-name">Criação de campos customizados para análises e filtros</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-<tr><td><div class="feat-name">Customização dos eixos da matriz n-Box (flexibilidade total de dimensões)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-<tr><td><div class="feat-name">Calibração de resultados (por quadrante, seção ou competência)</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-<tr><td><div class="feat-name">Comparação de resultados por cargo, área, diretoria, etc.</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-<tr><td><div class="feat-name">Acesso sem e-mail corporativo</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
-<tr><td><div class="feat-name">Envio de notificações por SMS e WhatsApp</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
-<tr><td><div class="feat-name">Inteligência Artificial para insights automáticos</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+          <tr><th>Critério</th><th class="iup-col">impulseup</th><th>Elofy</th><th>Qulture Rocks (QR)</th></tr>
+<tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><span style="font-size:12px;color:var(--color-fg-muted);">A confirmar</span></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Criação de campos customizados para análises e filtros</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><span style="font-size:12px;color:var(--color-fg-muted);">A confirmar</span></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Customização dos eixos da matriz n-Box (flexibilidade total de dimensões)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><span style="font-size:12px;color:var(--color-fg-muted);">A confirmar</span></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Calibração de resultados (por quadrante, seção ou competência)</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><span style="font-size:12px;color:var(--color-fg-muted);">A confirmar</span></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Comparação de resultados por cargo, área, diretoria, etc.</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><span style="font-size:12px;color:var(--color-fg-muted);">A confirmar</span></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Acesso sem e-mail corporativo</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><span style="font-size:12px;color:var(--color-fg-muted);">A confirmar</span></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Envio de notificações por SMS e WhatsApp</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><span style="font-size:12px;color:var(--color-fg-muted);">A confirmar</span></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Inteligência Artificial para insights automáticos</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><span style="font-size:12px;color:var(--color-fg-muted);">A confirmar</span></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
         </table>
       </div>
     </section>
@@ -753,7 +750,8 @@
   ],
   "comparativo": {
     "concorrentes": [
-      "Outras soluções"
+      "Elofy",
+      "Qulture Rocks (QR)"
     ],
     "criterios": [
       {
@@ -761,6 +759,7 @@
         "tag": "Flexível",
         "impulseup": true,
         "porConcorrente": [
+          false,
           true
         ]
       },
@@ -769,7 +768,8 @@
         "tag": "Flexível",
         "impulseup": true,
         "porConcorrente": [
-          false
+          false,
+          true
         ]
       },
       {
@@ -777,6 +777,7 @@
         "tag": "Flexível",
         "impulseup": true,
         "porConcorrente": [
+          false,
           true
         ]
       },
@@ -785,6 +786,7 @@
         "tag": "Confiável",
         "impulseup": true,
         "porConcorrente": [
+          false,
           true
         ]
       },
@@ -793,6 +795,7 @@
         "tag": "Inteligente",
         "impulseup": true,
         "porConcorrente": [
+          false,
           false
         ]
       },
@@ -801,6 +804,7 @@
         "tag": "Fácil",
         "impulseup": true,
         "porConcorrente": [
+          false,
           true
         ]
       },
@@ -809,6 +813,7 @@
         "tag": "Fácil",
         "impulseup": true,
         "porConcorrente": [
+          false,
           false
         ]
       },
@@ -817,6 +822,7 @@
         "tag": "Inteligente",
         "impulseup": true,
         "porConcorrente": [
+          false,
           true
         ]
       }
