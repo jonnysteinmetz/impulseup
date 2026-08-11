@@ -609,13 +609,83 @@
     <section class="tab-panel" id="tab-5">
       <h1 class="section-title">Aprovação e plano de ação</h1>
       <p class="section-sub">Objetivos de negócio da Redemix, o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
-        <i class="fa-regular fa-clipboard"></i>
-        <h3>Aba liberada após a reunião de Diagnóstico</h3>
-        <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
-      </div>
-      <div id="tab5PlanoWrap" style="display:none;">
-        <!--OBJETIVOS-->
+      <div id="tab5PlanoWrap">
+        
+        <div class="objetivo-card">
+          <h4>Trocar de plataforma sem perder a adesão que a Redemix já tinha</h4>
+          <p>Sair da SAP sem repetir o desgaste do primeiro ciclo — parametrização guiada e teste real antes do rollout, em vez de implantação às pressas com todo o público de uma vez.</p>
+          <div class="objetivo-body">
+            <div><div class="card-label">Situação atual</div><p>Primeiro ciclo (2025) tentou avaliar cerca de 2.000 pessoas de uma só vez, com pouco suporte da consultoria e sem visão gerencial — segundo a Patrícia, "foi muito complexo, difícil, tivemos transtornos no meio do caminho".</p></div>
+            <div><div class="card-label">Meta</div><p>Segundo ciclo restrito à liderança (230–250 pessoas), com teste guiado prévio em dois grupos, antes de ampliar gradualmente para o público operacional.</p></div>
+          </div>
+          <div class="block-title" style="font-size:13px;margin-top:16px;"><i class="fa-regular fa-calendar"></i>Etapas</div>
+          <div class="timeline">
+            <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Mês 1</span><div><span class="tl-desc">Teste guiado</span><div class="tl-meta">Cadastro de 8–10 pessoas em dois grupos, disparo real de avaliação e coleta de percepção de uso · conjunta</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Mês 1–2</span><div><span class="tl-desc">Parametrização dos formulários por grupo de liderança</span><div class="tl-meta">Configuração dos dois modelos (formulários separados x formulário único segmentado) para a Redemix decidir · impulseup</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Mês 3</span><div><span class="tl-desc">Rollout para os 230–250 líderes</span><div class="tl-meta">Primeiro ciclo oficial na nova plataforma, com acompanhamento próximo do consultor de implementação · conjunta</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Mês 4 em diante</span><div><span class="tl-desc">Ampliação gradual para o público operacional</span><div class="tl-meta">Conforme maturidade e adesão, conforme sinalizado por Patrícia e Érica · Redemix</div></div></div>
+          </div>
+          <div class="objetivo-body" style="margin-top:16px;">
+            <div class="card"><div class="card-label">Estado futuro — RH</div><p>Segundo ciclo de avaliação acontece sem os transtornos do primeiro — com acompanhamento técnico presente em cada etapa, não só na implantação inicial.</p></div>
+            <div class="card dark"><div class="card-label">Impacto no negócio</div><p>Redução do risco de mais um ciclo mal sucedido, que já custou tempo e energia da equipe de Gente em 2025 e comprometeu a credibilidade da avaliação de desempenho internamente.</p></div>
+          </div>
+          <p style="font-size:12.5px;color:var(--color-fg-muted);margin-top:10px;"><strong>Indicador de sucesso:</strong> Ciclo de liderança concluído dentro do prazo combinado, com taxa de resposta acima do que a Redemix teve na SAP.</p>
+        </div>
+    
+        
+        <div class="objetivo-card">
+          <h4>Eliminar o retrabalho manual de cadastro entre RM/TOTVS e a plataforma de avaliação</h4>
+          <p>Hoje toda admissão, promoção e transferência é replicada manualmente. Isso consome tempo do time de Gente e é fonte de erro quando o cadastro fica desatualizado.</p>
+          <div class="objetivo-body">
+            <div><div class="card-label">Situação atual</div><p>Sem integração entre TOTVS RM e a SAP hoje — atualização de cadastro feita "na mão", colaborador por colaborador.</p></div>
+            <div><div class="card-label">Meta</div><p>Cadastro sincronizado via API entre RM/TOTVS e a impulseup, com admissão, promoção, transferência e férias refletidas automaticamente.</p></div>
+          </div>
+          <div class="block-title" style="font-size:13px;margin-top:16px;"><i class="fa-regular fa-calendar"></i>Etapas</div>
+          <div class="timeline">
+            <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Mês 1</span><div><span class="tl-desc">Formulário técnico de integração</span><div class="tl-meta">Redemix direciona para o time de TI, que preenche a versão do sistema RM/TOTVS · Redemix</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Mês 1–2</span><div><span class="tl-desc">Validação com o time de produto impulseup</span><div class="tl-meta">Confirmação de compatibilidade e desenho do mapeamento de campos · impulseup</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Mês 2–3</span><div><span class="tl-desc">Homologação e ativação da API</span><div class="tl-meta">Testes de sincronização antes de rodar o primeiro ciclo real com dados integrados · conjunta</div></div></div>
+          </div>
+          <div class="objetivo-body" style="margin-top:16px;">
+            <div class="card"><div class="card-label">Estado futuro — RH</div><p>Time de Gente para de gastar tempo replicando cadastro manualmente e passa a confiar que a base de colaboradores está sempre atualizada.</p></div>
+            <div class="card dark"><div class="card-label">Impacto no negócio</div><p>Menos risco de erro de elegibilidade (pessoa errada recebendo ou não recebendo avaliação) em uma rede com quase 2.500 colaboradores e alta movimentação de loja.</p></div>
+          </div>
+          <p style="font-size:12.5px;color:var(--color-fg-muted);margin-top:10px;"><strong>Indicador de sucesso:</strong> Zero atualizações manuais de cadastro reportadas pelo time de Gente após a integração ativa.</p>
+        </div>
+    
+        
+        <div class="objetivo-card">
+          <h4>Padronizar formatos de avaliação (90/180/360°) por grupo de liderança, num único ciclo</h4>
+          <p>Hoje, para segmentar por grupo de cargo, a Redemix precisaria manter formulários separados — o que a Patrícia já fazia com sua metodologia de 40 anos de RH, mas que gera mais trabalho de manutenção a cada novo ciclo.</p>
+          <div class="objetivo-body">
+            <div><div class="card-label">Situação atual</div><p>Metodologia da Patrícia usa grupos homogêneos de cargo (ex: Grupo 1 = alta gestão, com 11 habilidades avaliadas) vinculados a formulários específicos — hoje replicada manualmente a cada ciclo.</p></div>
+            <div><div class="card-label">Meta</div><p>Formulário validado uma vez, reaproveitado ciclo a ciclo, com a segmentação por grupo de cargo mantida sem esforço adicional de configuração.</p></div>
+          </div>
+          <div class="block-title" style="font-size:13px;margin-top:16px;"><i class="fa-regular fa-calendar"></i>Etapas</div>
+          <div class="timeline">
+            <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Mês 1</span><div><span class="tl-desc">Envio de dois formulários piloto pela impulseup</span><div class="tl-meta">Um modelo com formulários separados por grupo (like Patrícia sugeriu) e um modelo de formulário único segmentado, para a Redemix comparar · impulseup</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Mês 1–2</span><div><span class="tl-desc">Decisão do modelo definitivo</span><div class="tl-meta">Redemix testa os dois modelos no ambiente de teste e escolhe o que faz mais sentido operacionalmente · Redemix</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Mês 2</span><div><span class="tl-desc">Validação final e duplicação do formulário para os próximos ciclos</span><div class="tl-meta">Uma vez aprovado, o formulário é reaproveitado sem precisar reconfigurar do zero · impulseup</div></div></div>
+          </div>
+          <div class="objetivo-body" style="margin-top:16px;">
+            <div class="card"><div class="card-label">Estado futuro — RH</div><p>Área de Gente deixa de recriar formulário por formulário a cada ciclo — a estrutura por grupo de cargo da Patrícia passa a existir dentro da plataforma, não só na cabeça de quem já sabe o processo.</p></div>
+            <div class="card dark"><div class="card-label">Impacto no negócio</div><p>Ciclo de avaliação escala para mais grupos de liderança sem multiplicar o esforço operacional proporcionalmente.</p></div>
+          </div>
+          <p style="font-size:12.5px;color:var(--color-fg-muted);margin-top:10px;"><strong>Indicador de sucesso:</strong> Formulário reutilizado no ciclo seguinte sem necessidade de reconfiguração do zero.</p>
+        </div>
+    
+        
+        <div class="objetivo-card">
+          <h4>Dar à área de Gente visão gerencial e dados confiáveis para decisão</h4>
+          <p>O ciclo de 2025 na SAP não permitia visão gerencial nem comparativos — só relatórios pontuais, isolados, sem cruzamento por área, cargo ou grupo de liderança.</p>
+          <div class="objetivo-body">
+            <div><div class="card-label">Situação atual</div><p>Sem dashboards consolidados; Érica apontou isso como um dos pontos críticos do processo anterior.</p></div>
+            <div><div class="card-label">Meta</div><p>Comparativos entre grupos de liderança, áreas e cargos disponíveis para a diretoria, com histórico entre ciclos.</p></div>
+          </div>
+          <div class="block-title" style="font-size:13px;margin-top:16px;"><i class="fa-regular fa-calendar"></i>Etapas</div>
+          <div class="timeline">
+            <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Mês 3</span><div><span class="tl-desc">Primeiro ciclo de liderança gera a primeira base de dados real</span><div class="tl-meta">Resultado do ciclo com a nova plataforma, já filtrável por grupo, cargo e área · impulseup</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Mês 3–4</span><div><span class="tl-desc">Sessão de calibração com visão do Nine-Box configurada por grupo</span><div class="tl-meta">Comitês compostos por quem convive com os avaliados, evitando viés de quem não acompanha o dia a dia · conjunta</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Mês 4</span><div><span class="tl-desc">Apresentação do resultado consolidado para a diretoria</span><div class="tl-meta">Material com o olhar da impulseup sobre o ciclo, não só números brutos · impulseup</div></div></div>
+          </div>
+          <div class="objetivo-body" style="margin-top:16px;">
+            <div class="card"><div class="card-label">Estado futuro — RH</div><p>A área de Gente passa a levar para a diretoria uma leitura fundamentada do processo, não apenas uma planilha de notas isoladas.</p></div>
+            <div class="card dark"><div class="card-label">Impacto no negócio</div><p>Decisões de sucessão, desenvolvimento e retenção passam a ser embasadas em dado comparável entre lojas e grupos, não em percepção individual de cada gestor.</p></div>
+          </div>
+          <p style="font-size:12.5px;color:var(--color-fg-muted);margin-top:10px;"><strong>Indicador de sucesso:</strong> Primeira apresentação de resultado consolidado à diretoria realizada com dados comparativos entre grupos.</p>
+        </div>
+    
       </div>
     </section>
 
@@ -703,7 +773,12 @@
       "numero": null
     }
   ],
-  "objetivos": [],
+  "objetivos": [
+    {"titulo": "Trocar de plataforma sem perder a adesão que a Redemix já tinha", "estadoFuturoResumido": "Segundo ciclo roda com acompanhamento próximo, sem os transtornos do primeiro"},
+    {"titulo": "Eliminar o retrabalho manual de cadastro entre RM/TOTVS e a plataforma", "estadoFuturoResumido": "Cadastro sempre atualizado, sem replicar dado manualmente"},
+    {"titulo": "Padronizar formatos de avaliação por grupo de liderança, num único ciclo", "estadoFuturoResumido": "Formulário validado uma vez, reaproveitado ciclo a ciclo"},
+    {"titulo": "Dar à área de Gente visão gerencial e dados confiáveis para decisão", "estadoFuturoResumido": "Comparativos entre grupos e áreas, embasando decisões da diretoria"}
+  ],
   "pilaresDestaque": [
     {
       "titulo": "Um único ciclo, vários formatos, sem multiplicar formulário",
