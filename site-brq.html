@@ -532,15 +532,15 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da BRQ Digital Solutions</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content" style="display:block;">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">5% → 7%</div><div class="label">engajamento em uma ação pontual de comunicação sobre plataforma de aprendizagem, mesmo com esforço direcionado</div></div>
+          <div class="stat-card"><div class="num">~50%</div><div class="label">dos colaboradores da BRQ estão alocados em clientes, com maior risco de desengajamento das iniciativas de RH</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -548,8 +548,10 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Plataforma de Learning atual é um repositório estático, sem interatividade, usada só por obrigatoriedade</td><td class="feat-name">Learning</td><td>Trilhas de aprendizado com navegação e conteúdo pensados para gerar interesse espontâneo, não apenas cumprimento de obrigação</td></tr>
+              <tr><td>Ferramenta de autoria mostra quem fez e quem não fez a avaliação, mas não indica qual questão a pessoa errou</td><td class="feat-name">Learning</td><td>Simulados com registro detalhado de acertos e erros por questão, permitindo plano de ação direcionado de melhoria contínua</td></tr>
+              <tr><td>Avaliação de desempenho e PDI foram descontinuados por baixo engajamento e hoje não existem na BRQ</td><td class="feat-name">Desenvolvimento</td><td>Avaliações 360º e PDI conectados automaticamente ao conteúdo de Learning, aumentando a chance de engajamento real</td></tr>
+              <tr><td>Decisões de cada subsistema de RH são tomadas de forma isolada, sem visão conectada entre módulos</td><td class="feat-name">Toda a jornada em um único lugar</td><td>Avaliação, metas e desenvolvimento conversam entre si automaticamente, com visão histórica comparável entre ciclos</td></tr>
             </tbody>
           </table>
         </div>
@@ -1086,7 +1088,7 @@
       <p class="section-sub">Jornada de compra da BRQ Digital Solutions</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">05 ago</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios da consolidação de RH em uma única plataforma</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">12 ago</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Marina apresenta o projeto internamente</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
