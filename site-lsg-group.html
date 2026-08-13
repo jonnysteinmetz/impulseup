@@ -580,16 +580,31 @@
     <section class="tab-panel" id="tab-4">
       <h1 class="section-title">Diferenciais impulseup</h1>
       <p class="section-sub">Comparativo com base nos critérios mais importantes para este projeto</p>
-      <div class="empty-state" id="tab4EmptyState">
+      <div class="empty-state" id="tab4EmptyState" style="display:none;">
         <i class="fa-regular fa-list-check"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que o closer finalizar o diagnóstico, esta aba mostra o comparativo entre a impulseup e os concorrentes identificados na conversa. Se nenhum concorrente específico for mencionado, o comparativo é feito contra "Outras soluções", com resultado mediano.</p>
       </div>
-      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:none;">
+      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:block;">
         <table class="rfp-table" id="tab4Table">
-          <!-- Preenchido pela skill site-cliente-impulseup a partir da transcrição da reunião de Diagnóstico e de references/rfp-criterios.json.
-               Cada critério exibe sua tag (campo "tags" do JSON) junto ao nome, ex:
-               <tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td>...</tr> -->
+          <thead>
+            <tr><th>Critério</th><th class="iup-col check-cell">impulseup</th><th class="check-cell">Outras soluções</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+            <tr><td><div class="feat-name">Criação de campos customizados para análises e filtros</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+            <tr><td><div class="feat-name">Pesos diferentes por tipo de avaliador, por competência</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+            <tr><td><div class="feat-name">Customização dos eixos da matriz n-Box (flexibilidade total de dimensões)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+            <tr><td><div class="feat-name">Calibração de resultados (por quadrante, seção ou competência)</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+            <tr><td><div class="feat-name">Planejamento de carreira e sucessão</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+            <tr><td><div class="feat-name">Perfil 360 (todas as informações do colaborador em uma única página)</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+            <tr><td><div class="feat-name">Inteligência Artificial para insights automáticos</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+            <tr><td><div class="feat-name">Comparação de performance e desenvolvimento ao longo do tempo</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+            <tr><td><div class="feat-name">Remuneração variável, calculada através de metas, avaliação, fórmulas etc.</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+            <tr><td><div class="feat-name">Construção de PDI com biblioteca e IA</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+            <tr><td><div class="feat-name">Acesso sem e-mail corporativo</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+            <tr><td><div class="feat-name">Atendimento e suporte para o usuário final</div><span class="feat-tag">Atendimento consultivo</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+          </tbody>
         </table>
       </div>
     </section>
@@ -598,13 +613,139 @@
     <section class="tab-panel" id="tab-5">
       <h1 class="section-title">Aprovação e plano de ação</h1>
       <p class="section-sub">Objetivos de negócio da LSG Group, o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
+      <div class="empty-state" id="tab5EmptyState" style="display:none;">
         <i class="fa-regular fa-clipboard"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
       </div>
-      <div id="tab5PlanoWrap" style="display:none;">
-        <!--OBJETIVOS-->
+      <div id="tab5PlanoWrap" style="display:block;">
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <span class="objetivo-num">01</span>
+            <div>
+              <h3>Estruturar e ampliar a cobertura da gestão de desempenho</h3>
+              <p>Sair de um processo que hoje só alcança os gestores para uma avaliação estruturada, com PDI e Nine Box, chegando a todos os cargos acima de supervisor no Brasil e na América Latina.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual"><span class="objetivo-compare-label">Situação atual</span><p>Hoje só os 800 gestores são avaliados; os outros 2.200 colaboradores, majoritariamente do time operacional, ficam fora do processo. Avaliação, PDI e Nine Box ainda não existem.</p></div>
+              <div class="objetivo-compare-box meta"><span class="objetivo-compare-label">Meta</span><p>Avaliação de Desempenho, PDI e Nine Box implantados do zero, com formato (90/180/360) definido junto com a diretoria e cobertura ampliada para todos os cargos acima de supervisor.</p></div>
+              <div class="objetivo-indicador"><i class="fa-solid fa-bullseye"></i><div><span class="objetivo-indicador-label">Indicador de sucesso</span><p>Percentual de cargos acima de supervisor com ciclo de avaliação e PDI concluído no primeiro ano.</p></div></div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa"><div class="objetivo-etapa-dot">1</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 1</span><h4>Definição de metodologia</h4><p>Consultor e Sky definem juntos o formato de avaliação (90, 180 ou 360), competências e escala de resposta.</p><span class="objetivo-etapa-resp">Conjunta</span></div></div>
+                <div class="objetivo-etapa"><div class="objetivo-etapa-dot">2</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 1–2</span><h4>Parametrização e piloto</h4><p>Consultor configura a plataforma com os campos de segmentação por país, área e cargo.</p><span class="objetivo-etapa-resp">impulseup</span></div></div>
+                <div class="objetivo-etapa"><div class="objetivo-etapa-dot">3</div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 2–3</span><h4>Rollout e calibração</h4><p>Diretoria e gestão calibram o primeiro ciclo pelo Nine Box, arrastando colaboradores entre quadrantes.</p><span class="objetivo-etapa-resp">Sky</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-arrow-trend-up"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro"><span class="approval-stage-label">Para o RH</span><p>Cobertura de avaliação e PDI para todos os cargos acima de supervisor, com processo padronizado no Brasil e na América Latina, deixando de depender do SuccessFactors.</p></div>
+              <div class="approval-stage negocio"><span class="approval-stage-label">Para o negócio</span><p>Decisões de promoção e desenvolvimento passam a se apoiar em dado estruturado, reduzindo o risco de promover alguém sem preparo, como já aconteceu na empresa segundo relato da Even.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <span class="objetivo-num">02</span>
+            <div>
+              <h3>Profissionalizar o ciclo de metas</h3>
+              <p>Transformar o acompanhamento manual em planilha em um ciclo digital, com visibilidade contínua para a liderança.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual"><span class="objetivo-compare-label">Situação atual</span><p>Metas acompanhadas em planilha, só com os gestores, sem revisão da diretoria ao longo do ano — apenas no fechamento anual.</p></div>
+              <div class="objetivo-compare-box meta"><span class="objetivo-compare-label">Meta</span><p>Ciclo de metas digital, com acompanhamento contínuo e cruzamento com o resultado da avaliação.</p></div>
+              <div class="objetivo-indicador"><i class="fa-solid fa-bullseye"></i><div><span class="objetivo-indicador-label">Indicador de sucesso</span><p>Ciclo de metas rodando digitalmente, com ao menos um checkpoint intermediário registrado antes do fechamento anual.</p></div></div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa"><div class="objetivo-etapa-dot">1</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 1</span><h4>Coleta de requisitos</h4><p>Consultor mapeia a estrutura de metas usada hoje pelos gestores.</p><span class="objetivo-etapa-resp">impulseup</span></div></div>
+                <div class="objetivo-etapa"><div class="objetivo-etapa-dot">2</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 2</span><h4>Configuração do ciclo digital</h4><p>Metas migram da planilha para a plataforma, com pesos e fórmula de cálculo definidos.</p><span class="objetivo-etapa-resp">impulseup</span></div></div>
+                <div class="objetivo-etapa"><div class="objetivo-etapa-dot">3</div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 3</span><h4>Rollout e primeiro checkpoint</h4><p>Diretoria acompanha o primeiro checkpoint intermediário, algo que hoje não existe.</p><span class="objetivo-etapa-resp">Sky</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-arrow-trend-up"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro"><span class="approval-stage-label">Para o RH</span><p>Acompanhamento de metas passa a ser contínuo, sem depender de planilha nem de revisão manual só no fim do ano.</p></div>
+              <div class="approval-stage negocio"><span class="approval-stage-label">Para o negócio</span><p>Liderança ganha visibilidade em tempo real de quem está atingindo meta, permitindo corrigir rota antes do fechamento anual.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <span class="objetivo-num">03</span>
+            <div>
+              <h3>Padronizar o processo entre Brasil e América Latina</h3>
+              <p>Rodar o mesmo processo de avaliação e metas nas unidades do Brasil, Chile, Argentina, Venezuela e Panamá.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual"><span class="objetivo-compare-label">Situação atual</span><p>Projeto hoje cobre só o Brasil; América Latina ainda não tem processo comum de avaliação, e a base da ferramenta usada nos EUA está sendo desativada.</p></div>
+              <div class="objetivo-compare-box meta"><span class="objetivo-compare-label">Meta</span><p>Um único processo de avaliação e metas, com suporte em espanhol, rodando nas mesmas condições no Brasil e nos países da América Latina.</p></div>
+              <div class="objetivo-indicador"><i class="fa-solid fa-bullseye"></i><div><span class="objetivo-indicador-label">Indicador de sucesso</span><p>Todos os países da América Latina participando do mesmo ciclo de avaliação.</p></div></div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa"><div class="objetivo-etapa-dot">1</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 1</span><h4>Levantamento por país</h4><p>Consultor mapeia particularidades de cada unidade da América Latina.</p><span class="objetivo-etapa-resp">Conjunta</span></div></div>
+                <div class="objetivo-etapa"><div class="objetivo-etapa-dot">2</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 2</span><h4>Parametrização multilíngue</h4><p>Configuração de segmentação por país, com avaliação disponível também em espanhol.</p><span class="objetivo-etapa-resp">impulseup</span></div></div>
+                <div class="objetivo-etapa"><div class="objetivo-etapa-dot">3</div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 3</span><h4>Rollout regional</h4><p>Primeiro ciclo rodando simultaneamente no Brasil e na América Latina.</p><span class="objetivo-etapa-resp">Sky</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-arrow-trend-up"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro"><span class="approval-stage-label">Para o RH</span><p>RH regional deixa de rodar processos fragmentados por país e passa a comparar resultados entre unidades numa única tela.</p></div>
+              <div class="approval-stage negocio"><span class="approval-stage-label">Para o negócio</span><p>Padronização reduz o risco de cada país seguir um critério diferente, acelerando decisões que hoje dependeriam de consolidar dados manualmente.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <span class="objetivo-num">04</span>
+            <div>
+              <h3>Criar critério de dados para sucessão e remuneração variável</h3>
+              <p>Substituir a percepção informal sobre quem é crítico para a empresa e como calcular bônus por um processo baseado em dado.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual"><span class="objetivo-compare-label">Situação atual</span><p>Sucessão mapeada de forma informal; bônus calculado manualmente, sem vínculo claro com meta ou avaliação.</p></div>
+              <div class="objetivo-compare-box meta"><span class="objetivo-compare-label">Meta</span><p>Mapa de sucessão e risco de saída atualizado a cada ciclo, com bônus calculado automaticamente a partir da regra que a Sky configurar, cruzando meta e avaliação.</p></div>
+              <div class="objetivo-indicador"><i class="fa-solid fa-bullseye"></i><div><span class="objetivo-indicador-label">Indicador de sucesso</span><p>Percentual de colaboradores mapeados por risco de saída e impacto, com plano de ação definido para os de risco alto.</p></div></div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa"><div class="objetivo-etapa-dot">1</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 2</span><h4>Formulário de sucessão</h4><p>Configuração do formulário automático de sucessão dentro da própria avaliação, respondido pelos gestores.</p><span class="objetivo-etapa-resp">impulseup</span></div></div>
+                <div class="objetivo-etapa"><div class="objetivo-etapa-dot">2</div><div class="objetivo-etapa-line"></div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 3</span><h4>Regra de remuneração variável</h4><p>Definição da fórmula que cruza resultado de meta e avaliação para o cálculo automático do bônus.</p><span class="objetivo-etapa-resp">Conjunta</span></div></div>
+                <div class="objetivo-etapa"><div class="objetivo-etapa-dot">3</div><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Mês 3–4</span><h4>Primeiro ciclo vinculado</h4><p>Sucessão e bônus rodando com base no primeiro ciclo de avaliação e metas.</p><span class="objetivo-etapa-resp">Sky</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-arrow-trend-up"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro"><span class="approval-stage-label">Para o RH</span><p>RH tem lista priorizada de colaboradores com risco de saída alto e impacto alto, pronta para ação, sem depender de levantamento manual.</p></div>
+              <div class="approval-stage negocio"><span class="approval-stage-label">Para o negócio</span><p>Retenção de talento crítico melhora porque a empresa sabe, com dado, quem precisa de atenção antes de perder a pessoa — e o pagamento de bônus passa a refletir performance real.</p></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -750,9 +891,27 @@
   "slugEmpresa": "lsg-group",
   "contexto": "Companhia global de catering aéreo, com operação no Brasil desde 1994, estruturando do zero Avaliação de Desempenho, PDI e Nine Box e ampliando o acompanhamento de metas para além dos 800 gestores, alcançando todos os cargos acima de supervisor no Brasil e na América Latina.",
   "desafiosCentrais": ["Cobertura limitada (só 800 dos 3.000 colaboradores avaliados)", "Sem metodologia de AD, PDI e Nine Box", "Metas em planilha, sem metodologia", "Padronização entre Brasil e América Latina", "Critério para bônus e sucessão"],
-  "objetivos": [],
-  "pilaresDestaque": [],
-  "comparativo": null,
+  "objetivos": [
+    {"titulo": "Estruturar e ampliar a cobertura da gestão de desempenho", "estadoFuturoResumido": "Cobertura de avaliação e PDI para todos os cargos acima de supervisor, no Brasil e na América Latina."},
+    {"titulo": "Profissionalizar o ciclo de metas", "estadoFuturoResumido": "Acompanhamento contínuo, sem depender de planilha nem de revisão manual só no fim do ano."},
+    {"titulo": "Padronizar o processo entre Brasil e América Latina", "estadoFuturoResumido": "Um único ciclo de avaliação e metas, com suporte em espanhol, comparável entre países."},
+    {"titulo": "Criar critério de dados para sucessão e remuneração variável", "estadoFuturoResumido": "Mapa de sucessão e risco de saída atualizado a cada ciclo, com bônus calculado automaticamente."}
+  ],
+  "pilaresDestaque": [
+    {"tag": "Flexível", "titulo": "Cultura de avaliação chega a quem hoje fica de fora"},
+    {"tag": "Inteligente", "titulo": "Metas, avaliação e sucessão cruzados no mesmo lugar"},
+    {"tag": "Atendimento consultivo", "titulo": "Padronização entre países é conduzida, não só implantada"}
+  ],
+  "comparativo": {
+    "concorrentes": ["Outras soluções"],
+    "criterios": [
+      {"nome": "Formatos de avaliação diferentes (90/180/360)", "impulseup": true, "porConcorrente": [true]},
+      {"nome": "Customização dos eixos da matriz n-Box", "impulseup": true, "porConcorrente": [false]},
+      {"nome": "Planejamento de carreira e sucessão", "impulseup": true, "porConcorrente": [true]},
+      {"nome": "Inteligência Artificial para insights automáticos", "impulseup": true, "porConcorrente": [false]},
+      {"nome": "Remuneração variável calculada através de metas e avaliação", "impulseup": true, "porConcorrente": [false]}
+    ]
+  },
   "investimento": null,
   "cronogramaMacro": [
     {"data": "11/08", "titulo": "Demonstração personalizada"},
