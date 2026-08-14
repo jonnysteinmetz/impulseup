@@ -479,7 +479,7 @@
       <div class="top-grid">
         <div class="card">
           <div class="card-label">Perfil</div>
-          <p>Inpasa é a maior biorrefinaria de grãos da América Latina, fundada em 2006 no Paraguai e presente no Brasil desde 2018, com unidades em Mato Grosso, Mato Grosso do Sul, Maranhão e novos projetos na Bahia e em Goiás. Aproximadamente 3.933 colaboradores, entre operação industrial e áreas corporativas.</p>
+          <p>Inpasa é a maior biorrefinaria de grãos da América Latina, com origem no Paraguai em 2006 e operação própria no Brasil desde 2019, hoje já perto de 4.000 colaboradores só na operação brasileira (unidades em Sinop, Dourados e outras). Colaboradores do Paraguai não entram no projeto, gestão independente.</p>
         </div>
         <div class="card dark">
           <div class="card-label">Momento atual</div>
@@ -501,21 +501,21 @@
           <label class="person-photo" data-initials="ML"><span>ML</span><input type="file" accept="image/*" class="personPhotoInput"></label>
           <div>
             <h4 contenteditable="true" class="person-name">Murilo Liberato</h4>
-            <p contenteditable="true" class="person-role">Cargo a confirmar na reunião</p>
+            <p contenteditable="true" class="person-role">Analista de DHO, frente técnica do projeto</p>
+          </div>
+        </div>
+        <div class="person-card">
+          <label class="person-photo" data-initials="LB"><span>LB</span><input type="file" accept="image/*" class="personPhotoInput"></label>
+          <div>
+            <h4 contenteditable="true" class="person-name">Leandro Brito</h4>
+            <p contenteditable="true" class="person-role">Analista de Treinamento e Desenvolvimento, 5 anos na empresa</p>
           </div>
         </div>
         <div class="person-card">
           <label class="person-photo" data-initials="??"><span>??</span><input type="file" accept="image/*" class="personPhotoInput"></label>
           <div>
             <h4 contenteditable="true" class="person-name">Nome a preencher</h4>
-            <p contenteditable="true" class="person-role">Gerente de RH</p>
-          </div>
-        </div>
-        <div class="person-card">
-          <label class="person-photo" data-initials="??"><span>??</span><input type="file" accept="image/*" class="personPhotoInput"></label>
-          <div>
-            <h4 contenteditable="true" class="person-name">Nome a preencher</h4>
-            <p contenteditable="true" class="person-role">Diretor(a) de RH</p>
+            <p contenteditable="true" class="person-role">Diretoria, decisão final de custo-benefício</p>
           </div>
         </div>
       </div>
@@ -539,10 +539,9 @@
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">A confirmar</div><div class="label">Não há dado quantitativo de turnover ou engajamento na reunião de Conexão. Vale levantar na Demo.</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -550,46 +549,14 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Ciclo de mérito subjetivo, decidido só pelo gestor</td><td class="feat-name">Avaliação de Desempenho com consenso</td><td>Critérios técnicos e comportamentais por cargo, sem depender da visão isolada de um gestor</td></tr>
+              <tr><td>Sucessão mapeada manualmente, só em áreas piloto</td><td class="feat-name">Matriz Nine-Box</td><td>Calibração ágil mesmo com público grande, sucessão escalável para todas as áreas</td></tr>
+              <tr><td>PDI feito de forma diferente por cada gestor</td><td class="feat-name">PDI e biblioteca de desenvolvimento</td><td>Padrão único de ações de desenvolvimento entre todas as unidades</td></tr>
+              <tr><td>Dados espalhados, dashboard manual e demorado de montar</td><td class="feat-name">Analytics e filtros customizados</td><td>Painel por equipe e diretoria, com até 25 campos customizados para segmentação</td></tr>
             </tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
-          <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
-               Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
-
-               Caso 1 — url_video já veio do closer (link de Drive ou YouTube) e foi reconhecida:
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap">
-                   <iframe src="{{embed_url}}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                 </div>
-               </div>
-
-               Caso 2 — url_video veio mas não foi possível gerar embed (ex: link de pasta do Drive,
-               sem permissão de embed): mostrar card de link em vez de iframe.
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-link-card">
-                   <i class="fa-brands fa-google-drive"></i>
-                   <p>Vídeo disponível para acesso externo</p>
-                   <a href="{{url_video}}" target="_blank" rel="noopener" class="video-link-btn">Assistir vídeo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
-               </div>
-
-               Caso 3 — vídeo ainda sem url_video: slot de colagem manual, para o closer colar o link
-               direto no site (fica salvo no localStorage do navegador via saveImage/loadStore).
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap video-embed-empty" data-video-idx="{{indice}}">
-                   <label class="video-paste-label">
-                     <i class="fa-regular fa-circle-play"></i>
-                     <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
-                   </label>
-                   <input type="text" class="video-url-input" data-video-idx="{{indice}}" placeholder="https://...">
-                 </div>
-               </div> -->
         </div>
       </div>
     </section>
@@ -700,8 +667,8 @@
       <h1 class="section-title">Próximos passos</h1>
       <p class="section-sub">Jornada de compra da Inpasa</p>
       <div class="timeline">
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A confirmar</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Murilo Liberato</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Realizada</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Murilo Liberato e Leandro Brito</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Sexta-feira, 9h às 10h (horário de Brasília)</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
