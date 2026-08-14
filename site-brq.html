@@ -522,7 +522,8 @@
       <div class="block-title"><i class="fa-regular fa-calendar"></i>Cronograma preliminar</div>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">05 ago</span><span class="tl-desc">Reunião de Diagnóstico realizada</span></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">12 ago</span><span class="tl-desc">Demonstração personalizada, foco em Learning, avaliação de desempenho e PDI</span></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">12 ago</span><span class="tl-desc">Demonstração realizada, foco em Learning</span></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">28 ago</span><span class="tl-desc">Demonstração, foco em avaliação de desempenho, PDI e sucessão</span></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Outubro/Novembro</span><span class="tl-desc">Possível abertura de janela orçamentária</span></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">A definir</span><span class="tl-desc">Piloto em uma parte da empresa, antes do rollout completo</span></div>
       </div>
@@ -532,30 +533,32 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da BRQ Digital Solutions</p>
-      <div class="empty-state" id="tab3EmptyState" style="display:none;">
-        <i class="fa-regular fa-circle-play"></i>
-        <h3>Aba liberada após a reunião de Demo</h3>
-        <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
-      </div>
-      <div id="tab3Content" style="display:block;">
-        <div class="stat-grid" id="tab3ImpactoGrid">
-          <div class="stat-card"><div class="num">5% → 7%</div><div class="label">engajamento em uma ação pontual de comunicação sobre plataforma de aprendizagem, mesmo com esforço direcionado</div></div>
-          <div class="stat-card"><div class="num">~50%</div><div class="label">dos colaboradores da BRQ estão alocados em clientes, com maior risco de desengajamento das iniciativas de RH</div></div>
-        </div>
+      <div id="tab3Content">
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
             <thead>
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <tr><td>Plataforma de Learning atual é um repositório estático, sem interatividade, usada só por obrigatoriedade</td><td class="feat-name">Learning</td><td>Trilhas de aprendizado com navegação e conteúdo pensados para gerar interesse espontâneo, não apenas cumprimento de obrigação</td></tr>
-              <tr><td>Ferramenta de autoria mostra quem fez e quem não fez a avaliação, mas não indica qual questão a pessoa errou</td><td class="feat-name">Learning</td><td>Simulados com registro detalhado de acertos e erros por questão, permitindo plano de ação direcionado de melhoria contínua</td></tr>
-              <tr><td>Avaliação de desempenho e PDI foram descontinuados por baixo engajamento e hoje não existem na BRQ</td><td class="feat-name">Desenvolvimento</td><td>Avaliações 360º e PDI conectados automaticamente ao conteúdo de Learning, aumentando a chance de engajamento real</td></tr>
-              <tr><td>Decisões de cada subsistema de RH são tomadas de forma isolada, sem visão conectada entre módulos</td><td class="feat-name">Toda a jornada em um único lugar</td><td>Avaliação, metas e desenvolvimento conversam entre si automaticamente, com visão histórica comparável entre ciclos</td></tr>
+              <tr><td>Learning não mostra qual questão o colaborador errou, só se o treinamento foi concluído</td><td class="feat-name">Learning, testes e quizzes</td><td>Relatório de nota e de erro por questão, para montar plano de ação com o especialista</td></tr>
+              <tr><td>Conteúdo em HTML feito por especialistas no cloud não sobe na plataforma atual</td><td class="feat-name">Learning, upload de conteúdo</td><td>Aceita HTML, vídeo do YouTube ou Vimeo, documentos do pacote Office, PDF e links</td></tr>
+              <tr><td>Gestores não têm visão da equipe, cobrança de treinamento fica só com o RH</td><td class="feat-name">Learning, relatórios por área, cargo e gestor</td><td>Gestor enxerga a própria equipe e cobra direto, sem depender do RH</td></tr>
+              <tr><td>PDI e avaliação hoje não têm conexão com o desenvolvimento realizado</td><td class="feat-name">Learning conectado ao PDI</td><td>PDI pode exigir a conclusão de um curso do Learning, e a avaliação mostra o histórico de desenvolvimento</td></tr>
             </tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
+          <div class="video-card">
+            <h4>Demonstração do módulo Learning</h4>
+            <p>Gravação da demo com a Laura, focada nos desafios de Learning mapeados no Diagnóstico.</p>
+            <div class="video-embed-wrap video-embed-empty" data-video-idx="0">
+              <label class="video-paste-label">
+                <i class="fa-regular fa-circle-play"></i>
+                <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
+              </label>
+              <input type="text" class="video-url-input" data-video-idx="0" placeholder="https://...">
+            </div>
+          </div>
           <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
                Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
 
@@ -1088,9 +1091,11 @@
       <p class="section-sub">Jornada de compra da BRQ Digital Solutions</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">05 ago</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios da consolidação de RH em uma única plataforma</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">12 ago</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">12 ago</span><div><span class="tl-desc">Demonstração, foco em Learning</span><div class="tl-meta">Curso, quizzes com erro por questão, relatórios por gestor e conexão com PDI</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">28 ago, 10h</span><div><span class="tl-desc">Demonstração, foco em Avaliação, PDI e Sucessão</span><div class="tl-meta">Avaliação de desempenho, PDI, feedback, one-on-one, sucessão e Nine Box</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Semana de 28 ago</span><div><span class="tl-desc">Laura envia requisitos ideais de Learning</span><div class="tl-meta">Lista formal do que considera essencial, para checarmos aderência ao roadmap</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Marina apresenta o projeto internamente</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Revisão jurídica</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Assinatura e kickoff</span></div></div>
@@ -1221,15 +1226,15 @@
     },
     {
       "data": "12 ago",
-      "titulo": "Demonstração personalizada"
+      "titulo": "Demonstração, foco em Learning"
+    },
+    {
+      "data": "28 ago",
+      "titulo": "Demonstração, foco em Avaliação e Sucessão"
     },
     {
       "data": "Out/Nov",
       "titulo": "Possível abertura de janela orçamentária"
-    },
-    {
-      "data": "A definir",
-      "titulo": "Assinatura e kickoff"
     }
   ]
 }
