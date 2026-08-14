@@ -598,13 +598,100 @@
     <section class="tab-panel" id="tab-5">
       <h1 class="section-title">Aprovação e plano de ação</h1>
       <p class="section-sub">Objetivos de negócio da Iguá Saneamento, o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
+      <div class="empty-state" id="tab5EmptyState" style="display:none;">
         <i class="fa-regular fa-clipboard"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
       </div>
-      <div id="tab5PlanoWrap" style="display:none;">
-        <!--OBJETIVOS-->
+      <div id="tab5PlanoWrap" style="display:block;">
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <span class="objetivo-num">01</span>
+            <div>
+              <h3>Reduzir o tempo e o esforço operacional do ciclo de metas</h3>
+              <p>Sair de um ciclo manual, dependente de uma única pessoa, para um processo em que gestor e colaborador cadastram e aprovam metas direto na plataforma.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>O ciclo de contratação de metas leva cerca de 8 meses. Colaboradores preenchem planilha, e uma única pessoa faz toda a triagem e o cadastro manual no sistema atual.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>Aproximar o ciclo do padrão observado em clientes impulseup com processo semelhante, que organizam o ciclo completo de metas em cerca de 30 dias.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <span class="objetivo-compare-label">Indicador de sucesso</span>
+                <p>Tempo do ciclo de contratação de metas, medido em dias, no próximo ciclo anual da Iguá.</p>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação (estimativa padrão de onboarding)</div>
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">1</span><span class="objetivo-etapa-line"></span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 1</span>
+                    <h4>Parametrização do módulo de Metas</h4>
+                    <p>Configuração dos fluxos de aprovação, do alinhamento hierárquico obrigatório e dos modelos de metas (peso, regra de cálculo, meta pai), conforme definido pela Iguá.</p>
+                    <span class="objetivo-etapa-resp">Responsável: impulseup</span>
+                  </div>
+                </div>
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">2</span><span class="objetivo-etapa-line"></span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 1</span>
+                    <h4>Modelos de metas e migração</h4>
+                    <p>Vivianny e Beatriz enviam os modelos reais de meta, usados como base para estruturar os modelos e a árvore de metas do próximo ciclo.</p>
+                    <span class="objetivo-etapa-resp">Responsável: conjunta</span>
+                  </div>
+                </div>
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">3</span><span class="objetivo-etapa-line"></span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 2</span>
+                    <h4>Piloto na base de testes</h4>
+                    <p>Vivianny e Beatriz testam cadastro, fluxo de aprovação e navegabilidade na base sem dados, validando o processo antes do ciclo real.</p>
+                    <span class="objetivo-etapa-resp">Responsável: conjunta</span>
+                  </div>
+                </div>
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">4</span><span class="objetivo-etapa-line"></span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 2–3</span>
+                    <h4>Rollout do ciclo de metas</h4>
+                    <p>Gestores e colaboradores passam a cadastrar e aprovar metas direto na plataforma, substituindo o preenchimento em planilha.</p>
+                    <span class="objetivo-etapa-resp">Responsável: Iguá Saneamento</span>
+                  </div>
+                </div>
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">5</span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 3 em diante</span>
+                    <h4>Acompanhamento contínuo</h4>
+                    <p>Suporte direto aos colaboradores e ajustes de configuração de fluxo e alertas conforme o ciclo avança.</p>
+                    <span class="objetivo-etapa-resp">Responsável: impulseup</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-flag-checkered"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro">
+                <span class="approval-stage-label">RH / DHO</span>
+                <p>Beatriz deixa de importar planilha e passa a contar com fluxo de aprovação e painel de alertas para saber, em tempo real, quem está com meta pendente, sem atualização ou fora do alinhamento hierárquico.</p>
+              </div>
+              <div class="approval-stage negocio">
+                <span class="approval-stage-label">Negócio</span>
+                <p>Com o ciclo de metas contratado em muito menos tempo e resultado acompanhado em tempo real, a diretoria ganha visibilidade mais rápida sobre onde estão os gargalos de performance ao longo do ano.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -716,7 +803,9 @@
     {"titulo": "IA ainda ausente na gestão de desempenho"},
     {"titulo": "Decisão em duas etapas: validação técnica antes do investimento"}
   ],
-  "objetivos": [],
+  "objetivos": [
+    {"titulo": "Reduzir o tempo e o esforço operacional do ciclo de metas", "situacaoAtual": "Ciclo de contratação de metas leva cerca de 8 meses, com triagem manual feita por uma única pessoa.", "meta": "Aproximar o ciclo do padrão de 30 dias observado em clientes com processo semelhante.", "indicadorSucesso": "Tempo do ciclo de contratação de metas, medido em dias, no próximo ciclo anual."}
+  ],
   "pilaresDestaque": [
     {"titulo": "Metas, OKRs e avaliação conversam entre si, sem retrabalho manual", "tag": "Inteligente"},
     {"titulo": "PDI nasce com apoio de IA, não do zero", "tag": "Inteligente"},
@@ -724,7 +813,12 @@
   ],
   "comparativo": null,
   "investimento": null,
-  "cronogramaMacro": []
+  "cronogramaMacro": [
+    {"periodo": "Mês 1", "descricao": "Parametrização do módulo de Metas e envio dos modelos reais"},
+    {"periodo": "Mês 2", "descricao": "Piloto na base de testes com Vivianny e Beatriz"},
+    {"periodo": "Mês 2–3", "descricao": "Rollout do ciclo de metas na plataforma"},
+    {"periodo": "Mês 3 em diante", "descricao": "Acompanhamento contínuo"}
+  ]
 }
 </script>
 
