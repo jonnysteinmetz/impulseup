@@ -464,9 +464,9 @@
       <div class="pillars">
         <!-- Cada pillar-card carrega a tag do critério correspondente em rfp-criterios.json
              (mesmo padrão da .feat-tag da Aba 4) — ver estrutura-abas.md, Aba 1. -->
-        <div class="pillar-card"><span class="pillar-num">01</span><span class="feat-tag">Confiável</span><h4>Decisão de performance sai mais justa e defensável</h4><p>Com avaliação de consenso e controle administrativo real sobre o processo, a diretoria deixa de depender da visão isolada de um gestor, ainda mais importante quando toda a empresa passa a ser avaliada de uma vez.</p></div>
-        <div class="pillar-card"><span class="pillar-num">02</span><span class="feat-tag">Liderança</span><h4>Sucessão vira plano, não intenção</h4><p>Gestores acompanham risco e potencial de cada posição crítica dentro da própria plataforma, o que dá à diretoria nova visibilidade real sobre quem sustenta o crescimento da empresa.</p></div>
-        <div class="pillar-card"><span class="pillar-num">03</span><span class="feat-tag">Flexível</span><h4>PDI padronizado, mesmo com dezenas de gestores diferentes</h4><p>Uma biblioteca única de ações de desenvolvimento substitui o "cada gestor faz do seu jeito" por um processo consistente entre áreas e unidades.</p></div>
+        <div class="pillar-card"><span class="pillar-num">01</span><span class="feat-tag">Confiável</span><h4>Decisão de performance sai mais justa e defensável</h4><p>Com avaliação de consenso e critérios customizados por cargo, a diretoria deixa de depender da visão isolada de um gestor, ainda mais importante quando toda a empresa passa a ser avaliada de uma vez.</p></div>
+        <div class="pillar-card"><span class="pillar-num">02</span><span class="feat-tag">Liderança</span><h4>Sucessão vira plano, não intenção</h4><p>Gestores acompanham risco, impacto e tempo de prontidão de cada posição crítica dentro da própria avaliação, o que dá à diretoria visibilidade real sobre quem sustenta o crescimento da empresa.</p></div>
+        <div class="pillar-card"><span class="pillar-num">03</span><span class="feat-tag">Inteligente</span><h4>Tudo do colaborador numa única tela, sem caçar informação em vários portais</h4><p>Avaliação, PDI, feedback, sucessão e histórico ficam centralizados no painel do gestor, acabando com o retrabalho de consultar planilha, Canva e outras ferramentas separadas para montar uma visão só.</p></div>
       </div>
 
     </section>
@@ -489,10 +489,11 @@
 
       <div class="block-title"><i class="fa-regular fa-flag"></i>Desafios mapeados</div>
       <div class="challenges">
-        <div class="challenge-card"><span class="ch-num">01</span><h4>Planilha não aguenta a escala</h4><p>Processo hoje roda por planilha e com parte da empresa. Ampliar para todos os 3.933 colaboradores no ciclo de outubro deixa de ser viável sem uma ferramenta.</p></div>
-        <div class="challenge-card"><span class="ch-num">02</span><h4>PDI sem padrão entre gestores</h4><p>Cada gestor conduz o PDI de um jeito diferente. Não há biblioteca ou processo único de desenvolvimento.</p></div>
-        <div class="challenge-card"><span class="ch-num">03</span><h4>Feedback e sucessão no início</h4><p>Os dois temas ainda estão em mapeamento inicial. A empresa quer avançar, mas não tem processo formal hoje.</p></div>
-        <div class="challenge-card"><span class="ch-num">04</span><h4>Diretoria nova pede visibilidade</h4><p>Com a nova diretoria, cresce a demanda por dados mapeados e comparáveis sobre desempenho, hoje impossíveis de consolidar em planilha.</p></div>
+        <div class="challenge-card"><span class="ch-num">01</span><h4>Planilha e portais dispersos</h4><p>Processo roda hoje na planilha (ferramenta Farmers) com parte da empresa. A calibração do Nine-Box é feita à parte, no Canva, seguida de reunião manual de calibragem. Ampliar para os quase 4.000 colaboradores do Brasil não é viável nesse formato.</p></div>
+        <div class="challenge-card"><span class="ch-num">02</span><h4>PDI sem padrão, feito no Excel</h4><p>Cada gestor conduz o PDI de um jeito, sem biblioteca comum. O acompanhamento hoje depende do time de DHO cobrar manualmente, apoiado por uma ferramenta externa de assessment.</p></div>
+        <div class="challenge-card"><span class="ch-num">03</span><h4>Cultura de feedback ainda em construção</h4><p>Não existe hoje uma cultura consolidada de feedback contínuo. O time de DHO está ativamente treinando e sensibilizando gestores, com adesão desigual entre quem já veio de mercado e quem cresceu dentro da empresa.</p></div>
+        <div class="challenge-card"><span class="ch-num">04</span><h4>Diretoria nova pede visibilidade</h4><p>Qualquer consolidação de dados para a diretoria hoje exige puxar informação manualmente de vários lugares diferentes, o que consome tempo do time de DHO.</p></div>
+        <div class="challenge-card"><span class="ch-num">05</span><h4>Sem sistema de metas hoje</h4><p>A avaliação atual é baseada só na descrição de cargo. A Inpasa ainda não tem um sistema de metas individuais, e quer migrar para isso futuramente, ligando ao PPR.</p></div>
       </div>
 
       <div class="block-title"><i class="fa-regular fa-user-tie"></i>Responsáveis pelo projeto</div>
@@ -565,16 +566,26 @@
     <section class="tab-panel" id="tab-4">
       <h1 class="section-title">Diferenciais impulseup</h1>
       <p class="section-sub">Comparativo com base nos critérios mais importantes para este projeto</p>
-      <div class="empty-state" id="tab4EmptyState">
-        <i class="fa-regular fa-list-check"></i>
-        <h3>Aba liberada após a reunião de Diagnóstico</h3>
-        <p>Assim que o closer finalizar o diagnóstico, esta aba mostra o comparativo entre a impulseup e os concorrentes identificados na conversa. Se nenhum concorrente específico for mencionado, o comparativo é feito contra "Outras soluções", com resultado mediano.</p>
-      </div>
-      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:none;">
+      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;">
         <table class="rfp-table" id="tab4Table">
-          <!-- Preenchido pela skill site-cliente-impulseup a partir da transcrição da reunião de Diagnóstico e de references/rfp-criterios.json.
-               Cada critério exibe sua tag (campo "tags" do JSON) junto ao nome, ex:
-               <tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td>...</tr> -->
+          <thead><tr><th>Critério</th><th class="iup-col">impulseup</th><th>Qulture Rocks</th></tr></thead><tbody><tr><td><div class="feat-name">Avaliação de consenso</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Competências específicas e exclusivas (líder, não líder, cargo, área ou outros)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Envio de avaliações por SMS e WhatsApp</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Acesso sem e-mail corporativo</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Controle de visibilidade e privilégios administrativos</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Contratação modular, conforme necessidade</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Planejamento de carreira e sucessão</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Calibração de resultados (por quadrante, seção ou competência)</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Disponibilizar matriz n-Box para gestores</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Análises avançadas com filtros customizados</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Comparação de resultados por cargo, área, diretoria, etc.</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Biblioteca de ações de desenvolvimento personalizada</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Conexão de gaps da avaliação com PDI e cursos de desenvolvimento</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Realização de Pesquisas simultâneas</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Inteligência Artificial para insights automáticos</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Registro de feedbacks (categorizados, compartilhados)</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Customização dos eixos da matriz n-Box (flexibilidade total de dimensões)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Criação de campos customizados para análises e filtros</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr></tbody>
         </table>
       </div>
     </section>
@@ -583,13 +594,98 @@
     <section class="tab-panel" id="tab-5">
       <h1 class="section-title">Aprovação e plano de ação</h1>
       <p class="section-sub">Objetivos de negócio da Inpasa, o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
-        <i class="fa-regular fa-clipboard"></i>
-        <h3>Aba liberada após a reunião de Diagnóstico</h3>
-        <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
+      <div id="tab5PlanoWrap">
+        
+    <div class="objetivo-card">
+      <div class="objetivo-header"><span class="objetivo-num">01</span><div><h3>Levar a gestão de desempenho da planilha para 100% da empresa</h3><p>Sair de um processo manual, restrito a áreas piloto, para um ciclo único cobrindo todos os quase 4.000 colaboradores do Brasil.</p></div></div>
+      <div class="objetivo-body">
+        <div class="objetivo-compare-col">
+          <div class="objetivo-compare-box atual"><h5>Situação atual</h5><p>Hoje o ciclo roda em planilha (ferramenta Farmers), só com parte da empresa. A calibração de Nine-Box é feita manualmente no Canva, depois de uma reunião de calibragem à parte.</p></div>
+          <div class="objetivo-compare-box meta"><h5>Meta</h5><p>Rodar o ciclo de outubro com todos os colaboradores do Brasil dentro de uma única plataforma, do envio da avaliação até a calibração.</p></div>
+          <div class="objetivo-indicador"><h5>Indicador de sucesso</h5><p>Ciclo de outubro rodado com 100% dos colaboradores do Brasil dentro da plataforma, sem etapa paralela em planilha.</p></div>
+        </div>
+        <div class="objetivo-plan-col">
+          <div class="objetivo-etapas"><div class="objetivo-etapa"><span class="etapa-periodo">Mês 1 (estimativa)</span><div><h5>Parametrização inicial</h5><p>Configuração dos perfis de acesso, tipos de avaliação (90/180) e formulário de competências.</p><span class="etapa-resp">impulseup</span></div></div>
+<div class="objetivo-etapa"><span class="etapa-periodo">Mês 1–2 (estimativa)</span><div><h5>Importação de dados e cadastro</h5><p>Importação da base de colaboradores, gestores e campos customizados via planilha.</p><span class="etapa-resp">conjunta</span></div></div>
+<div class="objetivo-etapa"><span class="etapa-periodo">Mês 2 (estimativa)</span><div><h5>Piloto de validação</h5><p>Rodada de teste com áreas que já participam hoje, para validar fluxo antes do rollout geral.</p><span class="etapa-resp">conjunta</span></div></div>
+<div class="objetivo-etapa"><span class="etapa-periodo">Outubro (compromisso do cliente)</span><div><h5>Rollout para todos os colaboradores</h5><p>Ciclo de mérito rodando 100% dentro da plataforma, substituindo a planilha.</p><span class="etapa-resp">Inpasa</span></div></div></div>
+        </div>
       </div>
-      <div id="tab5PlanoWrap" style="display:none;">
-        <!--OBJETIVOS-->
+      <div class="approval-outcome">
+        <div class="approval-outcome-title">Estado futuro</div>
+        <div class="approval-outcome-grid">
+          <div class="approval-stage futuro"><h5>Para o RH/DHO</h5><p>O time de DHO deixa de operar planilha, Canva e reunião de calibração manual em paralelo. Todo o ciclo, envio, acompanhamento e calibração, roda dentro de uma única tela.</p></div>
+          <div class="approval-stage negocio"><h5>Para o negócio</h5><p>A gestão de desempenho passa a acompanhar o ritmo de crescimento da Inpasa (quase 4.000 colaboradores e projeção de ultrapassar esse número ainda este ano), sem exigir esforço manual crescente do time de DHO a cada novo colaborador.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="objetivo-card">
+      <div class="objetivo-header"><span class="objetivo-num">02</span><div><h3>Transformar sucessão de intenção em plano estruturado</h3><p>Sair de um mapeamento de sucessão manual, restrito a poucas áreas, para um processo estruturado e escalável para toda a empresa.</p></div></div>
+      <div class="objetivo-body">
+        <div class="objetivo-compare-col">
+          <div class="objetivo-compare-box atual"><h5>Situação atual</h5><p>Hoje só as áreas piloto têm sucessores mapeados, talento-chave e talento-futuro identificados manualmente, sem uma ferramenta comum.</p></div>
+          <div class="objetivo-compare-box meta"><h5>Meta</h5><p>Mapear risco de saída, impacto e sucessores de posições críticas em toda a empresa, dentro do próprio fluxo de avaliação.</p></div>
+          <div class="objetivo-indicador"><h5>Indicador de sucesso</h5><p>Percentual de posições críticas com sucessor mapeado e tempo de prontidão definido, comparável ciclo a ciclo.</p></div>
+        </div>
+        <div class="objetivo-plan-col">
+          <div class="objetivo-etapas"><div class="objetivo-etapa"><span class="etapa-periodo">Mês 2 (estimativa)</span><div><h5>Configuração da Matriz Nine-Box</h5><p>Definição de eixos, quadrantes e critério de calibração, incluindo o formulário de risco e sucessão dentro da avaliação.</p><span class="etapa-resp">impulseup</span></div></div>
+<div class="objetivo-etapa"><span class="etapa-periodo">Mês 2–3 (estimativa)</span><div><h5>Extensão do mapeamento das áreas piloto</h5><p>Migração dos sucessores já identificados nas áreas piloto para o organograma de sucessão da plataforma.</p><span class="etapa-resp">conjunta</span></div></div>
+<div class="objetivo-etapa"><span class="etapa-periodo">Outubro em diante</span><div><h5>Rollout do mapeamento para todas as áreas</h5><p>Cada avaliação passa a alimentar automaticamente o organograma de sucessão da empresa toda.</p><span class="etapa-resp">Inpasa</span></div></div></div>
+        </div>
+      </div>
+      <div class="approval-outcome">
+        <div class="approval-outcome-title">Estado futuro</div>
+        <div class="approval-outcome-grid">
+          <div class="approval-stage futuro"><h5>Para o RH/DHO</h5><p>DHO acompanha em tempo real quais posições críticas têm sucessor pronto, tempo de prontidão de cada um e quais ainda estão descobertas, sem depender de mapeamento manual por área.</p></div>
+          <div class="approval-stage negocio"><h5>Para o negócio</h5><p>Retenção de talentos-chave em posições críticas, evitando o risco que Murilo apontou diretamente: perder para o mercado pessoas que a empresa ainda não tinha conseguido preparar como sucessoras.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="objetivo-card">
+      <div class="objetivo-header"><span class="objetivo-num">03</span><div><h3>Padronizar PDI entre todos os gestores</h3><p>Sair de um PDI que depende do estilo individual de cada gestor para um processo único e conectado diretamente aos gaps de cada avaliação.</p></div></div>
+      <div class="objetivo-body">
+        <div class="objetivo-compare-col">
+          <div class="objetivo-compare-box atual"><h5>Situação atual</h5><p>Hoje o PDI é feito no Excel, acompanhado manualmente pelo time de DHO, sem biblioteca de ações nem padrão comum entre gestores.</p></div>
+          <div class="objetivo-compare-box meta"><h5>Meta</h5><p>PDI estruturado com biblioteca de ações padronizada por competência, gerado a partir dos gaps identificados em cada avaliação.</p></div>
+          <div class="objetivo-indicador"><h5>Indicador de sucesso</h5><p>Percentual de colaboradores avaliados com PDI ativo na plataforma dentro do ciclo.</p></div>
+        </div>
+        <div class="objetivo-plan-col">
+          <div class="objetivo-etapas"><div class="objetivo-etapa"><span class="etapa-periodo">Mês 2 (estimativa)</span><div><h5>Ativação da biblioteca de PDI</h5><p>Configuração das ações de desenvolvimento por competência técnica e comportamental.</p><span class="etapa-resp">impulseup</span></div></div>
+<div class="objetivo-etapa"><span class="etapa-periodo">Mês 3 em diante</span><div><h5>PDI acoplado ao ciclo de avaliação</h5><p>Cada gestor passa a montar o PDI do colaborador dentro da mesma tela da devolutiva, com checklist de execução.</p><span class="etapa-resp">conjunta</span></div></div></div>
+        </div>
+      </div>
+      <div class="approval-outcome">
+        <div class="approval-outcome-title">Estado futuro</div>
+        <div class="approval-outcome-grid">
+          <div class="approval-stage futuro"><h5>Para o RH/DHO</h5><p>DHO reduz o trabalho manual de cobrar e consolidar PDI individualmente, já que o plano nasce direto dos gaps de cada avaliação, com checklist de execução.</p></div>
+          <div class="approval-stage negocio"><h5>Para o negócio</h5><p>Desenvolvimento mais consistente entre unidades espalhadas geograficamente, sustentando a cultura que a empresa começou a construir a partir da pesquisa de cultura recente.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="objetivo-card">
+      <div class="objetivo-header"><span class="objetivo-num">04</span><div><h3>Dar à diretoria dados em tempo real, sem consolidação manual</h3><p>Sair de um processo em que qualquer visão cruzada exige puxar dado de vários lugares para dashboards e filtros disponíveis direto na plataforma.</p></div></div>
+      <div class="objetivo-body">
+        <div class="objetivo-compare-col">
+          <div class="objetivo-compare-box atual"><h5>Situação atual</h5><p>Murilo descreveu que hoje qualquer consolidação para a diretoria exige puxar informação de vários lugares diferentes, o que demanda tempo do time de DHO.</p></div>
+          <div class="objetivo-compare-box meta"><h5>Meta</h5><p>Dashboards e filtros cruzados (por área, cargo, risco de saída, perfil de sucessão) disponíveis a qualquer momento, sem depender de compilação manual.</p></div>
+          <div class="objetivo-indicador"><h5>Indicador de sucesso</h5><p>Tempo de resposta a uma solicitação de dado da diretoria cai de dias (hoje) para minutos.</p></div>
+        </div>
+        <div class="objetivo-plan-col">
+          <div class="objetivo-etapas"><div class="objetivo-etapa"><span class="etapa-periodo">Mês 2 (estimativa)</span><div><h5>Configuração de campos customizados</h5><p>Criação dos campos de segmentação relevantes para a Inpasa (unidade, cargo, senioridade, BP, diretoria).</p><span class="etapa-resp">conjunta</span></div></div>
+<div class="objetivo-etapa"><span class="etapa-periodo">Mês 3 em diante</span><div><h5>Uso contínuo do Analytics pela diretoria e BPs</h5><p>Time de DHO e BPs passam a consultar direto na plataforma, sem depender de planilha de apoio.</p><span class="etapa-resp">Inpasa</span></div></div></div>
+        </div>
+      </div>
+      <div class="approval-outcome">
+        <div class="approval-outcome-title">Estado futuro</div>
+        <div class="approval-outcome-grid">
+          <div class="approval-stage futuro"><h5>Para o RH/DHO</h5><p>DHO responde a uma pergunta da diretoria na hora, filtrando por área, risco ou sucessão, sem depender de compilação manual entre ferramentas diferentes.</p></div>
+          <div class="approval-stage negocio"><h5>Para o negócio</h5><p>Mais velocidade de decisão para uma diretoria nova que já cobra dados hoje, apoiando a maturidade de governança que a empresa está construindo (caso do Conselho Consultivo recém-criado).</p></div>
+        </div>
+      </div>
+    </div>
       </div>
     </section>
 
@@ -668,10 +764,10 @@
       <p class="section-sub">Jornada de compra da Inpasa</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Realizada</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Murilo Liberato e Leandro Brito</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Sexta-feira, 9h às 10h (horário de Brasília)</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Realizada</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Murilo e Leandro confirmaram que a impulseup atende o projeto</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Até segunda-feira</span><div><span class="tl-desc">Envio da proposta comercial</span><div class="tl-meta">Retorno combinado com Murilo até a sexta-feira seguinte</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Alinhamento interno na Inpasa</span><div class="tl-meta">Murilo e Leandro avaliam a proposta e levantam o fluxo interno</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span><div class="tl-meta">Decisão técnica de Murilo e Leandro, sem necessidade de apresentação formal à diretoria</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Revisão jurídica</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Assinatura e kickoff</span></div></div>
       </div>
