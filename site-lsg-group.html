@@ -862,38 +862,73 @@
       <h1 class="section-title">Proposta comercial</h1>
       <p class="section-sub">Investimento para a LSG Group</p>
 
-      <div class="empty-state" id="tab7EmptyState">
+      <div class="empty-state" id="tab7EmptyState" style="display:none;">
         <i class="fa-regular fa-file-invoice-dollar"></i>
         <h3>Aba liberada após o closer informar a proposta comercial</h3>
         <p>Assim que o closer passar os valores definidos na ferramenta de precificação da impulseup, esta aba mostra o investimento, os módulos e serviços incluídos e o detalhamento de valores.</p>
       </div>
 
-      <div id="tab7ProposalWrap" style="display:none;">
+      <div id="tab7ProposalWrap" style="display:block;">
         <div class="investment-hero">
-          <div class="label">Investimento mensal</div>
-          <div class="value">R$ 12.400/mês</div>
+          <div class="label">Investimento mensal (12x)</div>
+          <div class="value">R$ 2.833,33</div>
         </div>
-        <p class="investment-hero-meta">Investimento total do contrato: R$ 148.800 · Validade da proposta: 15 dias · Duração do contrato: 12 meses</p>
+        <p class="investment-hero-meta">Investimento total do contrato: R$ 34.000,00 (de R$ 41.688,00) · Economia de R$ 7.688,00 (18,4%) · Validade da proposta: 5 dias · Duração do contrato: 12 meses · 100 usuários</p>
 
-        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos</div>
+        <div class="block-title"><i class="fa-regular fa-layer-group"></i>6 módulos de DHO em uma única plataforma</div>
+        <p style="font-size:13.5px;color:var(--color-fg-muted);margin:-6px 0 16px;max-width:640px;">Você não está contratando uma ferramenta de avaliação isolada. É todo o ecossistema de gestão de desempenho da Sky rodando em um único lugar: avaliação, metas, pesquisas, aprendizagem, remuneração variável e desenvolvimento, para os mesmos 100 usuários, sem sistemas paralelos nem planilhas soltas.</p>
         <div class="module-list">
           <div class="module-row">
-            <div class="module-row-main"><h4>Avaliação de Desempenho</h4><p>Ciclos completos com nine-box e PDI integrado.</p></div>
-            <div class="module-row-users">500 usuários</div>
+            <div class="module-row-main"><h4>Avaliações</h4><p>Ciclos 90/180/360 graus, avaliação de experiência e feedback contínuo.</p></div>
+            <div class="module-row-users">100 usuários</div>
           </div>
           <div class="module-row">
-            <div class="module-row-main"><h4>Plano de Serviço III</h4><p>Implementação assistida por especialista em DHO.</p></div>
-            <div class="module-row-users"></div>
+            <div class="module-row-main"><h4>Pesquisas</h4><p>Clima, pulso e engajamento.</p></div>
+            <div class="module-row-users">100 usuários</div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Metas e OKRs</h4><p>Indicadores e gestão estratégica.</p></div>
+            <div class="module-row-users">100 usuários</div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Learning</h4><p>Educação corporativa.</p></div>
+            <div class="module-row-users">100 usuários</div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Remuneração Variável</h4><p>Bônus, PPR, PLR e outros.</p></div>
+            <div class="module-row-users">100 usuários</div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Desenvolvimento</h4><p>PDIs, feedbacks, reuniões 1:1 e ações e iniciativas.</p></div>
+            <div class="module-row-users" style="color:var(--color-primary);font-weight:700;">Incluso</div>
+          </div>
+        </div>
+
+        <div class="block-title"><i class="fa-regular fa-rocket"></i>Serviços de ativação e sucesso</div>
+        <div class="module-list">
+          <div class="module-row">
+            <div class="module-row-main"><h4>Plano de Serviço II</h4><p>Acompanhamento especializado incluído para Avaliação de Desempenho, Metas, Pesquisas e Remuneração Variável, do onboarding ao primeiro ciclo.</p></div>
+            <div class="module-row-users" style="color:var(--color-primary);font-weight:700;">Incluso</div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Treinamento</h4><p>3 horas de capacitação dedicada ao time da Sky para acelerar a adoção da plataforma.</p></div>
+            <div class="module-row-users">R$ 1.500,00</div>
           </div>
         </div>
 
         <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
         <table class="rfp-table" id="proposalValuesTable">
-          <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
-          <tr><td><div class="feat-name">Avaliação de Desempenho</div></td><td class="check-cell">500</td><td class="check-cell">R$ 22,00</td><td class="check-cell">R$ 11.000,00</td><td class="check-cell">—</td></tr>
-          <tr><td><div class="feat-name">Plano de Serviço III</div></td><td class="check-cell">—</td><td class="check-cell">R$ 16.800,00</td><td class="check-cell">—</td><td class="check-cell">Cobrança única</td></tr>
-          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 148.800</td></tr>
+          <tr><th>Módulo</th><th>Usuários</th><th>Valor unitário</th><th>Total mensal</th></tr>
+          <tr><td><div class="feat-name">Avaliações</div></td><td class="check-cell">100</td><td class="check-cell">R$ 9,92</td><td class="check-cell">R$ 991,95</td></tr>
+          <tr><td><div class="feat-name">Pesquisas</div></td><td class="check-cell">100</td><td class="check-cell">R$ 2,33</td><td class="check-cell">R$ 233,27</td></tr>
+          <tr><td><div class="feat-name">Metas e OKRs</div></td><td class="check-cell">100</td><td class="check-cell">R$ 4,34</td><td class="check-cell">R$ 433,65</td></tr>
+          <tr><td><div class="feat-name">Learning</div></td><td class="check-cell">100</td><td class="check-cell">R$ 2,45</td><td class="check-cell">R$ 244,74</td></tr>
+          <tr><td><div class="feat-name">Remuneração Variável</div></td><td class="check-cell">100</td><td class="check-cell">R$ 1,80</td><td class="check-cell">R$ 179,73</td></tr>
+          <tr><td><div class="feat-name">Desenvolvimento</div></td><td class="check-cell">100</td><td class="check-cell">—</td><td class="check-cell">Incluso</td></tr>
+          <tr><td><div class="feat-name">Treinamento (3h)</div></td><td class="check-cell">—</td><td class="check-cell">—</td><td class="check-cell">R$ 1.500,00 (cobrança única)</td></tr>
+          <tr><td colspan="3" style="text-align:right;font-weight:600;">Investimento total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 34.000,00</td></tr>
         </table>
+        <p style="font-size:12.5px;color:var(--color-fg-muted);margin-top:8px;">Valor de tabela para os 6 módulos separadamente: R$ 41.688,00/ano. Na proposta consolidada, a Sky economiza R$ 7.688,00 (18,4%) por levar o ecossistema completo, e ainda tem o Plano de Serviço II incluso sem custo adicional.</p>
 
         <label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
           <div id="proposalPlaceholder">
