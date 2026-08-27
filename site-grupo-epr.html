@@ -677,38 +677,74 @@
       <h1 class="section-title">Proposta comercial</h1>
       <p class="section-sub">Investimento para a Grupo EPR</p>
 
-      <div class="empty-state" id="tab7EmptyState">
+      <div class="empty-state" id="tab7EmptyState" style="display:none;">
         <i class="fa-regular fa-file-invoice-dollar"></i>
         <h3>Aba liberada após o closer informar a proposta comercial</h3>
         <p>Assim que o closer passar os valores definidos na ferramenta de precificação da impulseup, esta aba mostra o investimento, os módulos e serviços incluídos e o detalhamento de valores.</p>
       </div>
 
-      <div id="tab7ProposalWrap" style="display:none;">
-        <div class="investment-hero">
-          <div class="label">Investimento mensal</div>
-          <div class="value">R$ 12.400/mês</div>
-        </div>
-        <p class="investment-hero-meta">Investimento total do contrato: R$ 148.800 · Validade da proposta: 15 dias · Duração do contrato: 12 meses</p>
-
-        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos</div>
-        <div class="module-list">
-          <div class="module-row">
-            <div class="module-row-main"><h4>Avaliação de Desempenho</h4><p>Ciclos completos com nine-box e PDI integrado.</p></div>
-            <div class="module-row-users">500 usuários</div>
+      <div id="tab7ProposalWrap">
+        <div class="cenarios-comparativo">
+          <div class="cards">
+            <div class="card">
+              <div class="card-header">
+                <div class="eyebrow-card">Cenário 1</div>
+                <div class="card-title">1.800 pessoas</div>
+              </div>
+              <div class="card-body">
+                <div class="price-line"><span class="price-value">R$ 13.491,80</span><span class="price-unit">/ parcela (6x)</span></div>
+                <div class="price-base">Investimento total do contrato: R$ 80.950,80 <s>R$ 115.644,00</s> · economia de R$ 34.693,20 (30%)</div>
+                <hr class="divider">
+                <div class="inclui-label">Inclui</div>
+                <p class="module-desc"><b>Avaliações</b> &mdash; Ciclos 90/180/360°, Avaliação de Experiência e Feedback contínuo.</p>
+                <p class="module-desc"><b>Desenvolvimento</b> &mdash; PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas.</p>
+                <ul class="check-list">
+                  <li><span class="tick">&#10003;</span>1.800 créditos de Avaliações</li>
+                  <li><span class="tick">&#10003;</span>Desenvolvimento incluso para os 3.000 usuários</li>
+                  <li><span class="tick">&#10003;</span>Plano de Serviço III &mdash; ativação e sucesso com Avaliação de Desempenho</li>
+                </ul>
+                <details class="detalhamento">
+                  <summary>Ver detalhamento</summary>
+                  <table class="detalhamento-table">
+                    <thead><tr><th>Item</th><th>Quantidade</th><th>Valor unitário</th><th>Valor total</th></tr></thead>
+                    <tbody>
+                      <tr><td>Avaliações</td><td>1.800</td><td>R$ 42,06</td><td>R$ 75.700,80</td></tr>
+                      <tr><td>Desenvolvimento</td><td>3.000</td><td>Incluso</td><td>Incluso</td></tr>
+                      <tr><td>Plano de Serviço III</td><td>—</td><td>Valor único</td><td>R$ 5.250,00</td></tr>
+                    </tbody>
+                  </table>
+                </details>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="eyebrow-card">Cenário 2</div>
+                <div class="card-title">3.000 pessoas</div>
+              </div>
+              <div class="card-body">
+                <div class="price-line"><span class="price-value">R$ 18.746,00</span><span class="price-unit">/ parcela (6x)</span></div>
+                <div class="price-base">Investimento total do contrato: R$ 112.476,00 <s>R$ 160.680,00</s> · economia de R$ 48.204,00 (30%)</div>
+                <hr class="divider">
+                <div class="inclui-label">Inclui tudo do Cenário 1, mais</div>
+                <ul class="check-list">
+                  <li><span class="tick">&#10003;</span>Avaliações ampliada para os 3.000 colaboradores, cobrindo também a operação da nova concessão da Regis</li>
+                </ul>
+                <details class="detalhamento">
+                  <summary>Ver detalhamento</summary>
+                  <table class="detalhamento-table">
+                    <thead><tr><th>Item</th><th>Quantidade</th><th>Valor unitário</th><th>Valor total</th></tr></thead>
+                    <tbody>
+                      <tr><td>Avaliações</td><td>3.000</td><td>R$ 35,74</td><td>R$ 107.226,00</td></tr>
+                      <tr><td>Desenvolvimento</td><td>3.000</td><td>Incluso</td><td>Incluso</td></tr>
+                      <tr><td>Plano de Serviço III</td><td>—</td><td>Valor único</td><td>R$ 5.250,00</td></tr>
+                    </tbody>
+                  </table>
+                </details>
+              </div>
+            </div>
           </div>
-          <div class="module-row">
-            <div class="module-row-main"><h4>Plano de Serviço III</h4><p>Implementação assistida por especialista em DHO.</p></div>
-            <div class="module-row-users"></div>
-          </div>
         </div>
-
-        <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
-        <table class="rfp-table" id="proposalValuesTable">
-          <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
-          <tr><td><div class="feat-name">Avaliação de Desempenho</div></td><td class="check-cell">500</td><td class="check-cell">R$ 22,00</td><td class="check-cell">R$ 11.000,00</td><td class="check-cell">—</td></tr>
-          <tr><td><div class="feat-name">Plano de Serviço III</div></td><td class="check-cell">—</td><td class="check-cell">R$ 16.800,00</td><td class="check-cell">—</td><td class="check-cell">Cobrança única</td></tr>
-          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 148.800</td></tr>
-        </table>
+        <p class="investment-hero-meta">Validade da proposta: 5 dias · Duração do contrato: 12 meses</p>
 
         <label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
           <div id="proposalPlaceholder">
