@@ -579,18 +579,18 @@
     </section>
 
     <!-- ABA 3 — DEMONSTRAÇÃO -->
-    <section class="tab-panel" id="tab-3">
+        <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Allcare</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content" style="display:block;">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">R$ 35 mil/ano</div><div class="label">pago hoje à Apdata só de mensalidade e implantação, fora horas de consultoria variáveis</div></div>
+          <div class="stat-card"><div class="num">2x ao ano</div><div class="label">frequência de uso da plataforma atual pelo RH — insuficiente para dominar a ferramenta</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -598,79 +598,359 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Qualquer ajuste de parametrização depende de chamado e consultoria paga</td><td class="feat-name">Avaliação de Desempenho</td><td>Configuração autônoma pelo próprio RH, sem depender de chamado técnico</td></tr>
+              <tr><td>Resultado bruto, sem calibração, com viés já percebido pelo RH</td><td class="feat-name">Matriz n-Box</td><td>Calibração de resultados por quadrante, competência ou questão aberta antes de fechar o ciclo</td></tr>
+              <tr><td>Sem mapeamento de sucessão, decisão de carreira subjetiva</td><td class="feat-name">Matriz n-Box</td><td>Matriz cruzando potencial de entregas e competências para identificar sucessores</td></tr>
+              <tr><td>PDI montado pelo gestor, sem IA nativa</td><td class="feat-name">PDI</td><td>Colaborador constrói o próprio PDI com apoio de biblioteca e IA a partir do resultado da avaliação</td></tr>
             </tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
-          <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
-               Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
-
-               Caso 1 — url_video já veio do closer (link de Drive ou YouTube) e foi reconhecida:
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap">
-                   <iframe src="{{embed_url}}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                 </div>
-               </div>
-
-               Caso 2 — url_video veio mas não foi possível gerar embed (ex: link de pasta do Drive,
-               sem permissão de embed): mostrar card de link em vez de iframe.
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-link-card">
-                   <i class="fa-brands fa-google-drive"></i>
-                   <p>Vídeo disponível para acesso externo</p>
-                   <a href="{{url_video}}" target="_blank" rel="noopener" class="video-link-btn">Assistir vídeo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
-               </div>
-
-               Caso 3 — vídeo ainda sem url_video: slot de colagem manual, para o closer colar o link
-               direto no site (fica salvo no localStorage do navegador via saveImage/loadStore).
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap video-embed-empty" data-video-idx="{{indice}}">
-                   <label class="video-paste-label">
-                     <i class="fa-regular fa-circle-play"></i>
-                     <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
-                   </label>
-                   <input type="text" class="video-url-input" data-video-idx="{{indice}}" placeholder="https://...">
-                 </div>
-               </div> -->
+          <div class="video-card">
+            <h4>Demonstração personalizada Allcare</h4>
+            <p>Vídeo será anexado pelo closer após a reunião de Demo real.</p>
+            <div class="video-embed-wrap video-embed-empty" data-video-idx="0">
+              <label class="video-paste-label">
+                <i class="fa-regular fa-circle-play"></i>
+                <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
+              </label>
+              <input type="text" class="video-url-input" data-video-idx="0" placeholder="https://...">
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ABA 4 — DIFERENCIAIS IMPULSEUP -->
-    <section class="tab-panel" id="tab-4">
+        <section class="tab-panel" id="tab-4">
       <h1 class="section-title">Diferenciais impulseup</h1>
       <p class="section-sub">Comparativo com base nos critérios mais importantes para este projeto</p>
-      <div class="empty-state" id="tab4EmptyState">
+      <div class="empty-state" id="tab4EmptyState" style="display:none;">
         <i class="fa-regular fa-list-check"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que o closer finalizar o diagnóstico, esta aba mostra o comparativo entre a impulseup e os concorrentes identificados na conversa. Se nenhum concorrente específico for mencionado, o comparativo é feito contra "Outras soluções", com resultado mediano.</p>
       </div>
-      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:none;">
+      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:block;">
         <table class="rfp-table" id="tab4Table">
-          <!-- Preenchido pela skill site-cliente-impulseup a partir da transcrição da reunião de Diagnóstico e de references/rfp-criterios.json.
-               Cada critério exibe sua tag (campo "tags" do JSON) junto ao nome, ex:
-               <tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td>...</tr> -->
+          <thead>
+            <tr><th>Critério</th><th class="iup-col">impulseup</th><th>Feedz</th><th>Qulture.Rocks</th></tr>
+          </thead>
+          <tbody>
+              <tr><td><div class="feat-name">Controle de visibilidade e privilégios administrativos</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+              <tr><td><div class="feat-name">Contratação modular, conforme necessidade</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+              <tr><td><div class="feat-name">Personalização da escala de resposta (tamanho, valores, nomes), por competência ou grupo</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+              <tr><td><div class="feat-name">Criação de campos customizados para análises e filtros</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+              <tr><td><div class="feat-name">Atendimento e suporte para o usuário final</div><span class="feat-tag">Atendimento consultivo</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+              <tr><td><div class="feat-name">Treinamento para gestores</div><span class="feat-tag">Atendimento consultivo</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+              <tr><td><div class="feat-name">Equipe de implementação com psicólogos organizacionais</div><span class="feat-tag">Atendimento consultivo</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+              <tr><td><div class="feat-name">Calibração de resultados (por quadrante, seção ou competência)</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+              <tr><td><div class="feat-name">Permite calibrar respostas de questões abertas</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+              <tr><td><div class="feat-name">Planejamento de carreira e sucessão</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+              <tr><td><div class="feat-name">Permite construir qualquer formato de matriz (2x2, 3x3, 4x1 etc.)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+              <tr><td><div class="feat-name">Conexão de gaps da avaliação com PDI e cursos de desenvolvimento</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+              <tr><td><div class="feat-name">Construção de PDI com biblioteca e IA</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+              <tr><td><div class="feat-name">Ajuda de IA para escrever feedbacks</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+              <tr><td><div class="feat-name">Inteligência Artificial para insights automáticos</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+              <tr><td><div class="feat-name">Alinhamento de metas e objetivos</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+          </tbody>
         </table>
       </div>
     </section>
 
     <!-- ABA 5 — APROVAÇÃO E PLANO DE AÇÃO -->
-    <section class="tab-panel" id="tab-5">
+        <section class="tab-panel" id="tab-5">
       <h1 class="section-title">Aprovação e plano de ação</h1>
       <p class="section-sub">Objetivos de negócio da Allcare, o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
+      <div class="empty-state" id="tab5EmptyState" style="display:none;">
         <i class="fa-regular fa-clipboard"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
       </div>
-      <div id="tab5PlanoWrap" style="display:none;">
-        <!--OBJETIVOS-->
+      <div id="tab5PlanoWrap" style="display:block;">
+        <p style="font-size:11.5px;color:var(--color-fg-muted);margin-bottom:16px;"><i class="fa-regular fa-clock"></i> Os prazos abaixo são estimativa padrão de onboarding, ainda sem cronograma comercial/CS confirmado para a Allcare.</p>
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <span class="objetivo-num">1</span>
+            <div>
+              <h3>Ganhar autonomia operacional e reduzir dependência de terceiros</h3>
+              <p>Trazer para dentro do RH a capacidade de configurar e ajustar o ciclo de avaliação sem depender de chamado ou consultoria paga.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>Qualquer ajuste, de nota de corte a template de e-mail de cobrança, depende de chamado e consultoria paga da Apdata. A plataforma é usada só duas vezes por ano e nunca se torna intuitiva, e hoje apenas Jessica domina as diretrizes e a parametrização do processo.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>RH configura o ciclo sozinho, sem chamado nem consultoria paga, e mais de uma pessoa do time consegue operar o processo de ponta a ponta.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-flag-checkered"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p style="color:#fff;font-size:12px;">Zero chamados de consultoria paga para ajustes de parametrização em um ciclo completo.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+            <div class="objetivo-etapa">
+              <span class="objetivo-etapa-dot">1</span><span class="objetivo-etapa-line"></span>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 1 (estimativa)</span>
+                <h4>Parametrização assistida do primeiro ciclo</h4>
+                <p>Consultor impulseup configura, junto com o RH, competências, escalas e regras de negócio do primeiro ciclo.</p>
+                <span class="objetivo-etapa-resp">impulseup</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <span class="objetivo-etapa-dot">2</span><span class="objetivo-etapa-line"></span>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 1–2 (estimativa)</span>
+                <h4>Migração do histórico da Apdata</h4>
+                <p>Histórico de avaliações e feedbacks já rodados é migrado para a nova plataforma.</p>
+                <span class="objetivo-etapa-resp">impulseup</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <span class="objetivo-etapa-dot">3</span><span class="objetivo-etapa-line"></span>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 2 (estimativa)</span>
+                <h4>Treinamento do time de RH</h4>
+                <p>Treinamento cobre não só Jessica, mas o restante do time de RH/DHO envolvido no processo.</p>
+                <span class="objetivo-etapa-resp">impulseup</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <span class="objetivo-etapa-dot">4</span>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 3 em diante (estimativa)</span>
+                <h4>Acompanhamento consultivo contínuo</h4>
+                <p>Acompanhamento recorrente para consolidar a autonomia do time nas configurações do dia a dia.</p>
+                <span class="objetivo-etapa-resp">conjunta</span>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-arrow-trend-up"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro">
+                <span class="approval-stage-label">Para o RH/DHO</span>
+                <p>RH ajusta sozinho notas de corte, templates de cobrança e controles de acesso, e mais de uma pessoa do time sabe operar o ciclo de ponta a ponta, sem depender só da Jessica.</p>
+              </div>
+              <div class="approval-stage negocio">
+                <span class="approval-stage-label">Impacto no negócio</span>
+                <p>Libera o RH da rotina hoje descrita como 100% operacional durante o mês de ciclo, abrindo espaço para atuação estratégica em desenvolvimento de pessoas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <span class="objetivo-num">2</span>
+            <div>
+              <h3>Trazer confiabilidade ao resultado da avaliação com calibração</h3>
+              <p>Adicionar uma camada de calibração ao resultado da avaliação, hoje bruto e sujeito a viés.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>O resultado hoje é bruto — só a visão do gestor — e Jessica já identificou padrões de nota recorrentes que não fazem sentido frente ao comportamento real do colaborador, sem forma de corrigir isso na plataforma atual.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>Resultados passam por uma camada de calibração antes de virar decisão de carreira.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-flag-checkered"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p style="color:#fff;font-size:12px;">Resultados calibrados publicados a cada ciclo, com registro dos ajustes feitos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+            <div class="objetivo-etapa">
+              <span class="objetivo-etapa-dot">1</span><span class="objetivo-etapa-line"></span>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 2 (estimativa)</span>
+                <h4>Configuração da calibração de resultados</h4>
+                <p>Definição de como a calibração será aplicada, por quadrante, seção ou competência.</p>
+                <span class="objetivo-etapa-resp">impulseup</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <span class="objetivo-etapa-dot">2</span>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 2 em diante (estimativa)</span>
+                <h4>Aplicação da calibração a cada ciclo</h4>
+                <p>RH conduz a calibração com apoio consultivo até ganhar autonomia total no processo.</p>
+                <span class="objetivo-etapa-resp">conjunta</span>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-arrow-trend-up"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro">
+                <span class="approval-stage-label">Para o RH/DHO</span>
+                <p>RH consegue calibrar resultados por quadrante, seção ou competência, incluindo respostas de questões abertas, antes de fechar o ciclo.</p>
+              </div>
+              <div class="approval-stage negocio">
+                <span class="approval-stage-label">Impacto no negócio</span>
+                <p>Reduz o viés identificado por Jessica em padrões de nota recorrentes, tornando as decisões de carreira mais confiáveis para a diretoria.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <span class="objetivo-num">3</span>
+            <div>
+              <h3>Estruturar o mapeamento de sucessão</h3>
+              <p>Sair da opinião subjetiva do gestor para um mapeamento formal de sucessores.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>A Allcare já perdeu colaboradores considerados talentos por falta de plano de carreira estruturado. Hoje a identificação de quem está pronto para crescer é opinião subjetiva do gestor, sem sucessão mapeada — descrito pela própria superintendência de RH como o objetivo mais ambicioso da área.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>RH consegue visualizar e mapear formalmente sucessores antes de perder talentos.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-flag-checkered"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p style="color:#fff;font-size:12px;">Matriz de sucessão publicada e revisada a cada ciclo, com sucessores identificados para posições-chave.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+            <div class="objetivo-etapa">
+              <span class="objetivo-etapa-dot">1</span><span class="objetivo-etapa-line"></span>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 3 (estimativa)</span>
+                <h4>Configuração da matriz de performance/potencial</h4>
+                <p>Matriz é construída no formato que fizer sentido para a Allcare, cruzando potencial de entregas e competências.</p>
+                <span class="objetivo-etapa-resp">impulseup</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <span class="objetivo-etapa-dot">2</span>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 4 (estimativa)</span>
+                <h4>Primeiro ciclo de mapeamento de sucessores</h4>
+                <p>RH conduz, com apoio consultivo, o primeiro mapeamento formal de sucessores a partir da matriz.</p>
+                <span class="objetivo-etapa-resp">conjunta</span>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-arrow-trend-up"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro">
+                <span class="approval-stage-label">Para o RH/DHO</span>
+                <p>RH constrói uma matriz cruzando potencial de entregas e competências, no formato que fizer sentido para a Allcare, para identificar sucessores.</p>
+              </div>
+              <div class="approval-stage negocio">
+                <span class="approval-stage-label">Impacto no negócio</span>
+                <p>Reduz o risco de perder talentos por falta de plano de carreira, causa já registrada de saída de colaboradores considerados talentos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <span class="objetivo-num">4</span>
+            <div>
+              <h3>Amadurecer a avaliação com metas, PDI protagonizado pelo colaborador e IA</h3>
+              <p>Evoluir de uma avaliação só por competências para um processo que cruza metas, distribui a responsabilidade do PDI e usa IA nativa da plataforma.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>Hoje a avaliação é só por competências, o PDI é montado pelo gestor (não pelo colaborador), e nenhuma etapa do processo conta com IA — Jessica chegou a montar, por fora da plataforma, um agente próprio para sugerir plano de ação a partir do resultado da avaliação.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>Avaliação cruza metas e competências, e o PDI é construído pelo colaborador com apoio de IA nativa da plataforma.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-flag-checkered"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p style="color:#fff;font-size:12px;">Percentual de colaboradores com PDI ativo e atualizado a cada ciclo.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+            <div class="objetivo-etapa">
+              <span class="objetivo-etapa-dot">1</span><span class="objetivo-etapa-line"></span>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 3–4 (estimativa)</span>
+                <h4>Configuração de metas alinhadas à avaliação</h4>
+                <p>Estrutura de metas é definida para complementar a avaliação por competências já existente.</p>
+                <span class="objetivo-etapa-resp">impulseup</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <span class="objetivo-etapa-dot">2</span><span class="objetivo-etapa-line"></span>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 4 (estimativa)</span>
+                <h4>Ativação do PDI com IA para o colaborador</h4>
+                <p>Colaborador passa a construir o próprio PDI com apoio de biblioteca e IA a partir do resultado da avaliação.</p>
+                <span class="objetivo-etapa-resp">impulseup</span>
+              </div>
+            </div>
+            <div class="objetivo-etapa">
+              <span class="objetivo-etapa-dot">3</span>
+              <div class="objetivo-etapa-content">
+                <span class="objetivo-etapa-period">Mês 4 em diante (estimativa)</span>
+                <h4>Acompanhamento do uso do PDI pelos colaboradores</h4>
+                <p>RH acompanha adesão e execução dos PDIs ao longo do ciclo.</p>
+                <span class="objetivo-etapa-resp">conjunta</span>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-arrow-trend-up"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro">
+                <span class="approval-stage-label">Para o RH/DHO</span>
+                <p>Colaborador cria o próprio PDI com apoio de biblioteca e IA a partir do resultado da avaliação, dentro da mesma plataforma, sem depender de agente externo.</p>
+              </div>
+              <div class="approval-stage negocio">
+                <span class="approval-stage-label">Impacto no negócio</span>
+                <p>Substitui a solução paralela que a Jessica precisou construir por fora da plataforma, e distribui a responsabilidade de carreira entre colaborador e gestor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
