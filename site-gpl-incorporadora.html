@@ -789,18 +789,106 @@
       <h1 class="section-title">Processo de implementação</h1>
       <p class="section-sub">Como será a jornada de implementação da GPL Incorporadora com a impulseup</p>
 
-      <div class="empty-state" id="tab6EmptyState">
+      <div class="empty-state" id="tab6EmptyState" style="display:none;">
         <i class="fa-regular fa-map"></i>
         <h3>Aba liberada após o closer confirmar cluster, módulos e Weeklies (se Enterprise)</h3>
         <p>Assim que o cluster de implementação (Low/Mid, High ou Enterprise) e os módulos da proposta forem confirmados, esta aba mostra a cadeia de implementação de cada módulo: etapas e responsáveis do nosso lado.</p>
       </div>
 
-      <div id="tab6ProcessWrap" style="display:none;">
+      <div id="tab6ProcessWrap" style="display:block;">
         <!--IMPL_PROCESSO-->
+        <div class="approval-outcome" style="margin-bottom:24px;">
+          <div class="approval-outcome-title"><i class="fa-solid fa-flag"></i>Marcos do cronograma</div>
+          <div class="approval-outcome-grid">
+            <div class="approval-stage futuro"><span class="approval-stage-label">Assinatura</span><p>Prevista para o fim de setembro, no máximo início de outubro.</p></div>
+            <div class="approval-stage negocio"><span class="approval-stage-label">Configuração e treinamento</span><p>Todo o restante do ano (out/dez) é dedicado só a isso — o ciclo de avaliação ainda não roda.</p></div>
+          </div>
+          <div class="approval-outcome-grid" style="margin-top:12px;">
+            <div class="approval-stage futuro"><span class="approval-stage-label">Lançamento do ciclo</span><p>A avaliação é lançada para os colaboradores só em janeiro.</p></div>
+            <div class="approval-stage negocio"><span class="approval-stage-label">SLA do cliente</span><p>Prazo médio de 5 dias úteis para cada atividade sob responsabilidade da GPL Incorporadora.</p></div>
+          </div>
+        </div>
+
+        <div style="overflow-x:auto;margin-bottom:28px;">
+          <table class="rfp-table" id="tab6CronogramaTable">
+            <thead>
+              <tr><th>Fase</th><th>Etapa</th><th>Tipo</th><th>Responsável</th><th>Quando</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="6" style="font-weight:700;vertical-align:top;">Jornada inicial<br><span style="font-weight:400;font-size:11px;color:var(--color-fg-muted);">Setembro/Outubro</span></td>
+                <td><div class="feat-name">Planejamento inicial</div></td><td><span class="feat-tag">Reunião</span></td><td class="check-cell">CSI + CSM + cliente</td><td class="check-cell">Até 5 dias úteis após a assinatura</td>
+              </tr>
+              <tr>
+                <td><div class="feat-name">Preenchimento da planilha de usuários</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">Cliente</td><td class="check-cell">SLA cliente: até 5 dias úteis</td>
+              </tr>
+              <tr>
+                <td><div class="feat-name">Importação da planilha de usuários</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">Suporte</td><td class="check-cell">Conforme SLA impulseup</td>
+              </tr>
+              <tr>
+                <td><div class="feat-name">Workshop do sistema</div></td><td><span class="feat-tag">Reunião</span></td><td class="check-cell">CSI + cliente</td><td class="check-cell">2ª quinzena de outubro</td>
+              </tr>
+              <tr>
+                <td><div class="feat-name">Estratégia de 1º acesso</div></td><td><span class="feat-tag">Reunião</span></td><td class="check-cell">CSI + cliente</td><td class="check-cell">2ª quinzena de outubro</td>
+              </tr>
+              <tr>
+                <td><div class="feat-name">Lançamento da plataforma</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">CSI + cliente</td><td class="check-cell">Final de outubro</td>
+              </tr>
+              <tr style="background:var(--color-bg-alt);">
+                <td rowspan="7" style="font-weight:700;vertical-align:top;background:var(--color-bg-alt);">Implementação da avaliação de desempenho<br><span style="font-weight:400;font-size:11px;color:var(--color-fg-muted);">Novembro/Dezembro — configuração e treinamento</span></td>
+                <td><div class="feat-name">Preencher formulário de requisitos</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">Cliente</td><td class="check-cell">SLA cliente: até 5 dias úteis</td>
+              </tr>
+              <tr style="background:var(--color-bg-alt);">
+                <td><div class="feat-name">Definição da etapa 4</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">Cliente</td><td class="check-cell">SLA cliente: até 5 dias úteis</td>
+              </tr>
+              <tr style="background:var(--color-bg-alt);">
+                <td><div class="feat-name">Preenchimento da base de competências</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">Cliente</td><td class="check-cell">SLA cliente: até 5 dias úteis</td>
+              </tr>
+              <tr style="background:var(--color-bg-alt);">
+                <td><div class="feat-name">Importação da base de competências</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">Suporte</td><td class="check-cell">Conforme SLA impulseup</td>
+              </tr>
+              <tr style="background:var(--color-bg-alt);">
+                <td><div class="feat-name">Validação final da avaliação</div></td><td><span class="feat-tag">Reunião</span></td><td class="check-cell">CSI + cliente</td><td class="check-cell">Dezembro</td>
+              </tr>
+              <tr style="background:var(--color-bg-alt);">
+                <td><div class="feat-name">Sensibilização</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">Cliente</td><td class="check-cell">Dezembro, antes do recesso</td>
+              </tr>
+              <tr style="background:#FBEAF0;">
+                <td><div class="feat-name" style="color:var(--color-primary);">Lançamento do ciclo de avaliação</div></td><td><span class="feat-tag">Marco</span></td><td class="check-cell">GPL Incorporadora</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">Janeiro</td>
+              </tr>
+              <tr>
+                <td rowspan="8" style="font-weight:700;vertical-align:top;">Acompanhamento do ciclo<br><span style="font-weight:400;font-size:11px;color:var(--color-fg-muted);">Duração depende do ritmo do cliente</span></td>
+                <td><div class="feat-name">Analytics</div></td><td><span class="feat-tag">Reunião</span></td><td class="check-cell">CSI + cliente</td><td class="check-cell">Sem data fixa</td>
+              </tr>
+              <tr>
+                <td><div class="feat-name">Envio dos relatórios para gestor</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">CSI + cliente</td><td class="check-cell">Sem data fixa</td>
+              </tr>
+              <tr>
+                <td><div class="feat-name">Comitês de calibração</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">Cliente</td><td class="check-cell">Sem data fixa</td>
+              </tr>
+              <tr>
+                <td><div class="feat-name">Envio da apresentação de resultados</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">CSI</td><td class="check-cell">Sem data fixa</td>
+              </tr>
+              <tr>
+                <td><div class="feat-name">Envio dos relatórios para liderado</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">CSI + cliente</td><td class="check-cell">Sem data fixa</td>
+              </tr>
+              <tr>
+                <td><div class="feat-name">Devolutiva</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">Cliente</td><td class="check-cell">Sem data fixa</td>
+              </tr>
+              <tr>
+                <td><div class="feat-name">Definição dos PDI</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">Cliente</td><td class="check-cell">Sem data fixa</td>
+              </tr>
+              <tr>
+                <td><div class="feat-name">Programa de reconhecimento</div></td><td><span class="additional-status">Atividade</span></td><td class="check-cell">Cliente</td><td class="check-cell">Sem data fixa</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <div class="impl-legend">
-          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#CC0088;"></span>Consultor de implementação</div>
-          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#4B4B8A;"></span>CSI</div>
-          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#111;"></span>Gerente de contas</div>
+          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#CC0088;"></span>Consultor de implementação (CSI)</div>
+          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#4B4B8A;"></span>Suporte técnico — acompanha toda a jornada, do início ao fim</div>
+          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#111;"></span>Gerente de contas (fase de acompanhamento)</div>
         </div>
       </div>
     </section>
@@ -877,9 +965,9 @@
   "investimento": {"parcelaValor": "R$ 1.973,07 a R$ 2.613,57/mês", "duracaoContrato": "12 meses"},
   "cronogramaMacro": [
     {"data": "Ago/Set", "titulo": "Diagnóstico e demonstração da plataforma"},
-    {"data": "Out (1ª semana)", "titulo": "Apresentação e aprovação com a diretoria"},
-    {"data": "Out/Nov", "titulo": "Assinatura, contratação e treinamento das lideranças"},
-    {"data": "Jan", "titulo": "Primeiro ciclo de avaliação de desempenho na plataforma"}
+    {"data": "Fim de set/início de out", "titulo": "Assinatura do contrato"},
+    {"data": "Out/Dez", "titulo": "Configuração da plataforma e treinamento das lideranças"},
+    {"data": "Jan", "titulo": "Lançamento do ciclo de avaliação de desempenho"}
   ]
 }
 </script>
