@@ -580,6 +580,9 @@
           <div class="stat-card"><div class="num">120</div><div class="label">colaboradores no primeiro ciclo de avaliação (administrativo + engenheiros de obra)</div></div>
           <div class="stat-card"><div class="num">90°</div><div class="label">modelo escolhido para o primeiro ciclo: autoavaliação + avaliação do gestor</div></div>
           <div class="stat-card"><div class="num">2 a 15</div><div class="label">colaboradores por gestor avaliador, perfil bem mesclado entre as equipes</div></div>
+          <div class="stat-card"><div class="num">3</div><div class="label">níveis de acesso configuráveis (administrador, gestor, colaborador), com escopo de visualização por área</div></div>
+          <div class="stat-card"><div class="num">360+</div><div class="label">ações de desenvolvimento já mapeadas na biblioteca de PDI, prontas para uso</div></div>
+          <div class="stat-card"><div class="num">25</div><div class="label">campos customizados de cadastro disponíveis para filtro no Analytics</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -587,10 +590,10 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <tr><td>Sem avaliação de desempenho estruturada; promoção e aumento decididos por planilha, sem critério padronizado entre gestores</td><td class="feat-name">Ciclos de Avaliação de Desempenho</td><td>Fluxo 100% digital de avaliação 90°, com autoavaliação e avaliação do gestor, critérios estruturados e comparáveis entre áreas</td></tr>
-              <tr><td>Sabrina extrai e apresenta os resultados manualmente, sem apoio de relatório automático</td><td class="feat-name">Painéis de acompanhamento</td><td>Relatórios e painéis automáticos de resultado, liberando o RH da extração manual de dados</td></tr>
-              <tr><td>Solides usado para R&amp;S e pesquisa de clima, com falhas de notificação por e-mail e custo em torno de R$ 4 mil/mês</td><td class="feat-name">Pesquisa de Clima</td><td>Pesquisa de clima com envio direto pelo WhatsApp do colaborador, sem depender de e-mail</td></tr>
-              <tr><td>Engenheiros de obra sem prática com avaliações digitais; gestores com times de até 15 pessoas</td><td class="feat-name">Usabilidade / notificação via WhatsApp</td><td>Link da avaliação enviado direto no WhatsApp do colaborador, poucos cliques, alta adesão mesmo no público de campo</td></tr>
+              <tr><td>Sem avaliação de desempenho estruturada; promoção e aumento decididos sem critério padronizado entre gestores</td><td class="feat-name">Ciclos de Avaliação de Desempenho</td><td>Fluxo 100% digital de avaliação 90°, com autoavaliação e avaliação do gestor na mesma tela, e envio direto pelo WhatsApp do colaborador</td></tr>
+              <tr><td>Sabrina extrai e apresenta os resultados manualmente, sem apoio de relatório automático nem visão de quem já respondeu</td><td class="feat-name">Painéis de acompanhamento</td><td>Status em tempo real de envio, resposta, liberação de relatório e confirmação da devolutiva, sem depender de perguntar gestor por gestor</td></tr>
+              <tr><td>Sem mapeamento de sucessão nem visão de risco de saída em posições críticas de obra e liderança</td><td class="feat-name">Eixo de Sucessão</td><td>Gestor mapeia risco de saída, impacto e possíveis sucessores direto na plataforma, sem levantamento manual área por área</td></tr>
+              <tr><td>Devolutiva e construção de PDI dependem só da maturidade individual de cada gestor</td><td class="feat-name">Insights com IA + Biblioteca de PDI</td><td>Resumo automático da avaliação, sugestão de pauta para a devolutiva e biblioteca com mais de 360 ações prontas para montar o PDI</td></tr>
             </tbody>
           </table>
         </div>
@@ -603,16 +606,29 @@
     <section class="tab-panel" id="tab-4">
       <h1 class="section-title">Diferenciais impulseup</h1>
       <p class="section-sub">Comparativo com base nos critérios mais importantes para este projeto</p>
-      <div class="empty-state" id="tab4EmptyState">
+      <div class="empty-state" id="tab4EmptyState" style="display:none;">
         <i class="fa-regular fa-list-check"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que o closer finalizar o diagnóstico, esta aba mostra o comparativo entre a impulseup e os concorrentes identificados na conversa. Se nenhum concorrente específico for mencionado, o comparativo é feito contra "Outras soluções", com resultado mediano.</p>
       </div>
-      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:none;">
+      <p class="section-sub" style="margin-top:-8px;margin-bottom:24px;">A GPL usa hoje a Sólides apenas para R&amp;S — sem uma base de comparação direta em avaliação de desempenho, o quadro abaixo mostra os requisitos que a impulseup entrega para os desafios mapeados no Diagnóstico.</p>
+      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:block;">
         <table class="rfp-table" id="tab4Table">
-          <!-- Preenchido pela skill site-cliente-impulseup a partir da transcrição da reunião de Diagnóstico e de references/rfp-criterios.json.
-               Cada critério exibe sua tag (campo "tags" do JSON) junto ao nome, ex:
-               <tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td>...</tr> -->
+          <thead>
+            <tr><th>Critério</th><th class="iup-col check-cell">impulseup</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><div class="feat-name">Envio de avaliações por SMS e WhatsApp</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+            <tr><td><div class="feat-name">Gestores acompanham o status das respostas de suas equipes</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+            <tr><td><div class="feat-name">Análises avançadas com filtros customizados</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+            <tr><td><div class="feat-name">Planejamento de carreira e sucessão</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+            <tr><td><div class="feat-name">Inteligência Artificial para insights automáticos</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+            <tr><td><div class="feat-name">Perfil 360 (todas as informações do colaborador em uma única página)</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+            <tr><td><div class="feat-name">Biblioteca de ações de desenvolvimento personalizada</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+            <tr><td><div class="feat-name">Construção de PDI com biblioteca e IA</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+            <tr><td><div class="feat-name">Customização dos eixos da matriz n-Box (flexibilidade total de dimensões)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+            <tr><td><div class="feat-name">Salvamento automático de informações</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+          </tbody>
         </table>
       </div>
     </section>
@@ -621,13 +637,150 @@
     <section class="tab-panel" id="tab-5">
       <h1 class="section-title">Aprovação e plano de ação</h1>
       <p class="section-sub">Objetivos de negócio da GPL Incorporadora, o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
+      <div class="empty-state" id="tab5EmptyState" style="display:none;">
         <i class="fa-regular fa-clipboard"></i>
         <h3>Aba liberada após a reunião de Diagnóstico</h3>
         <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
       </div>
-      <div id="tab5PlanoWrap" style="display:none;">
+      <div id="tab5PlanoWrap" style="display:block;">
         <!--OBJETIVOS-->
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <div class="objetivo-num">01</div>
+            <div>
+              <h3>Sair da decisão sem dado para um processo formal de desempenho</h3>
+              <p>A GPL nunca fez uma avaliação de desempenho. Promoção e ajuste salarial hoje não têm critério formal por trás — é a primeira vez que a empresa estrutura isso.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>Nunca houve avaliação de desempenho na história da empresa; decisões de carreira não têm dado formal por trás.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>120 colaboradores (administrativo + engenheiros de obra) passam pelo primeiro ciclo de avaliação 90° a partir de janeiro.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-bullseye"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p>Ciclo completo (envio, resposta, devolutiva) concluído para os 120 colaboradores até o fim do primeiro trimestre de rodagem.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa"><span class="objetivo-etapa-dot">1</span><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Out/Nov</span><h4>Aprovação da diretoria e assinatura</h4><p>Validação do investimento e formalização do contrato.</p><span class="objetivo-etapa-resp">conjunta</span></div></div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa"><span class="objetivo-etapa-dot">2</span><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Nov/Dez</span><h4>Configuração da avaliação</h4><p>Eixos, formulário e campo de comentário obrigatório nos extremos, com apoio do time de implantação.</p><span class="objetivo-etapa-resp">impulseup</span></div></div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa"><span class="objetivo-etapa-dot">3</span><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Dez</span><h4>Treinamento das lideranças</h4><p>Gestores aprendem a aplicar a avaliação e conduzir a devolutiva.</p><span class="objetivo-etapa-resp">impulseup</span></div></div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa"><span class="objetivo-etapa-dot">4</span><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Jan em diante</span><h4>Primeiro ciclo roda na plataforma</h4><p>Avaliação, devolutiva e PDI dos 120 colaboradores.</p><span class="objetivo-etapa-resp">GPL Incorporadora</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-flag-checkered"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro"><span class="approval-stage-label">Para o RH</span><p>Processo documentado e replicável, que não depende só da experiência pessoal da Sabrina com o time.</p></div>
+              <div class="approval-stage negocio"><span class="approval-stage-label">Para o negócio</span><p>Decisões de promoção e remuneração passam a ter base em dado real, reduzindo o risco de injustiça percebida e turnover de posições-chave.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <div class="objetivo-num">02</div>
+            <div>
+              <h3>Ter governança do processo, sem depender de uma pessoa</h3>
+              <p>A Sabrina foi direta: hoje ela conhece cada colaborador porque "as pessoas foram crescendo na minha mão". Se ela sair, o processo precisa continuar existindo.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>Conhecimento sobre cada colaborador concentrado na experiência pessoal da Sabrina, sem histórico formal centralizado.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>Histórico de avaliação, feedback, PDI e devolutiva documentado e acessível na plataforma, independente de quem está na cadeira do RH.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-bullseye"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p>100% das devolutivas do primeiro ciclo confirmadas na plataforma por gestor e colaborador.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa"><span class="objetivo-etapa-dot">1</span><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Nov/Dez</span><h4>Configuração do painel de acompanhamento</h4><p>Histórico do colaborador centralizado (feedbacks, PDIs, reuniões) numa única tela.</p><span class="objetivo-etapa-resp">impulseup</span></div></div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa"><span class="objetivo-etapa-dot">2</span><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Dez</span><h4>Treinamento de gestores</h4><p>Registro de devolutiva e PDI direto na plataforma.</p><span class="objetivo-etapa-resp">impulseup</span></div></div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa"><span class="objetivo-etapa-dot">3</span><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Jan em diante</span><h4>Uso contínuo do painel</h4><p>Acompanhamento de status sem depender de perguntar a cada gestor.</p><span class="objetivo-etapa-resp">GPL Incorporadora</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-flag-checkered"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro"><span class="approval-stage-label">Para o RH</span><p>Quem assumir a posição da Sabrina no futuro encontra o histórico completo de cada colaborador já documentado.</p></div>
+              <div class="approval-stage negocio"><span class="approval-stage-label">Para o negócio</span><p>Continuidade da gestão de pessoas mesmo em caso de troca no RH, reduzindo o risco de depender de uma única pessoa.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <div class="objetivo-num">03</div>
+            <div>
+              <h3>Manter adesão alta mesmo com público operacional</h3>
+              <p>A Sabrina comparou diretamente com o sistema de qualidade atual, que "cai" e tem baixa adesão espontânea. Ela quer que o time sinta vontade de participar, não que faça por obrigação.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>Sistema de qualidade atual da GPL tem baixa adesão espontânea; colaboradores só entram quando o RH cobra.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>Avaliação respondida até pelo celular, com alta adesão espontânea, sem cobrança constante do RH.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-bullseye"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p>Adesão acima de 90% no primeiro ciclo, sem necessidade de reenvio manual repetido pelo RH.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa"><span class="objetivo-etapa-dot">1</span><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Dez</span><h4>Configuração de envio por WhatsApp</h4><p>Link da avaliação direto no WhatsApp, com acesso mobile liberado.</p><span class="objetivo-etapa-resp">impulseup</span></div></div>
+                <div class="objetivo-etapa-line"></div>
+                <div class="objetivo-etapa"><span class="objetivo-etapa-dot">2</span><div class="objetivo-etapa-content"><span class="objetivo-etapa-period">Jan</span><h4>Acompanhamento em tempo real</h4><p>Reenvio automático quando o colaborador não recebe ou não responde.</p><span class="objetivo-etapa-resp">GPL Incorporadora</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-flag-checkered"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro"><span class="approval-stage-label">Para o RH</span><p>Sabrina deixa de ser a "cobradora" do processo e passa a atuar na parte estratégica, como ela mesma descreveu que quer.</p></div>
+              <div class="approval-stage negocio"><span class="approval-stage-label">Para o negócio</span><p>Alta adesão eleva a qualidade do dado coletado e reduz o tempo do RH gasto em cobrança operacional.</p></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -729,13 +882,27 @@
 {
   "nomeEmpresa": "GPL Incorporadora",
   "slugEmpresa": "gpl-incorporadora",
-  "contexto": null,
-  "desafiosCentrais": [],
-  "objetivos": [],
+  "contexto": "RH recém estruturado, conduzindo a primeira avaliação de desempenho da história da empresa. Aprovação da diretoria prevista para a primeira semana de outubro, com o ciclo rodando a partir de janeiro.",
+  "desafiosCentrais": [
+    {"titulo": "Nunca fizeram avaliação de desempenho", "numero": "600+ colaboradores"},
+    {"titulo": "Decisão sem dados formais", "numero": null},
+    {"titulo": "Ferramenta atual subutilizada", "numero": null},
+    {"titulo": "Ciclo real começa em janeiro", "numero": "120 colaboradores no 1º ciclo"}
+  ],
+  "objetivos": [
+    {"titulo": "Processo formal de avaliação de desempenho", "estadoFuturoResumido": "Decisões de promoção e remuneração passam a ter base em dado real."},
+    {"titulo": "Governança do processo, sem depender de uma pessoa", "estadoFuturoResumido": "Histórico de cada colaborador documentado e acessível, independente de quem está no RH."},
+    {"titulo": "Adesão alta mesmo com público operacional", "estadoFuturoResumido": "Avaliação respondida pelo celular, sem cobrança constante do RH."}
+  ],
   "pilaresDestaque": [],
   "comparativo": null,
   "investimento": null,
-  "cronogramaMacro": []
+  "cronogramaMacro": [
+    {"data": "Ago/Set", "titulo": "Diagnóstico e demonstração da plataforma"},
+    {"data": "Out (1ª semana)", "titulo": "Apresentação e aprovação com a diretoria"},
+    {"data": "Out/Nov", "titulo": "Assinatura, contratação e treinamento das lideranças"},
+    {"data": "Jan", "titulo": "Primeiro ciclo de avaliação de desempenho na plataforma"}
+  ]
 }
 </script>
 
