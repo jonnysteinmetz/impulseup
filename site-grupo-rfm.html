@@ -564,15 +564,11 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Grupo RFM</p>
-      <div class="empty-state" id="tab3EmptyState">
-        <i class="fa-regular fa-circle-play"></i>
-        <h3>Aba liberada após a reunião de Demo</h3>
-        <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
-      </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">5</div><div class="label">desligamentos em uma única obra, em um único mês (agosto)</div></div>
+          <div class="stat-card"><div class="num">70-100</div><div class="label">colaboradores na incorporadora, público do primeiro ciclo</div></div>
+          <div class="stat-card"><div class="num">R$ 10 mil/mês</div><div class="label">custo atual com a FIDS, usada apenas 1x ao ano na avaliação</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -580,8 +576,10 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>FIDS custa cerca de R$ 10 mil/mês para o grupo, mas é usada só uma vez ao ano, no ciclo de avaliação</td><td class="feat-name">Avaliação de Desempenho</td><td>Plataforma dimensionada pelo uso real, sem pagar o ano todo por uma ferramenta que só roda no ciclo anual</td></tr>
+              <tr><td>Não existe hoje um mapa de sucessão formalizado — as decisões de "quem assume no lugar de quem" são feitas de forma verbal, em reunião</td><td class="feat-name">Sucessão</td><td>Visualização clara de sucessores por posição, algo que a FIDS não oferece</td></tr>
+              <tr><td>Metas hoje existem só no nível empresa (financeiro); departamento e indivíduo ainda não têm meta estruturada</td><td class="feat-name">Metas</td><td>Estrutura de metas em árvore, do nível empresa até o individual, com fluxo de atualização e aprovação</td></tr>
+              <tr><td>Cálculo do PLR é manual, feito pela gestora, sem integração com metas ou avaliação</td><td class="feat-name">Remuneração Variável (PLR)</td><td>Cálculo automático dentro da plataforma, integrando metas e resultado da avaliação</td></tr>
             </tbody>
           </table>
         </div>
@@ -730,7 +728,8 @@
       <h1 class="section-title">Próximos passos</h1>
       <p class="section-sub">Jornada de compra da Grupo RFM</p>
       <div class="timeline">
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">04 set.</span><div><span class="tl-desc">Reunião de Diagnóstico + Demonstração</span><div class="tl-meta">Entender contexto e desafios · Jessica Justo</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">04 set.</span><div><span class="tl-desc">Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Jessica Justo</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">08 set., 16h30</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Avaliação, Nine Box, Sucessão, Metas e PLR · Jessica Justo + gestora (convidada)</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
@@ -759,7 +758,12 @@
   "pilaresDestaque": [],
   "comparativo": null,
   "investimento": null,
-  "cronogramaMacro": []
+  "cronogramaMacro": [
+    {"data": "04 set.", "titulo": "Diagnóstico"},
+    {"data": "08 set., 16h30", "titulo": "Demonstração personalizada"},
+    {"data": "A definir", "titulo": "Construção de projeto e proposta"},
+    {"data": "A definir", "titulo": "Apresentação para diretoria"}
+  ]
 }
 </script>
 
