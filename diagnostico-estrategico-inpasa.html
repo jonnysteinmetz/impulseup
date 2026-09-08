@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Diagnóstico Estratégico · Inpasa × impulseup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --color-bg:#FFFFFF;--color-bg-alt:#F4F2EF;--color-fg:#0C0C0C;--color-fg-muted:#666666;
+  --color-border:#E0E0E0;--color-primary:#CC0088;--color-primary-hover:#A3006D;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Poppins',sans-serif;background:var(--color-bg);color:var(--color-fg);line-height:1.6;}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px;}
+header{background:var(--color-fg);color:#fff;padding:56px 0 44px;}
+header .kicker{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#FF7FC8;margin-bottom:14px;}
+header h1{font-size:36px;font-weight:800;margin:0 0 8px;line-height:1.2;}
+header .sub{color:#D8D8D8;font-size:15px;max-width:640px;}
+section{padding:56px 0;border-bottom:1px solid var(--color-border);}
+.block-kicker{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-primary);margin-bottom:10px;}
+h2{font-size:26px;font-weight:800;margin:0 0 8px;}
+.lede{color:var(--color-fg-muted);font-size:14.5px;max-width:680px;margin-bottom:30px;}
+.dor-card{border:1px solid var(--color-border);border-radius:14px;padding:24px 26px;margin-bottom:16px;background:#fff;}
+.dor-card .dor-tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--color-primary);background:#FCE6F3;padding:4px 11px;border-radius:12px;margin-bottom:12px;}
+.dor-card h4{margin:0 0 8px;font-size:17px;font-weight:800;}
+.dor-card p{margin:0 0 10px;font-size:13.5px;color:var(--color-fg);}
+.dor-card .impacto{font-size:13px;color:var(--color-fg-muted);border-left:3px solid var(--color-primary);padding-left:12px;margin-top:10px;}
+.dor-card .impacto b{color:var(--color-fg);}
+table.roi{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+table.roi th{background:var(--color-fg);color:#fff;text-align:left;padding:11px 14px;font-weight:700;font-size:12px;}
+table.roi td{padding:11px 14px;border-bottom:1px solid var(--color-border);vertical-align:top;}
+table.roi tr:nth-child(even) td{background:var(--color-bg-alt);}
+.impact-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;}
+.impact-alto{background:#FCE6F3;color:var(--color-primary);}
+.impact-medio{background:#EFEFEF;color:var(--color-fg-muted);}
+.tipo-prioritario{font-weight:700;color:var(--color-fg);}
+.tipo-suporte{color:var(--color-fg-muted);}
+.solucao-card{display:grid;grid-template-columns:32px 1fr;gap:16px;margin-bottom:22px;align-items:start;}
+.solucao-num{width:32px;height:32px;border-radius:50%;background:var(--color-primary);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.solucao-num.roadmap{background:var(--color-fg-muted);}
+.solucao-content h4{margin:0 0 6px;font-size:15.5px;font-weight:800;}
+.solucao-content .dor-ref{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--color-primary);margin-bottom:4px;}
+.solucao-content p{margin:0;font-size:13.5px;color:var(--color-fg-muted);}
+.solucao-content .resolve{margin-top:8px;font-size:13px;color:var(--color-fg);font-weight:600;}
+.solucao-content .resolve i{color:var(--color-primary);margin-right:6px;}
+.pillars-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:8px;}
+.pillar-card{border:1px solid var(--color-border);border-radius:14px;padding:22px;background:#fff;}
+.pillar-card .feat-tag{display:inline-block;background:var(--color-primary);color:#fff;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 11px;border-radius:14px;margin-bottom:14px;}
+.pillar-card h4{margin:0 0 8px;font-size:15px;font-weight:800;line-height:1.4;}
+.pillar-card p{margin:0;font-size:12.5px;color:var(--color-fg-muted);}
+.partner-panel{background:var(--color-fg);border-radius:18px;padding:34px 38px;color:#fff;margin-top:10px;}
+.partner-panel .kicker{color:#FF7FC8;}
+.partner-item{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start;}
+.partner-item:last-child{margin-bottom:0;}
+.partner-item i{color:var(--color-primary);font-size:16px;margin-top:2px;}
+.partner-item div b{display:block;font-size:14px;margin-bottom:2px;}
+.partner-item div span{font-size:12.5px;color:#CFCFCF;}
+.timeline{margin-top:10px;}
+.tl-item{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--color-border);}
+.tl-item:last-child{border-bottom:none;}
+.tl-date{min-width:140px;font-weight:700;font-size:12.5px;color:var(--color-primary);}
+.tl-desc{font-size:14px;}
+.invest-panel{display:flex;align-items:center;gap:50px;background:var(--color-bg-alt);border-radius:16px;padding:32px 36px;margin-top:10px;flex-wrap:wrap;}
+.invest-value{font-size:38px;font-weight:800;color:var(--color-primary);}
+.invest-meta{font-size:13.5px;color:var(--color-fg-muted);}
+.closing{background:linear-gradient(135deg,var(--color-primary),#8A0060);color:#fff;padding:52px 0;text-align:center;}
+.closing h2{color:#fff;font-size:24px;margin-bottom:14px;}
+.closing p{max-width:620px;margin:0 auto;font-size:14.5px;color:#FCE6F3;}
+footer{padding:24px 0;text-align:center;font-size:11.5px;color:var(--color-fg-muted);}
+@media(max-width:760px){.pillars-grid{grid-template-columns:1fr;}.invest-panel{flex-direction:column;align-items:flex-start;gap:12px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">Diagnóstico Estratégico · impulseup</div>
+    <h1>Gestão de Performance e Sucessão — Inpasa</h1>
+    <p class="sub">Empresa em forte expansão, ampliando a gestão de desempenho para todos os colaboradores a partir do ciclo de outubro. Hoje o processo roda por planilha, em parte da empresa, em ciclos semestrais atrelados ao mérito — e a diretoria nova quer dados para decidir.</p>
+  </div>
+</header>
+
+<section id="dores">
+  <div class="wrap">
+    <div class="block-kicker">Dores e impactos</div>
+    <h2>Dores mapeadas na Inpasa</h2>
+    <p class="lede">Levantamento estruturado das principais limitações do processo atual e seus impactos diretos na operação, no time de DHO e na velocidade de decisão da diretoria.</p>
+
+    <div class="dor-card">
+      <span class="dor-tag">Operacional</span>
+      <h4>Dor 1 · Ciclo inteiro ainda roda em planilha e Canva</h4>
+      <p>O ciclo de mérito roda hoje em planilha, com apenas parte da empresa participando através de áreas piloto. A calibração de Nine-Box é feita à parte, no Canva, seguida de uma reunião manual de calibragem.</p>
+      <div class="impacto"><b>Impacto:</b> ampliar esse modelo manual para os quase 4.000 colaboradores do Brasil que entram no ciclo de outubro não é viável — qualquer decisão de escala esbarra no processo atual.</div>
+    </div>
+
+    <div class="dor-card">
+      <span class="dor-tag">Operacional</span>
+      <h4>Dor 2 · PDI sem padrão, feito no Excel</h4>
+      <p>Cada gestor conduz o PDI de um jeito diferente, sem biblioteca comum de ações. O acompanhamento de execução hoje é manual, feito pelo time de DHO em conjunto com uma ferramenta externa de assessment.</p>
+      <div class="impacto"><b>Impacto:</b> um time de DHO enxuto (na prática, cerca de uma pessoa a cada mil colaboradores, segundo o próprio Murilo) gasta tempo cobrando gestor por gestor, sem padrão comparável entre unidades.</div>
+    </div>
+
+    <div class="dor-card">
+      <span class="dor-tag">Estratégico</span>
+      <h4>Dor 3 · Sucessão ainda é intenção, não plano estruturado</h4>
+      <p>Só as áreas que já participam do piloto têm sucessores, talento-chave e talento-futuro mapeados — sem ferramenta comum e sem visão consolidada de risco de saída.</p>
+      <div class="impacto"><b>Impacto:</b> risco real, apontado pelo próprio Murilo, de perder para o mercado pessoas-chave em posições críticas que a empresa ainda não conseguiu preparar como sucessoras.</div>
+    </div>
+
+    <div class="dor-card">
+      <span class="dor-tag">Estratégico</span>
+      <h4>Dor 4 · Diretoria nova pede visibilidade que hoje exige trabalho manual</h4>
+      <p>A diretoria nova da Inpasa cobra dados para decidir, mas qualquer consolidação hoje exige puxar informação de vários lugares diferentes — planilha, Canva e outras ferramentas soltas.</p>
+      <div class="impacto"><b>Impacto:</b> tempo de resposta a uma pergunta simples da diretoria se mede em dias de trabalho manual do DHO, não em minutos — e trava a velocidade de decisão de uma diretoria que já cobra isso.</div>
+    </div>
+
+    <div class="dor-card">
+      <span class="dor-tag">Risco de escala</span>
+      <h4>Dor 5 · Sem sistema de metas hoje, avaliação só por descrição de cargo</h4>
+      <p>A avaliação atual é baseada só na descrição de cargo. A Inpasa ainda não tem um sistema de metas individuais — e quer migrar para isso futuramente, ligando ao PPR.</p>
+      <div class="impacto"><b>Impacto:</b> sem metas individuais, a avaliação de desempenho não capta o que cada colaborador de fato entregou no período, só o que o cargo previa.</div>
+    </div>
+  </div>
+</section>
+
+<section id="roi">
+  <div class="wrap">
+    <div class="block-kicker">Linhas de ROI</div>
+    <h2>Por que este projeto importa agora</h2>
+    <p class="lede">A Inpasa já tem orçamento aprovado pela diretoria para esta frente — o que está em jogo não é "se", é qual plataforma sustenta o ritmo de crescimento da empresa.</p>
+    <table class="roi">
+      <tr><th>Linha de ROI</th><th>Tipo</th><th>Lógica</th><th>Nível de impacto</th></tr>
+      <tr>
+        <td><b>Escalar a gestão de desempenho para 100% da empresa</b></td>
+        <td class="tipo-prioritario">Prioritário</td>
+        <td>Hoje o ciclo roda manualmente só em áreas piloto; o ciclo de outubro precisa cobrir os quase 4.000 colaboradores do Brasil de uma vez.</td>
+        <td><span class="impact-tag impact-alto">Alto</span><br><span style="font-size:11.5px;color:var(--color-fg-muted);">projeto do ano, com orçamento já aprovado</span></td>
+      </tr>
+      <tr>
+        <td><b>Estruturar o plano de sucessão</b></td>
+        <td class="tipo-prioritario">Prioritário</td>
+        <td>Só áreas piloto têm sucessores mapeados hoje; a Inpasa já identificou risco de perder talento-chave por falta de plano formal.</td>
+        <td><span class="impact-tag impact-alto">Alto</span><br><span style="font-size:11.5px;color:var(--color-fg-muted);">retenção em posições críticas</span></td>
+      </tr>
+      <tr>
+        <td><b>Dar à diretoria dados em tempo real</b></td>
+        <td class="tipo-prioritario">Prioritário</td>
+        <td>Diretoria nova pede visibilidade; hoje qualquer dado cruzado exige compilação manual de várias fontes diferentes.</td>
+        <td><span class="impact-tag impact-alto">Alto</span><br><span style="font-size:11.5px;color:var(--color-fg-muted);">velocidade de decisão</span></td>
+      </tr>
+      <tr>
+        <td><b>Padronizar o PDI entre gestores</b></td>
+        <td class="tipo-suporte">Suporte</td>
+        <td>PDI feito no Excel, sem biblioteca comum; acompanhamento hoje é 100% manual do time de DHO.</td>
+        <td><span class="impact-tag impact-medio">Médio</span><br><span style="font-size:11.5px;color:var(--color-fg-muted);">tempo de equipe e consistência</span></td>
+      </tr>
+      <tr>
+        <td><b>Consolidar cultura de feedback contínuo</b></td>
+        <td class="tipo-suporte">Suporte</td>
+        <td>Cultura de feedback ainda em construção, com adesão desigual entre gestores; tema que já apareceu na pesquisa de cultura recente da Inpasa.</td>
+        <td><span class="impact-tag impact-medio">Médio</span><br><span style="font-size:11.5px;color:var(--color-fg-muted);">sustenta a pesquisa de cultura</span></td>
+      </tr>
+    </table>
+    <p style="font-size:12px;color:var(--color-fg-muted);margin-top:14px;">Nível de impacto qualitativo, baseado no que a Inpasa já verbalizou nas reuniões de Diagnóstico, Demo e Proposta — a Inpasa não compartilhou até aqui números de turnover, absenteísmo ou custo de multa contratual que permitissem calcular um R$ de retorno financeiro direto. Se esses números existirem internamente, vale levantar com o Murilo para fortalecer ainda mais o caso de negócio.</p>
+  </div>
+</section>
+
+<section id="solucao">
+  <div class="wrap">
+    <div class="block-kicker">Solução proposta · impulseup</div>
+    <h2>Como a impulseup resolve cada dor da Inpasa</h2>
+    <p class="lede">Para cada limitação identificada no processo atual, a impulseup tem uma resposta específica — sem exigir que o projeto da Inpasa se adapte à plataforma, e sim o contrário.</p>
+
+    <div class="solucao-card">
+      <div class="solucao-num">1</div>
+      <div class="solucao-content">
+        <div class="dor-ref">Resolve a dor 1 · Planilha e escala</div>
+        <h4>Migração assistida, com consultor de implementação dedicado</h4>
+        <p>Parametrização, importação de dados e um piloto de validação com as áreas que já participam hoje, antes do rollout para todos os colaboradores — sempre acompanhado por um consultor de implementação, nunca um treinamento único e "boa sorte".</p>
+        <div class="resolve"><i class="fa-solid fa-check"></i>Ciclo de mérito passa a rodar 100% dentro da plataforma, sem etapa paralela em planilha.</div>
+      </div>
+    </div>
+
+    <div class="solucao-card">
+      <div class="solucao-num">2</div>
+      <div class="solucao-content">
+        <div class="dor-ref">Resolve a dor 2 · PDI sem padrão</div>
+        <h4>PDI com biblioteca de ações e checklist de execução</h4>
+        <p>Ações de desenvolvimento pré-mapeadas por competência técnica e comportamental (a plataforma já nasce com dezenas de ações prontas por competência), acopladas direto à devolutiva de cada avaliação, com checklist para acompanhar a execução.</p>
+        <div class="resolve"><i class="fa-solid fa-check"></i>PDI nasce direto dos gaps da avaliação, sem depender de cobrança manual do DHO.</div>
+      </div>
+    </div>
+
+    <div class="solucao-card">
+      <div class="solucao-num">3</div>
+      <div class="solucao-content">
+        <div class="dor-ref">Resolve a dor 3 · Sucessão</div>
+        <h4>Matriz Nine-Box com risco de saída e sucessores mapeados na própria avaliação</h4>
+        <p>Análise de risco de saída, impacto e sucessores é preenchida dentro do próprio fluxo de avaliação — sem depender de reunião manual de calibração à parte, como acontece hoje no Canva.</p>
+        <div class="resolve"><i class="fa-solid fa-check"></i>DHO acompanha em tempo real quais posições críticas têm sucessor pronto.</div>
+      </div>
+    </div>
+
+    <div class="solucao-card">
+      <div class="solucao-num">4</div>
+      <div class="solucao-content">
+        <div class="dor-ref">Resolve a dor 4 · Visibilidade da diretoria</div>
+        <h4>Analytics com até 25 campos customizados de segmentação</h4>
+        <p>Painel por unidade, cargo, senioridade, BP ou diretoria, disponível a qualquer momento para o time de DHO e para a diretoria — sem depender de compilação manual entre planilha, Canva e outras ferramentas.</p>
+        <div class="resolve"><i class="fa-solid fa-check"></i>Resposta a uma pergunta da diretoria cai de dias para minutos.</div>
+      </div>
+    </div>
+
+    <div class="solucao-card">
+      <div class="solucao-num roadmap">5</div>
+      <div class="solucao-content">
+        <div class="dor-ref">Dor 5 · Gestão de metas — próxima fase</div>
+        <h4>Fica no roadmap, sem exigir troca de fornecedor</h4>
+        <p>A própria Inpasa já sinalizou que este não é o escopo do ciclo de outubro. Quando a Inpasa quiser avançar para metas individuais ligadas ao PPR, o módulo já está dentro da mesma plataforma — sem precisar contratar ou integrar um novo fornecedor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pilares">
+  <div class="wrap">
+    <div class="block-kicker">Por que a impulseup</div>
+    <h2>O que sustenta a escolha</h2>
+    <p class="lede">Empresas industriais com público operacional e administrativo, no mesmo perfil da Inpasa, escolhem a impulseup por três razões.</p>
+    <div class="pillars-grid">
+      <div class="pillar-card"><span class="feat-tag">Confiável</span><h4>Decisão de performance sai mais justa e defensável</h4><p>Avaliação de consenso e critérios customizados por cargo — a diretoria deixa de depender da visão isolada de um único gestor.</p></div>
+      <div class="pillar-card"><span class="feat-tag">Liderança</span><h4>Sucessão vira plano, não intenção</h4><p>Risco, impacto e tempo de prontidão de cada posição crítica dentro da própria avaliação — visibilidade real sobre quem sustenta o crescimento.</p></div>
+      <div class="pillar-card"><span class="feat-tag">Inteligente</span><h4>Tudo do colaborador numa única tela</h4><p>Avaliação, PDI, feedback, sucessão e histórico centralizados — sem caçar informação em planilha, Canva ou portais separados.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="parceiro">
+  <div class="wrap">
+    <div class="block-kicker" style="color:#FF7FC8;">Por que a impulseup é o parceiro certo</div>
+    <h2>Não é só uma implantação, é um projeto acompanhado</h2>
+    <div class="partner-panel">
+      <div class="partner-item">
+        <i class="fa-solid fa-user-check"></i>
+        <div><b>Consultor de implementação dedicado + gerente de contas</b><span>Time Enterprise, com reunião semanal (Weeklies) de acompanhamento durante toda a implantação — não só um treinamento inicial.</span></div>
+      </div>
+      <div class="partner-item">
+        <i class="fa-solid fa-headset"></i>
+        <div><b>Suporte direto para cada colaborador, não só para o RH</b><span>Líder e colaborador acessam o suporte técnico de dentro da própria plataforma — tira do time de DHO o trabalho operacional de responder dúvida de todo mundo.</span></div>
+      </div>
+      <div class="partner-item">
+        <i class="fa-solid fa-people-arrows"></i>
+        <div><b>Relação que vai além do comercial</b><span>Empresas do mesmo perfil da Inpasa (indústrias do agro) já são clientes de referência da impulseup, com histórico de proximidade real com o time de implantação.</span></div>
+      </div>
+      <div class="partner-item">
+        <i class="fa-solid fa-gears"></i>
+        <div><b>O projeto se adapta à Inpasa, não o contrário</b><span>Flexibilidade de configuração (perfis de acesso, campos customizados, segmentação) para acompanhar o crescimento acelerado da empresa sem depender de um novo fornecedor a cada mudança.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="plano">
+  <div class="wrap">
+    <div class="block-kicker">O caminho até lá</div>
+    <h2>Próximos passos</h2>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">Realizada</div><div class="tl-desc">Reunião de Diagnóstico — desafios mapeados com Murilo Liberato e Leandro Brito</div></div>
+      <div class="tl-item"><div class="tl-date">Realizada</div><div class="tl-desc">Demonstração personalizada — Murilo e Leandro confirmaram que a impulseup atende o projeto</div></div>
+      <div class="tl-item"><div class="tl-date">Até segunda-feira</div><div class="tl-desc">Envio da proposta comercial</div></div>
+      <div class="tl-item"><div class="tl-date">A definir</div><div class="tl-desc">Alinhamento interno e aprovação na Inpasa</div></div>
+      <div class="tl-item"><div class="tl-date">A definir</div><div class="tl-desc">Assinatura e kickoff — meta de rodar o ciclo de outubro dentro da plataforma</div></div>
+    </div>
+    <div class="invest-panel">
+      <div><div style="font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--color-fg-muted);">Investimento</div><div class="invest-value">12x R$ 32.593,98</div></div>
+      <div class="invest-meta">Contrato de 12 meses · módulo completo de Avaliação de Desempenho, Sucessão e Desenvolvimento para os 3.933 usuários do Brasil</div>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <h2>A Inpasa já decidiu investir nisso. A pergunta é com quem.</h2>
+    <p>Diagnóstico feito, plataforma validada por Murilo e Leandro na demonstração, orçamento já aprovado pela diretoria. O que falta é a decisão de qual parceiro vai sustentar o ritmo de crescimento da Inpasa nos próximos anos — a impulseup já mostrou como resolve cada uma das dores mapeadas aqui.</p>
+  </div>
+</div>
+
+<footer>impulseup · Diagnóstico Estratégico preparado para Inpasa · Confidencial</footer>
+
+</body>
+</html>
