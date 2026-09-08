@@ -38,8 +38,7 @@ table.roi tr:nth-child(even) td{background:var(--color-bg-alt);}
 .tipo-prioritario{font-weight:700;color:var(--color-fg);}
 .tipo-suporte{color:var(--color-fg-muted);}
 .solucao-card{display:grid;grid-template-columns:32px 1fr;gap:16px;margin-bottom:22px;align-items:start;}
-.solucao-num{width:32px;height:32px;border-radius:50%;background:var(--color-primary);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;}
-.solucao-num.roadmap{background:var(--color-fg-muted);}
+.solucao-num{width:32px;height:32px;border-radius:50%;background:var(--color-primary);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .solucao-content h4{margin:0 0 6px;font-size:15.5px;font-weight:800;}
 .solucao-content .dor-ref{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--color-primary);margin-bottom:4px;}
 .solucao-content p{margin:0;font-size:13.5px;color:var(--color-fg-muted);}
@@ -57,11 +56,19 @@ table.roi tr:nth-child(even) td{background:var(--color-bg-alt);}
 .partner-item i{color:var(--color-primary);font-size:16px;margin-top:2px;}
 .partner-item div b{display:block;font-size:14px;margin-bottom:2px;}
 .partner-item div span{font-size:12.5px;color:#CFCFCF;}
-.timeline{margin-top:10px;}
-.tl-item{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--color-border);}
-.tl-item:last-child{border-bottom:none;}
-.tl-date{min-width:140px;font-weight:700;font-size:12.5px;color:var(--color-primary);}
-.tl-desc{font-size:14px;}
+.role-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:22px 0 34px;}
+.role-card{border:1px solid var(--color-border);border-radius:14px;padding:20px;background:var(--color-bg-alt);}
+.role-card i{color:var(--color-primary);font-size:20px;margin-bottom:10px;display:block;}
+.role-card h5{margin:0 0 6px;font-size:14px;font-weight:800;}
+.role-card p{margin:0;font-size:12px;color:var(--color-fg-muted);}
+.impl-phase-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--color-primary);margin:30px 0 12px;}
+table.impl{width:100%;border-collapse:collapse;font-size:12.5px;margin-bottom:8px;}
+table.impl th{background:var(--color-fg);color:#fff;text-align:left;padding:9px 12px;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.03em;}
+table.impl td{padding:9px 12px;border-bottom:1px solid var(--color-border);}
+table.impl tr:nth-child(even) td{background:var(--color-bg-alt);}
+.impl-tipo-reuniao{color:var(--color-primary);font-weight:700;font-size:11.5px;}
+.impl-tipo-atividade{color:var(--color-fg-muted);font-size:11.5px;}
+.impl-note{font-size:12px;color:var(--color-fg-muted);margin-top:6px;}
 .invest-panel{display:flex;align-items:center;gap:50px;background:var(--color-bg-alt);border-radius:16px;padding:32px 36px;margin-top:10px;flex-wrap:wrap;}
 .invest-value{font-size:38px;font-weight:800;color:var(--color-primary);}
 .invest-meta{font-size:13.5px;color:var(--color-fg-muted);}
@@ -69,7 +76,7 @@ table.roi tr:nth-child(even) td{background:var(--color-bg-alt);}
 .closing h2{color:#fff;font-size:24px;margin-bottom:14px;}
 .closing p{max-width:620px;margin:0 auto;font-size:14.5px;color:#FCE6F3;}
 footer{padding:24px 0;text-align:center;font-size:11.5px;color:var(--color-fg-muted);}
-@media(max-width:760px){.pillars-grid{grid-template-columns:1fr;}.invest-panel{flex-direction:column;align-items:flex-start;gap:12px;}}
+@media(max-width:760px){.pillars-grid{grid-template-columns:1fr;}.role-grid{grid-template-columns:1fr;}.invest-panel{flex-direction:column;align-items:flex-start;gap:12px;}table.impl{font-size:11px;}}
 </style>
 </head>
 <body>
@@ -118,9 +125,9 @@ footer{padding:24px 0;text-align:center;font-size:11.5px;color:var(--color-fg-mu
 
     <div class="dor-card">
       <span class="dor-tag">Risco de escala</span>
-      <h4>Dor 5 · Sem sistema de metas hoje, avaliação só por descrição de cargo</h4>
-      <p>A avaliação atual é baseada só na descrição de cargo. A Inpasa ainda não tem um sistema de metas individuais — e quer migrar para isso futuramente, ligando ao PPR.</p>
-      <div class="impacto"><b>Impacto:</b> sem metas individuais, a avaliação de desempenho não capta o que cada colaborador de fato entregou no período, só o que o cargo previa.</div>
+      <h4>Dor 5 · Engajamento heterogêneo entre unidades, sem estratégia unificada de adesão</h4>
+      <p>O próprio Murilo descreveu que o engajamento hoje varia tanto entre áreas quanto entre unidades — cada uma reage de um jeito diferente, especialmente pela dispersão geográfica da operação (Sinop, Dourados e outras unidades).</p>
+      <div class="impacto"><b>Impacto:</b> sem um padrão de adesão, o time de DHO precisa desenhar campanhas específicas por unidade a cada ciclo — algumas presenciais, outras só online — consumindo tempo extra do time de comunicação interna que hoje já dá esse apoio.</div>
     </div>
   </div>
 </section>
@@ -157,10 +164,10 @@ footer{padding:24px 0;text-align:center;font-size:11.5px;color:var(--color-fg-mu
         <td><span class="impact-tag impact-medio">Médio</span><br><span style="font-size:11.5px;color:var(--color-fg-muted);">tempo de equipe e consistência</span></td>
       </tr>
       <tr>
-        <td><b>Consolidar cultura de feedback contínuo</b></td>
+        <td><b>Unificar a estratégia de engajamento entre unidades</b></td>
         <td class="tipo-suporte">Suporte</td>
-        <td>Cultura de feedback ainda em construção, com adesão desigual entre gestores; tema que já apareceu na pesquisa de cultura recente da Inpasa.</td>
-        <td><span class="impact-tag impact-medio">Médio</span><br><span style="font-size:11.5px;color:var(--color-fg-muted);">sustenta a pesquisa de cultura</span></td>
+        <td>Adesão varia por unidade e área, exigindo campanhas específicas a cada ciclo, apoiadas pelo time de comunicação interna.</td>
+        <td><span class="impact-tag impact-medio">Médio</span><br><span style="font-size:11.5px;color:var(--color-fg-muted);">tempo de equipe e adesão do ciclo</span></td>
       </tr>
     </table>
     <p style="font-size:12px;color:var(--color-fg-muted);margin-top:14px;">Nível de impacto qualitativo, baseado no que a Inpasa já verbalizou nas reuniões de Diagnóstico, Demo e Proposta — a Inpasa não compartilhou até aqui números de turnover, absenteísmo ou custo de multa contratual que permitissem calcular um R$ de retorno financeiro direto. Se esses números existirem internamente, vale levantar com o Murilo para fortalecer ainda mais o caso de negócio.</p>
@@ -214,11 +221,12 @@ footer{padding:24px 0;text-align:center;font-size:11.5px;color:var(--color-fg-mu
     </div>
 
     <div class="solucao-card">
-      <div class="solucao-num roadmap">5</div>
+      <div class="solucao-num">5</div>
       <div class="solucao-content">
-        <div class="dor-ref">Dor 5 · Gestão de metas — próxima fase</div>
-        <h4>Fica no roadmap, sem exigir troca de fornecedor</h4>
-        <p>A própria Inpasa já sinalizou que este não é o escopo do ciclo de outubro. Quando a Inpasa quiser avançar para metas individuais ligadas ao PPR, o módulo já está dentro da mesma plataforma — sem precisar contratar ou integrar um novo fornecedor.</p>
+        <div class="dor-ref">Resolve a dor 5 · Engajamento heterogêneo</div>
+        <h4>Envio da avaliação direto no WhatsApp, SMS ou e-mail, com acesso sem depender de e-mail corporativo</h4>
+        <p>O link da avaliação chega direto no celular do colaborador, com acesso também via CPF, sem depender de totem ou computador fixo na unidade. Foi essa combinação que levou a Urofino, cliente com perfil industrial semelhante, a 99% de adesão no ciclo.</p>
+        <div class="resolve"><i class="fa-solid fa-check"></i>Adesão deixa de depender de campanha manual e específica por unidade a cada ciclo.</div>
       </div>
     </div>
   </div>
@@ -262,17 +270,80 @@ footer{padding:24px 0;text-align:center;font-size:11.5px;color:var(--color-fg-mu
   </div>
 </section>
 
-<section id="plano">
+<section id="acompanhamento">
   <div class="wrap">
-    <div class="block-kicker">O caminho até lá</div>
-    <h2>Próximos passos</h2>
-    <div class="timeline">
-      <div class="tl-item"><div class="tl-date">Realizada</div><div class="tl-desc">Reunião de Diagnóstico — desafios mapeados com Murilo Liberato e Leandro Brito</div></div>
-      <div class="tl-item"><div class="tl-date">Realizada</div><div class="tl-desc">Demonstração personalizada — Murilo e Leandro confirmaram que a impulseup atende o projeto</div></div>
-      <div class="tl-item"><div class="tl-date">Até segunda-feira</div><div class="tl-desc">Envio da proposta comercial</div></div>
-      <div class="tl-item"><div class="tl-date">A definir</div><div class="tl-desc">Alinhamento interno e aprovação na Inpasa</div></div>
-      <div class="tl-item"><div class="tl-date">A definir</div><div class="tl-desc">Assinatura e kickoff — meta de rodar o ciclo de outubro dentro da plataforma</div></div>
+    <div class="block-kicker">Acompanhamento do projeto</div>
+    <h2>Como funciona a implantação, etapa a etapa</h2>
+    <p class="lede">Implantação, para a impulseup, não é treinar o time e desejar boa sorte. É um processo consultivo, com a Inpasa acompanhada do início ao fim — cada etapa abaixo tem uma reunião ou entrega associada, nunca uma "caixa preta".</p>
+
+    <div class="role-grid">
+      <div class="role-card">
+        <i class="fa-solid fa-user-tie"></i>
+        <h5>Consultor de implementação</h5>
+        <p>Ponto focal técnico durante toda a jornada inicial e a implementação da avaliação — conduz workshops, valida requisitos e acompanha os testes antes do lançamento.</p>
+      </div>
+      <div class="role-card">
+        <i class="fa-solid fa-briefcase"></i>
+        <h5>Gerente de contas (CSM)</h5>
+        <p>Ponto focal de negócio, presente já no planejamento inicial e na apresentação de resultados — o olhar estratégico que soma ao acompanhamento técnico.</p>
+      </div>
+      <div class="role-card">
+        <i class="fa-solid fa-headset"></i>
+        <h5>Suporte técnico Enterprise</h5>
+        <p>Time de analistas experientes, dedicado a clientes do porte da Inpasa, com SLA de 3 dias úteis para importações — atende time de DHO, gestores e colaboradores.</p>
+      </div>
     </div>
+
+    <div class="impl-phase-title">Fase 1 · Jornada inicial</div>
+    <table class="impl">
+      <tr><th>Etapa</th><th>Tipo</th><th>Responsável</th></tr>
+      <tr><td>Planejamento inicial</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + CSM + Inpasa</td></tr>
+      <tr><td>Preenchimento da planilha de usuários</td><td class="impl-tipo-atividade">Atividade</td><td>Inpasa</td></tr>
+      <tr><td>Coleta de cronograma</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Importação da planilha de usuários</td><td class="impl-tipo-atividade">Atividade</td><td>Suporte <span style="color:var(--color-primary);font-weight:700;">· SLA 3 dias úteis</span></td></tr>
+      <tr><td>Workshop do sistema</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Estratégia de 1º acesso</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Apresentação da plataforma</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Lançamento da plataforma</td><td class="impl-tipo-atividade">Atividade</td><td>Consultor de implementação + Inpasa</td></tr>
+    </table>
+    <p class="impl-note">Nesta fase, a Inpasa nunca fica sozinha definindo a melhor estratégia de lançamento — a definição de primeiro acesso (WhatsApp, e-mail, SSO) é construída em conjunto, com base no que já funcionou em clientes do mesmo perfil.</p>
+
+    <div class="impl-phase-title">Fase 2 · Implementação da avaliação de desempenho</div>
+    <table class="impl">
+      <tr><th>Etapa</th><th>Tipo</th><th>Responsável</th></tr>
+      <tr><td>Preencher formulário de requisitos</td><td class="impl-tipo-atividade">Atividade</td><td>Inpasa</td></tr>
+      <tr><td>Coleta de requisitos da avaliação</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Definição da etapa de sucessão</td><td class="impl-tipo-atividade">Atividade</td><td>Inpasa</td></tr>
+      <tr><td>Preenchimento da base de competências</td><td class="impl-tipo-atividade">Atividade</td><td>Inpasa</td></tr>
+      <tr><td>Importação da base de competências</td><td class="impl-tipo-atividade">Atividade</td><td>Suporte <span style="color:var(--color-primary);font-weight:700;">· SLA 3 dias úteis</span></td></tr>
+      <tr><td>Validação inicial da avaliação</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Testes da avaliação</td><td class="impl-tipo-atividade">Atividade</td><td>Inpasa</td></tr>
+      <tr><td>Validação final da avaliação</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Sensibilização</td><td class="impl-tipo-atividade">Atividade</td><td>Inpasa</td></tr>
+      <tr><td>Treinamento para a empresa (1h)</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Envio da avaliação + acompanhamento</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Período avaliativo</td><td class="impl-tipo-atividade">Atividade</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Relatório, devolutiva e PDI</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Nine-box e sucessão</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Analytics</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Envio dos relatórios para o gestor</td><td class="impl-tipo-atividade">Atividade</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Comitês de calibração</td><td class="impl-tipo-atividade">Atividade</td><td>Inpasa</td></tr>
+      <tr><td>Apresentação de resultados</td><td class="impl-tipo-reuniao">Reunião</td><td>Consultor de implementação + CSM + Inpasa</td></tr>
+      <tr><td>Envio dos relatórios para o liderado</td><td class="impl-tipo-atividade">Atividade</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Devolutiva</td><td class="impl-tipo-atividade">Atividade</td><td>Inpasa</td></tr>
+      <tr><td>Definição dos PDIs</td><td class="impl-tipo-atividade">Atividade</td><td>Inpasa</td></tr>
+      <tr><td>Programa de reconhecimento</td><td class="impl-tipo-atividade">Atividade</td><td>Inpasa</td></tr>
+    </table>
+    <p class="impl-note">Na "Apresentação de resultados", o próprio time impulseup monta a apresentação com a leitura do resultado do ciclo — material pronto para a Inpasa levar à diretoria, não só um número solto.</p>
+
+    <div class="impl-phase-title">Acompanhamento contínuo · cliente Enterprise</div>
+    <table class="impl">
+      <tr><th>Ritual</th><th>Frequência</th><th>Responsável</th></tr>
+      <tr><td>Weeklies de acompanhamento com o consultor de implementação</td><td>Semanal</td><td>Consultor de implementação + Inpasa</td></tr>
+      <tr><td>Suporte técnico direto (RH, gestores e colaboradores)</td><td>Sob demanda, dentro da plataforma</td><td>Suporte técnico Enterprise</td></tr>
+    </table>
+    <p class="impl-note">Como cliente Enterprise, a Inpasa tem alinhamento semanal garantido — pensado para um público grande, com ciclos semestrais, que demanda esse nível de cuidado contínuo, não só no momento do lançamento.</p>
+
     <div class="invest-panel">
       <div><div style="font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--color-fg-muted);">Investimento</div><div class="invest-value">12x R$ 32.593,98</div></div>
       <div class="invest-meta">Contrato de 12 meses · módulo completo de Avaliação de Desempenho, Sucessão e Desenvolvimento para os 3.933 usuários do Brasil</div>
@@ -283,7 +354,7 @@ footer{padding:24px 0;text-align:center;font-size:11.5px;color:var(--color-fg-mu
 <div class="closing">
   <div class="wrap">
     <h2>A Inpasa já decidiu investir nisso. A pergunta é com quem.</h2>
-    <p>Diagnóstico feito, plataforma validada por Murilo e Leandro na demonstração, orçamento já aprovado pela diretoria. O que falta é a decisão de qual parceiro vai sustentar o ritmo de crescimento da Inpasa nos próximos anos — a impulseup já mostrou como resolve cada uma das dores mapeadas aqui.</p>
+    <p>Diagnóstico feito, plataforma validada por Murilo e Leandro na demonstração, orçamento já aprovado pela diretoria. O que falta é a decisão de qual parceiro vai sustentar o ritmo de crescimento da Inpasa nos próximos anos — a impulseup já mostrou como resolve cada uma das dores mapeadas aqui, e como acompanha de perto cada etapa da implantação.</p>
   </div>
 </div>
 
