@@ -507,7 +507,7 @@
       <div class="top-grid">
         <div class="card">
           <div class="card-label">Perfil</div>
-          <p>Grupo RFM — construtora com 46 anos de mercado, atuando no segmento de construção civil em São Paulo. O grupo reúne 4 empresas: a construtora e a incorporadora (obras residenciais próprias), a Anfeva (mão de obra das obras) e a Chi (hotelaria), somando cerca de 400 colaboradores.</p>
+          <p>Grupo RFM — construtora com 46 anos de mercado, atuando no segmento de construção civil em São Paulo. O grupo reúne 4 empresas: a construtora e a incorporadora (obras residenciais próprias), a Anfeva (mão de obra das obras) e a Txai (hotelaria), somando cerca de 400 colaboradores.</p>
         </div>
         <div class="card dark">
           <div class="card-label">Momento atual</div>
@@ -681,38 +681,9 @@
       <h1 class="section-title">Proposta comercial</h1>
       <p class="section-sub">Investimento para a Grupo RFM</p>
 
-      <div class="empty-state" id="tab7EmptyState">
-        <i class="fa-regular fa-file-invoice-dollar"></i>
-        <h3>Aba liberada após o closer informar a proposta comercial</h3>
-        <p>Assim que o closer passar os valores definidos na ferramenta de precificação da impulseup, esta aba mostra o investimento, os módulos e serviços incluídos e o detalhamento de valores.</p>
-      </div>
-
-      <div id="tab7ProposalWrap" style="display:none;">
-        <div class="investment-hero">
-          <div class="label">Investimento mensal</div>
-          <div class="value">R$ 12.400/mês</div>
-        </div>
-        <p class="investment-hero-meta">Investimento total do contrato: R$ 148.800 · Validade da proposta: 15 dias · Duração do contrato: 12 meses</p>
-
-        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos</div>
-        <div class="module-list">
-          <div class="module-row">
-            <div class="module-row-main"><h4>Avaliação de Desempenho</h4><p>Ciclos completos com nine-box e PDI integrado.</p></div>
-            <div class="module-row-users">500 usuários</div>
-          </div>
-          <div class="module-row">
-            <div class="module-row-main"><h4>Plano de Serviço III</h4><p>Implementação assistida por especialista em DHO.</p></div>
-            <div class="module-row-users"></div>
-          </div>
-        </div>
-
-        <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
-        <table class="rfp-table" id="proposalValuesTable">
-          <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
-          <tr><td><div class="feat-name">Avaliação de Desempenho</div></td><td class="check-cell">500</td><td class="check-cell">R$ 22,00</td><td class="check-cell">R$ 11.000,00</td><td class="check-cell">—</td></tr>
-          <tr><td><div class="feat-name">Plano de Serviço III</div></td><td class="check-cell">—</td><td class="check-cell">R$ 16.800,00</td><td class="check-cell">—</td><td class="check-cell">Cobrança única</td></tr>
-          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 148.800</td></tr>
-        </table>
+      
+      <div id="tab7ProposalWrap">
+        <div class="cenarios-comparativo"><div class="cards"><div class="card"><div class="card-header"><div class="eyebrow-card">Cenário 1</div><div class="card-title">Incorporadora — 100 pessoas</div></div><div class="card-body"><div class="price-line"><span class="price-value">R$ 2.500/mês</span><span class="price-unit">/ mês (12x)</span></div><div class="price-base">Investimento total do contrato: R$ 30.000</div><hr class="divider"><div class="inclui-label">Inclui</div><ul class="check-list"><li><span class="tick">&#10003;</span>100 colaboradores da incorporadora</li><li><span class="tick">&#10003;</span>Avaliação, Metas, Pesquisa, Learning e Remuneração Variável</li><li><span class="tick">&#10003;</span>Implantação de todos os módulos inclusa</li></ul></div></div><div class="card recommended"><div class="card-header"><span class="badge-recommended">Recomendado</span><div class="eyebrow-card">Cenário 2</div><div class="card-title">Grupo RFM completo — 385 pessoas</div></div><div class="card-body"><div class="price-line"><span class="price-value">R$ 3.924/mês</span><span class="price-unit">/ mês (12x)</span></div><div class="price-base">Investimento total do contrato: R$ 47.088</div><hr class="divider"><div class="inclui-label">Inclui</div><ul class="check-list"><li><span class="tick">&#10003;</span>385 colaboradores avaliados (incorporadora, construtora e Txai)</li><li><span class="tick">&#10003;</span>Metas para os 100 colaboradores da incorporadora</li><li><span class="tick">&#10003;</span>Módulo de Desenvolvimento para todo o grupo</li><li><span class="tick">&#10003;</span>Implantação dos módulos de Avaliação e Metas inclusa</li></ul></div></div></div></div>
 
         <label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
           <div id="proposalPlaceholder">
@@ -722,6 +693,7 @@
           <input type="file" accept="image/*" id="proposalInput">
         </label>
       </div>
+    
     </section>
 
     <!-- ABA 8 — PRÓXIMOS PASSOS -->
@@ -730,10 +702,11 @@
       <p class="section-sub">Jornada de compra da Grupo RFM</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">04 set.</span><div><span class="tl-desc">Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Jessica Justo</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">08 set., 16h30</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Avaliação, Nine Box, Sucessão, Metas e PLR · Jessica Justo + gestora (convidada)</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">08 set., 16h30</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Avaliação, Nine Box, Sucessão, Metas e PLR · Jessica Justo</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Semana de 15 set.</span><div><span class="tl-desc">Checkpoint por WhatsApp</span><div class="tl-meta">Retorno da Jessica após conversar com a gestora Monizi Oyama sobre a incorporadora</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Semana de 22 set. (opcional)</span><div><span class="tl-desc">Apresentação da plataforma para a diretoria</span><div class="tl-meta">A confirmar com a Jessica se será necessária</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">29 set., 10h30</span><div><span class="tl-desc">Reunião de decisão</span><div class="tl-meta">Avanço com a incorporadora (100 vidas) e/ou com o grupo completo (385 vidas)</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Em andamento</span><div><span class="tl-desc">Minuta contratual com o jurídico</span><div class="tl-meta">Enviada para análise antecipada, antes da decisão da diretoria</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Revisão jurídica</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Assinatura e kickoff</span></div></div>
       </div>
