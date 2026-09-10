@@ -582,65 +582,32 @@
     <!-- ABA 3 — DEMONSTRAÇÃO -->
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
-      <p class="section-sub">Vídeos da plataforma, orientados aos desafios da AmPm</p>
-      <div class="empty-state" id="tab3EmptyState">
-        <i class="fa-regular fa-circle-play"></i>
-        <h3>Aba liberada após a reunião de Demo</h3>
-        <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
+      <p class="section-sub">O que preparamos para o cenário da AmPm</p>
+
+      <div class="stat-grid">
+        <div class="stat-card"><div class="num">90%+</div><div class="label">adesão à pesquisa piloto na Millennium (rede de postos)</div></div>
+        <div class="stat-card"><div class="num">~80%</div><div class="label">adesão à pesquisa piloto na Crispin Creamy</div></div>
+        <div class="stat-card"><div class="num">100+</div><div class="label">perfis montados manualmente a cada calibração, de presidente a analista sênior</div></div>
       </div>
-      <div id="tab3Content" style="display:none;">
-        <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
-        </div>
-        <div style="overflow-x:auto;margin-bottom:40px;">
-          <table class="rfp-table" id="tab3ComparativoTable">
-            <thead>
-              <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
-            </thead>
-            <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
-            </tbody>
-          </table>
-        </div>
-        <div class="video-grid" id="tab3VideoGrid">
-          <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
-               Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
 
-               Caso 1 — url_video já veio do closer (link de Drive ou YouTube) e foi reconhecida:
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap">
-                   <iframe src="{{embed_url}}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                 </div>
-               </div>
 
-               Caso 2 — url_video veio mas não foi possível gerar embed (ex: link de pasta do Drive,
-               sem permissão de embed): mostrar card de link em vez de iframe.
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-link-card">
-                   <i class="fa-brands fa-google-drive"></i>
-                   <p>Vídeo disponível para acesso externo</p>
-                   <a href="{{url_video}}" target="_blank" rel="noopener" class="video-link-btn">Assistir vídeo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
-               </div>
+      <div class="block-title"><i class="fa-solid fa-arrows-left-right"></i>Como a impulseup resolve cada ponto</div>
+      <table class="rfp-table">
+        <thead><tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr></thead>
+        <tbody>
+<tr><td>Relatórios de clima pouco confiáveis, exportação manual em Excel e risco de erro humano ao montar material de diretoria</td><td><span class="feat-tag">Análises e Relatórios</span></td><td>Mapa de calor automático, gráfico de favorabilidade e exportação direta em PDF ou PPT</td></tr>
+<tr><td>Histórico de pesquisa se sobrepõe entre AmPm, Crispin Creamy e Millennium, com risco de perder dado a cada novo disparo</td><td><span class="feat-tag">Pesquisas</span></td><td>Cada pesquisa preserva o próprio histórico, com comparativo entre os três negócios lado a lado</td></tr>
+<tr><td>Nine Box hoje é só potencial x tempo, e simular o modelo padrão de mercado exige contratar o módulo de metas à parte</td><td><span class="feat-tag">Matriz n-Box</span></td><td>Eixos customizáveis para simular cenários e metas sobem direto no Nine Box, sem precisar contratar módulo separado</td></tr>
+<tr><td>Sucessão sem indicador e PDI burocrático, com baixa adesão do time</td><td><span class="feat-tag">Sucessão + PDI</span></td><td>Organograma de sucessão com risco e impacto de saída nativos, e PDI conectado direto à avaliação</td></tr>
+</tbody></table>
 
-               Caso 3 — vídeo ainda sem url_video: slot de colagem manual, para o closer colar o link
-               direto no site (fica salvo no localStorage do navegador via saveImage/loadStore).
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap video-embed-empty" data-video-idx="{{indice}}">
-                   <label class="video-paste-label">
-                     <i class="fa-regular fa-circle-play"></i>
-                     <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
-                   </label>
-                   <input type="text" class="video-url-input" data-video-idx="{{indice}}" placeholder="https://...">
-                 </div>
-               </div> -->
-        </div>
+
+      <div class="block-title"><i class="fa-solid fa-video"></i>Gravação da demonstração</div>
+      <div class="video-embed-wrap video-embed-empty">
+        <p>O link da gravação será colado aqui pelo closer logo após a reunião do dia 10.</p>
+        <input type="text" class="video-url-input" placeholder="Cole aqui o link do vídeo (YouTube ou Google Drive)">
       </div>
+
     </section>
 
     <!-- ABA 4 — DIFERENCIAIS IMPULSEUP -->
@@ -746,7 +713,7 @@
       <p class="section-sub">Jornada de compra da AmPm</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">31 ago</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Beatriz Bento</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">10 set</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">10h às 11h · Beatriz, Fabiana, Julia e Luana</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
@@ -875,7 +842,7 @@
       "titulo": "Reunião de Diagnóstico"
     },
     {
-      "data": "A definir",
+      "data": "10 set",
       "titulo": "Demonstração personalizada"
     },
     {
