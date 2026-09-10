@@ -790,18 +790,55 @@
       <h1 class="section-title">Processo de implementação</h1>
       <p class="section-sub">Como será a jornada de implementação da Ativa Logística com a impulseup</p>
 
-      <div class="empty-state" id="tab6EmptyState">
+      <div class="empty-state" id="tab6EmptyState" style="display:none;">
         <i class="fa-regular fa-map"></i>
         <h3>Aba liberada após o closer confirmar cluster, módulos e Weeklies (se Enterprise)</h3>
         <p>Assim que o cluster de implementação (Low/Mid, High ou Enterprise) e os módulos da proposta forem confirmados, esta aba mostra a cadeia de implementação de cada módulo: etapas e responsáveis do nosso lado.</p>
       </div>
 
-      <div id="tab6ProcessWrap" style="display:none;">
-        <!--IMPL_PROCESSO-->
+      <div id="tab6ProcessWrap" style="display:block;">
+        <p style="font-size:13px;color:var(--color-fg-muted);margin-bottom:18px;">Cronograma construído de trás para frente a partir da meta de disparo do ciclo em fevereiro. Datas em <strong>modo cenário apertado</strong>: pressupõem assinatura do contrato até o início de outubro — se a decisão da diretoria vier depois disso, o lançamento se desloca proporcionalmente.</p>
+        <div style="overflow-x:auto;margin-bottom:32px;">
+          <table class="rfp-table" id="tab6Table">
+            <thead>
+              <tr><th>Fase</th><th>Nome da Reunião/Etapa</th><th>Tipo</th><th>Responsável</th><th>Data inicial</th><th>Data de término</th><th>Status</th><th>Observações</th></tr>
+            </thead>
+            <tbody>
+              <tr><td rowspan="8" style="font-weight:700;vertical-align:top;background:var(--color-bg-alt);">Jornada inicial</td><td>Planejamento inicial</td><td>Reunião</td><td>CSI + CSM + cliente</td><td>12 out</td><td>16 out</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Preenchimento da planilha de usuários</td><td>Atividade</td><td>Cliente</td><td>19 out</td><td>23 out</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Coleta de cronograma</td><td>Reunião</td><td>CSI + cliente</td><td>26 out</td><td>30 out</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Importação da planilha de usuários</td><td>Atividade</td><td>Suporte</td><td>02 nov</td><td>04 nov</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td>SLA: 3 dias úteis</td></tr>
+              <tr><td>Workshop do sistema</td><td>Reunião</td><td>CSI + cliente</td><td>05 nov</td><td>09 nov</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Estratégia de 1º acesso</td><td>Reunião</td><td>CSI + cliente</td><td>10 nov</td><td>14 nov</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Apresentação da plataforma</td><td>Reunião</td><td>CSI + cliente</td><td>16 nov</td><td>20 nov</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Lançamento da plataforma</td><td>Atividade</td><td>CSI + cliente</td><td>23 nov</td><td>27 nov</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td rowspan="20" style="font-weight:700;vertical-align:top;background:var(--color-bg-alt);">Implementação da avaliação de desempenho</td><td>Preencher formulário de requisitos</td><td>Atividade</td><td>Cliente</td><td>30 nov</td><td>04 dez</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Coleta de requisitos da avaliação</td><td>Reunião</td><td>CSI + cliente</td><td>07 dez</td><td>11 dez</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Definição da etapa 4*</td><td>Atividade</td><td>Cliente</td><td>14 dez</td><td>18 dez</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Preenchimento da base de competências</td><td>Atividade</td><td>Cliente</td><td>21 dez</td><td>25 dez</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Importação da base de competências</td><td>Atividade</td><td>Suporte</td><td>28 dez</td><td>30 dez</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td>SLA: 3 dias úteis</td></tr>
+              <tr><td>Validação inicial da avaliação</td><td>Reunião</td><td>CSI + cliente</td><td>31 dez</td><td>04 jan</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Testes da avaliação</td><td>Atividade</td><td>Cliente</td><td>05 jan</td><td>09 jan</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Validação final da avaliação</td><td>Reunião</td><td>CSI + cliente</td><td>11 jan</td><td>15 jan</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Sensibilização</td><td>Atividade</td><td>Cliente</td><td>18 jan</td><td>22 jan</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Período avaliativo</td><td>Atividade</td><td>CSI + cliente</td><td>01 fev</td><td>10 fev</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td>Ciclo semestral — disparo em fevereiro</td></tr>
+              <tr><td>Relatório, devolutiva e PDI</td><td>Reunião</td><td>CSI + cliente</td><td>11 fev</td><td>15 fev</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Ninebox e sucessão</td><td>Reunião</td><td>CSI + cliente</td><td>16 fev</td><td>20 fev</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Analytics</td><td>Reunião</td><td>CSI + cliente</td><td>22 fev</td><td>26 fev</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Envio dos relatórios para gestor</td><td>Atividade</td><td>CSI + cliente</td><td>01 mar</td><td>03 mar</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Comitês de calibração</td><td>Atividade</td><td>Cliente</td><td>04 mar</td><td>08 mar</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Apresentação de resultados</td><td>Reunião</td><td>CSI + CSM + cliente</td><td>09 mar</td><td>13 mar</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Envio dos relatórios para liderado</td><td>Atividade</td><td>CSI + cliente</td><td>15 mar</td><td>17 mar</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Devolutiva</td><td>Atividade</td><td>Cliente</td><td>18 mar</td><td>22 mar</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Definição dos PDIs</td><td>Atividade</td><td>Cliente</td><td>23 mar</td><td>27 mar</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+              <tr><td>Programa de reconhecimento</td><td>Atividade</td><td>Cliente</td><td>29 mar</td><td>02 abr</td><td class="check-cell"><span class="feat-tag" style="background:var(--color-bg-alt);color:var(--color-fg-muted);">A definir</span></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
         <div class="impl-legend">
-          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#CC0088;"></span>Consultor de implementação</div>
-          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#4B4B8A;"></span>CSI</div>
-          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#111;"></span>Gerente de contas</div>
+          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#CC0088;"></span>CSI — Consultor de implementação</div>
+          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#4B4B8A;"></span>CSM — Gerente de contas</div>
+          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#111;"></span>Suporte técnico — acompanha toda a jornada</div>
         </div>
       </div>
     </section>
@@ -862,10 +899,10 @@
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Realizado</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Fernanda Teixeira e Kaique Ribeiro Oliveira</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Realizado</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Usabilidade, flexibilidade e analytics aplicados aos desafios mapeados</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">10 set</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Apresentação do plano de ação e da proposta comercial ao Kaique</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Final de set. / início de out.</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Marina apresenta o projeto internamente após retorno de férias (volta em 21–22/set)</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Revisão jurídica</span></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Dez / Jan (meta)</span><div><span class="tl-desc">Assinatura e kickoff</span><div class="tl-meta">Para viabilizar o disparo do primeiro ciclo em fevereiro</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Final de set. / início de out.</span><div><span class="tl-desc">Apresentação e decisão da diretoria</span><div class="tl-meta">Marina apresenta o projeto internamente após retorno de férias (volta em 21–22/set)</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">1ª semana de out.</span><div><span class="tl-desc">Negociação e aprovação da proposta</span><div class="tl-meta">Ajuste de valores/escopo dentro do budget já reservado pela Ativa</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">1ª semana de out.</span><div><span class="tl-desc">Revisão jurídica</span><div class="tl-meta">Corre em paralelo à negociação, para não consumir semana adicional do prazo</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Até 09 out (meta)</span><div><span class="tl-desc">Assinatura e kickoff</span><div class="tl-meta">Prazo crítico: assinatura até essa data é o que viabiliza o disparo do ciclo em fevereiro (ver Aba 6 — Processo de implementação)</div></div></div>
       </div>
     </section>
 
