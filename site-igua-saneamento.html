@@ -928,27 +928,43 @@
       <h1 class="section-title">Proposta comercial</h1>
       <p class="section-sub">Investimento para a Iguá Saneamento</p>
 
-      <div class="empty-state" id="tab7EmptyState">
+      <div class="empty-state" id="tab7EmptyState" style="display:none;">
         <i class="fa-regular fa-file-invoice-dollar"></i>
         <h3>Aba liberada após o closer informar a proposta comercial</h3>
         <p>Assim que o closer passar os valores definidos na ferramenta de precificação da impulseup, esta aba mostra o investimento, os módulos e serviços incluídos e o detalhamento de valores.</p>
       </div>
 
-      <div id="tab7ProposalWrap" style="display:none;">
+      <div id="tab7ProposalWrap" style="display:block;">
         <div class="investment-hero">
-          <div class="label">Investimento mensal</div>
-          <div class="value">R$ 12.400/mês</div>
+          <div class="label">Valor da parcela — 12x</div>
+          <div class="value">R$ 26.215,04</div>
         </div>
-        <p class="investment-hero-meta">Investimento total do contrato: R$ 148.800 · Validade da proposta: 15 dias · Duração do contrato: 12 meses</p>
+        <p class="investment-hero-meta">Investimento total do contrato: R$ 314.580,42 · Validade da proposta: 5 dias · Duração do contrato: 12 meses</p>
 
         <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos</div>
         <div class="module-list">
           <div class="module-row">
-            <div class="module-row-main"><h4>Avaliação de Desempenho</h4><p>Ciclos completos com nine-box e PDI integrado.</p></div>
-            <div class="module-row-users">500 usuários</div>
+            <div class="module-row-main"><h4>Avaliações</h4><p>Ciclos 90/180/360º, avaliação de experiência e feedback contínuo.</p></div>
+            <div class="module-row-users">3.300 usuários</div>
           </div>
           <div class="module-row">
-            <div class="module-row-main"><h4>Plano de Serviço III</h4><p>Implementação assistida por especialista em DHO.</p></div>
+            <div class="module-row-main"><h4>Metas e OKRs</h4><p>Indicadores e gestão estratégica.</p></div>
+            <div class="module-row-users">350 usuários</div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Desenvolvimento</h4><p>PDIs, feedbacks, reuniões 1:1, ações e iniciativas.</p></div>
+            <div class="module-row-users">3.300 usuários — incluso</div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Plano de Serviço Enterprise</h4><p>Ativação e sucesso, incluindo Avaliação de Desempenho e Metas.</p></div>
+            <div class="module-row-users"></div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Integração</h4><p>Integração com outros sistemas da Iguá Saneamento.</p></div>
+            <div class="module-row-users"></div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Treinamento</h4><p>4 horas de treinamento para o time de RH/DHO.</p></div>
             <div class="module-row-users"></div>
           </div>
         </div>
@@ -956,9 +972,14 @@
         <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
         <table class="rfp-table" id="proposalValuesTable">
           <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
-          <tr><td><div class="feat-name">Avaliação de Desempenho</div></td><td class="check-cell">500</td><td class="check-cell">R$ 22,00</td><td class="check-cell">R$ 11.000,00</td><td class="check-cell">—</td></tr>
-          <tr><td><div class="feat-name">Plano de Serviço III</div></td><td class="check-cell">—</td><td class="check-cell">R$ 16.800,00</td><td class="check-cell">—</td><td class="check-cell">Cobrança única</td></tr>
-          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 148.800</td></tr>
+          <tr><td><div class="feat-name">Avaliações</div></td><td class="check-cell">3.300</td><td class="check-cell">R$ 7,09 /mês</td><td class="check-cell">R$ 23.397,00</td><td class="check-cell">—</td></tr>
+          <tr><td><div class="feat-name">Metas e OKRs</div></td><td class="check-cell">350</td><td class="check-cell">R$ 4,48 /mês</td><td class="check-cell">R$ 1.568,00</td><td class="check-cell">—</td></tr>
+          <tr><td><div class="feat-name">Desenvolvimento</div></td><td class="check-cell">3.300</td><td class="check-cell">Incluso</td><td class="check-cell">Incluso</td><td class="check-cell">PDIs, feedbacks, reuniões 1:1, ações e iniciativas</td></tr>
+          <tr><td><div class="feat-name">Plano de Serviço Enterprise</div></td><td class="check-cell">—</td><td class="check-cell">R$ 32.953,80</td><td class="check-cell">—</td><td class="check-cell">Cobrança única — inclui Avaliação de Desempenho e Metas</td></tr>
+          <tr><td><div class="feat-name">Integração</div></td><td class="check-cell">—</td><td class="check-cell">R$ 15.000,00</td><td class="check-cell">—</td><td class="check-cell">Cobrança única — outros sistemas</td></tr>
+          <tr><td><div class="feat-name">Treinamento</div></td><td class="check-cell">—</td><td class="check-cell">R$ 2.000,00</td><td class="check-cell">—</td><td class="check-cell">Cobrança única — 4 horas</td></tr>
+          <tr><td><div class="feat-name">Desconto comercial</div></td><td class="check-cell">—</td><td class="check-cell">- R$ 34.953,38</td><td class="check-cell">—</td><td class="check-cell">Valor de tabela R$ 349.533,80, negociado para R$ 314.580,42.</td></tr>
+          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 314.580,42</td></tr>
         </table>
 
         <label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
