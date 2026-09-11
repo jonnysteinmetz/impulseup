@@ -663,46 +663,70 @@
       <h1 class="section-title">Proposta comercial</h1>
       <p class="section-sub">Investimento para a AmPm</p>
 
-      <div class="empty-state" id="tab7EmptyState">
+      <div class="empty-state" id="tab7EmptyState" style="display:none;">
         <i class="fa-regular fa-file-invoice-dollar"></i>
         <h3>Aba liberada após o closer informar a proposta comercial</h3>
         <p>Assim que o closer passar os valores definidos na ferramenta de precificação da impulseup, esta aba mostra o investimento, os módulos e serviços incluídos e o detalhamento de valores.</p>
       </div>
 
-      <div id="tab7ProposalWrap" style="display:none;">
-        <div class="investment-hero">
-          <div class="label">Investimento mensal</div>
-          <div class="value">R$ 12.400/mês</div>
-        </div>
-        <p class="investment-hero-meta">Investimento total do contrato: R$ 148.800 · Validade da proposta: 15 dias · Duração do contrato: 12 meses</p>
-
-        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos</div>
-        <div class="module-list">
-          <div class="module-row">
-            <div class="module-row-main"><h4>Avaliação de Desempenho</h4><p>Ciclos completos com nine-box e PDI integrado.</p></div>
-            <div class="module-row-users">500 usuários</div>
-          </div>
-          <div class="module-row">
-            <div class="module-row-main"><h4>Plano de Serviço III</h4><p>Implementação assistida por especialista em DHO.</p></div>
-            <div class="module-row-users"></div>
-          </div>
-        </div>
-
-        <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
-        <table class="rfp-table" id="proposalValuesTable">
-          <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
-          <tr><td><div class="feat-name">Avaliação de Desempenho</div></td><td class="check-cell">500</td><td class="check-cell">R$ 22,00</td><td class="check-cell">R$ 11.000,00</td><td class="check-cell">—</td></tr>
-          <tr><td><div class="feat-name">Plano de Serviço III</div></td><td class="check-cell">—</td><td class="check-cell">R$ 16.800,00</td><td class="check-cell">—</td><td class="check-cell">Cobrança única</td></tr>
-          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 148.800</td></tr>
-        </table>
-
-        <label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
-          <div id="proposalPlaceholder">
-            <i class="fa-regular fa-image" style="font-size:22px;color:var(--color-border);display:block;margin-bottom:10px;"></i>
-            <span style="font-size:13px;color:var(--color-fg-muted);">Clique para anexar</span>
-          </div>
-          <input type="file" accept="image/*" id="proposalInput">
-        </label>
+      <div id="tab7ProposalWrap" style="display:block;">
+<div class="cenarios-comparativo">
+<div class="cards"><div class="card">
+<div class="card-header">
+<div class="eyebrow-card">Cenário 1</div>
+<div class="card-title">Público corporativo (700 usuários)</div>
+</div>
+<div class="card-body">
+<div class="price-line"><span class="price-value">R$ 8.454,00</span><span class="price-unit">/ mês (12x)</span></div>
+<div class="price-base">Investimento total do contrato: R$ 101.448,00 · Validade da proposta: 5 dias</div>
+<hr class="divider">
+<div class="inclui-label">Inclui</div>
+<ul class="check-list">
+<li><span class="tick">&#10003;</span>Avaliações (Ciclos 90/180/360°, Av. Experiência e Feedback contínuo)</li>
+<li><span class="tick">&#10003;</span>Pesquisas (Clima, Pulso e Engajamento)</li>
+<li><span class="tick">&#10003;</span>Desenvolvimento (PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas) &mdash; incluso</li>
+<li><span class="tick">&#10003;</span>Plano de Serviço III + Integração</li>
+</ul>
+<details class="detalhamento">
+<summary>Ver detalhamento por empresa</summary>
+<table class="detalhamento-table">
+<thead><tr><th>Item</th><th>Quantidade</th><th>Valor unitário</th><th>Valor total</th></tr></thead>
+<tbody><tr class="empresa-row"><td colspan="4"><b>AmPm</b> &mdash; 424 usuários (60,57% do grupo)</td></tr><tr><td>Avaliações</td><td>424 créditos</td><td>Ver plano</td><td>R$ 29.968,32</td></tr><tr><td>Pesquisas (12 meses)</td><td>424 usuários</td><td>Ver plano</td><td>R$ 16.943,04</td></tr><tr><td>Plano de Serviço III (rateado)</td><td>&mdash;</td><td>Valor único</td><td>R$ 5.451,43</td></tr><tr><td>Integração (rateado)</td><td>&mdash;</td><td>Valor único</td><td>R$ 9.085,71</td></tr><tr style="font-weight:700;"><td colspan="3">Total AmPm (12 meses) &mdash; parcela R$ 5.120,71/mês</td><td>R$ 61.448,50</td></tr><tr class="empresa-row"><td colspan="4"><b>Millennium</b> &mdash; 127 usuários (18,14% do grupo)</td></tr><tr><td>Avaliações</td><td>127 créditos</td><td>Ver plano</td><td>R$ 8.976,36</td></tr><tr><td>Pesquisas (12 meses)</td><td>127 usuários</td><td>Ver plano</td><td>R$ 5.074,92</td></tr><tr><td>Plano de Serviço III (rateado)</td><td>&mdash;</td><td>Valor único</td><td>R$ 1.632,86</td></tr><tr><td>Integração (rateado)</td><td>&mdash;</td><td>Valor único</td><td>R$ 2.721,43</td></tr><tr style="font-weight:700;"><td colspan="3">Total Millennium (12 meses) &mdash; parcela R$ 1.533,80/mês</td><td>R$ 18.405,57</td></tr><tr class="empresa-row"><td colspan="4"><b>Krispy Kreme</b> &mdash; 149 usuários (21,29% do grupo)</td></tr><tr><td>Avaliações</td><td>149 créditos</td><td>Ver plano</td><td>R$ 10.531,32</td></tr><tr><td>Pesquisas (12 meses)</td><td>149 usuários</td><td>Ver plano</td><td>R$ 5.954,04</td></tr><tr><td>Plano de Serviço III (rateado)</td><td>&mdash;</td><td>Valor único</td><td>R$ 1.915,71</td></tr><tr><td>Integração (rateado)</td><td>&mdash;</td><td>Valor único</td><td>R$ 3.192,86</td></tr><tr style="font-weight:700;"><td colspan="3">Total Krispy Kreme (12 meses) &mdash; parcela R$ 1.799,49/mês</td><td>R$ 21.593,93</td></tr></tbody>
+</table>
+</details>
+</div>
+</div><div class="card">
+<div class="card-header">
+<div class="eyebrow-card">Cenário 2</div>
+<div class="card-title">Corporativo + operação completa (2.465 usuários)</div>
+</div>
+<div class="card-body">
+<div class="price-line"><span class="price-value">R$ 22.692,30</span><span class="price-unit">/ mês (12x)</span></div>
+<div class="price-base">Investimento total do contrato: R$ 272.307,55 · Validade da proposta: 5 dias</div>
+<hr class="divider">
+<div class="inclui-label">Inclui tudo do Cenário 1, mais</div>
+<ul class="check-list">
+<li><span class="tick">&#10003;</span>Cobertura completa do público operacional: lojas, centros de distribuição e franquias, além do corporativo</li>
+<li><span class="tick">&#10003;</span>Plano de Serviço Enterprise (em vez de Plano de Serviço III)</li>
+</ul>
+<details class="detalhamento">
+<summary>Ver detalhamento por empresa</summary>
+<table class="detalhamento-table">
+<thead><tr><th>Item</th><th>Quantidade</th><th>Valor unitário</th><th>Valor total</th></tr></thead>
+<tbody><tr class="empresa-row"><td colspan="4"><b>AmPm</b> &mdash; 432 usuários (17,53% do grupo)</td></tr><tr><td>Avaliações</td><td>432 créditos</td><td>Ver plano</td><td>R$ 25.954,56</td></tr><tr><td>Pesquisas (12 meses)</td><td>432 usuários</td><td>Ver plano</td><td>R$ 14.670,72</td></tr><tr><td>Plano de Serviço Enterprise (rateado)</td><td>&mdash;</td><td>Valor único</td><td>R$ 4.468,78</td></tr><tr><td>Integração (rateado)</td><td>&mdash;</td><td>Valor único</td><td>R$ 2.628,80</td></tr><tr style="font-weight:700;"><td colspan="3">Total AmPm (12 meses) &mdash; parcela R$ 3.976,91/mês</td><td>R$ 47.722,86</td></tr><tr class="empresa-row"><td colspan="4"><b>Millennium</b> &mdash; 913 usuários (37,04% do grupo)</td></tr><tr><td>Avaliações</td><td>913 créditos</td><td>Ver plano</td><td>R$ 54.853,04</td></tr><tr><td>Pesquisas (12 meses)</td><td>913 usuários</td><td>Ver plano</td><td>R$ 31.005,48</td></tr><tr><td>Plano de Serviço Enterprise (rateado)</td><td>&mdash;</td><td>Valor único</td><td>R$ 9.444,44</td></tr><tr><td>Integração (rateado)</td><td>&mdash;</td><td>Valor único</td><td>R$ 5.555,78</td></tr><tr style="font-weight:700;"><td colspan="3">Total Millennium (12 meses) &mdash; parcela R$ 8.404,90/mês</td><td>R$ 100.858,74</td></tr><tr class="empresa-row"><td colspan="4"><b>Krispy Kreme</b> &mdash; 1.120 usuários (45,44% do grupo)</td></tr><tr><td>Avaliações</td><td>1.120 créditos</td><td>Ver plano</td><td>R$ 67.289,60</td></tr><tr><td>Pesquisas (12 meses)</td><td>1.120 usuários</td><td>Ver plano</td><td>R$ 38.035,20</td></tr><tr><td>Plano de Serviço Enterprise (rateado)</td><td>&mdash;</td><td>Valor único</td><td>R$ 11.585,73</td></tr><tr><td>Integração (rateado)</td><td>&mdash;</td><td>Valor único</td><td>R$ 6.815,42</td></tr><tr style="font-weight:700;"><td colspan="3">Total Krispy Kreme (12 meses) &mdash; parcela R$ 10.310,50/mês</td><td>R$ 123.725,95</td></tr></tbody>
+</table>
+</details>
+</div>
+</div></div>
+</div>
+<p style="font-size:11.5px;color:var(--color-fg-muted);margin-top:14px;">Divisão por empresa calculada com base no headcount de cada negócio dentro do grupo (AmPm, Millennium e Krispy Kreme), ratando taxas fixas (Plano de Serviço e Integração) proporcionalmente ao headcount, e módulos por usuário/crédito de forma direta.</p>
+<label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
+  <div id="proposalPlaceholder">
+    <i class="fa-regular fa-image" style="font-size:22px;color:var(--color-border);display:block;margin-bottom:10px;"></i>
+    <span style="font-size:13px;color:var(--color-fg-muted);">Clique para anexar</span>
+  </div>
+  <input type="file" accept="image/*" id="proposalInput">
+</label>
       </div>
     </section>
 
