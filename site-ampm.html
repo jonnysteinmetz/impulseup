@@ -315,35 +315,6 @@
   }
   .cenarios-comparativo .detalhamento-table td{padding:7px 4px;border-bottom:1px solid var(--color-bg-alt);}
   .cenarios-comparativo .additional-title{font-size:11px;font-weight:700;letter-spacing:0.05em;color:var(--color-fg-muted);text-transform:uppercase;margin:0 0 12px 4px;}
-
-  /* ABA 7 — Proposta comercial: cards por empresa dentro de cada cenário */
-  .cenario-block{margin-bottom:40px;}
-  .cenario-block-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:18px;padding-bottom:16px;border-bottom:2px solid var(--color-fg);}
-  .cenario-block-header .eyebrow-card{font-size:11px;font-weight:700;color:var(--color-primary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;}
-  .cenario-block-header h3{font-size:19px;font-weight:700;color:var(--color-fg);}
-  .cenario-block-header .hero-value{font-size:26px;font-weight:800;color:var(--color-fg);}
-  .cenario-block-header .hero-meta{font-size:11.5px;color:var(--color-fg-muted);margin-top:2px;}
-  .empresa-cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
-  @media (max-width:1000px){.empresa-cards-grid{grid-template-columns:1fr 1fr;}}
-  .empresa-card{border:1px solid var(--color-border);border-radius:12px;padding:18px;background:var(--color-bg);}
-  .empresa-card.total{background:var(--color-fg);border-color:var(--color-fg);}
-  .empresa-card-name{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--color-fg-muted);margin-bottom:2px;}
-  .empresa-card.total .empresa-card-name{color:#FF7FC8;}
-  .empresa-card-pct{font-size:11px;color:var(--color-fg-muted);margin-bottom:12px;}
-  .empresa-card.total .empresa-card-pct{color:#D8D8D8;}
-  .empresa-card-total{font-size:20px;font-weight:800;color:var(--color-primary);}
-  .empresa-card.total .empresa-card-total{color:#fff;}
-  .empresa-card-mensal{font-size:11.5px;color:var(--color-fg-muted);margin:2px 0 14px;}
-  .empresa-card.total .empresa-card-mensal{color:#D8D8D8;}
-  .mod-row{padding:8px 0;border-top:1px solid var(--color-border);}
-  .empresa-card.total .mod-row{border-top-color:rgba(255,255,255,0.15);}
-  .mod-row .mod-name{font-size:10.5px;color:var(--color-fg-muted);margin-bottom:3px;}
-  .empresa-card.total .mod-row .mod-name{color:#B8B8B8;}
-  .mod-row .mod-line{display:flex;justify-content:space-between;align-items:baseline;gap:6px;font-size:12px;}
-  .mod-row .mod-unit{color:var(--color-fg-muted);font-size:10.5px;white-space:nowrap;}
-  .empresa-card.total .mod-row .mod-unit{color:#B8B8B8;}
-  .mod-row .mod-total{font-weight:700;color:var(--color-fg);text-align:right;}
-  .empresa-card.total .mod-row .mod-total{color:#fff;}
   .cenarios-comparativo .additional-list{display:flex;flex-direction:column;gap:10px;}
   .cenarios-comparativo .additional-row{
     background:var(--color-bg);border-radius:12px;padding:14px 18px;display:flex;align-items:center;
@@ -426,14 +397,6 @@
   .export-exec-btn:hover{background:var(--color-primary-hover);}
   .export-exec-btn:disabled{opacity:0.6;cursor:wait;}
   .export-exec-btn i{font-size:13px;}
-
-  /* ABA 6 — Tabela detalhada de fases/etapas (sem modelo cadeia/cronograma) */
-  .impl-detail-table td, .impl-detail-table th{font-size:12px;vertical-align:top;}
-  .impl-detail-table .fase-cell{background:var(--color-bg-alt);font-size:12.5px;vertical-align:top;min-width:160px;}
-  .impl-detail-table .status-pill{
-    display:inline-block;font-size:10px;font-weight:600;color:var(--color-fg-muted);white-space:nowrap;
-    background:var(--color-bg-alt);border:1px solid var(--color-border);border-radius:20px;padding:3px 10px;
-  }
 </style>
 </head>
 <body>
@@ -464,7 +427,8 @@
       <button data-tab="5"><span class="num">05</span>Aprovação e plano de ação</button>
       <button data-tab="6"><span class="num">06</span>Processo de implementação</button>
       <button data-tab="7"><span class="num">07</span>Proposta comercial</button>
-      <button data-tab="8"><span class="num">08</span>Próximos passos</button>
+      <button data-tab="8"><span class="num">08</span>Proposta · Pesquisa</button>
+      <button data-tab="9"><span class="num">09</span>Próximos passos</button>
       <button type="button" id="exportExecHtmlBtn" class="export-exec-btn">
         <i class="fa-regular fa-file-code"></i> Resumo executivo (HTML)
       </button>
@@ -556,11 +520,11 @@
       <div class="top-grid">
         <div class="card">
           <div class="card-label">Perfil</div>
-          <p>Maior rede de lojas de conveniência do Brasil, no mercado desde 1991, parte do ecossistema Ipiranga (Grupo Ultra) mas operada como empresa independente. Mais de 1.400 unidades no país, incluindo rede própria de padarias. Hoje reúne três negócios sob a mesma área de RH: a própria AmPm, a joint-venture Crispin Creamy (chegou em 2024) e a rede de postos Millennium (bandeiras Ipiranga) — atendendo públicos muito diferentes entre si, do corporativo aos franqueados, passando por centros de distribuição e operação de loja.</p>
+          <p>Maior rede de lojas de conveniência do Brasil, no mercado desde 1991, operada pela Ipiranga (Grupo Ultra). Mais de 1.400 unidades no país, incluindo rede própria de padarias, atendendo públicos muito distintos entre corporativo, operação, centros de distribuição e loja.</p>
         </div>
         <div class="card dark">
           <div class="card-label">Momento atual</div>
-          <p>Reavaliação simultânea de dois fornecedores centrais de RH: Pesquisa de Clima (hoje Pulses/Gupy) e Avaliação de Desempenho/Sucessão (hoje Qulture.Rocks). O objetivo declarado é reduzir a fragmentação entre plataformas e ganhar visão cruzada entre clima, desempenho e sucessão para os três negócios do grupo. Decisão prevista para meados de outubro, alinhada à renovação do contrato atual e à liberação do orçamento do próximo ciclo.</p>
+          <p>Reavaliação do fornecedor de Pesquisa de Clima (hoje Pulses/Gupy), buscando uma plataforma capaz de atender corporativo, operação, CDs e lojas dentro de uma mesma metodologia. Decisão prevista para meados de outubro, alinhada à renovação do contrato atual.</p>
         </div>
       </div>
 
@@ -569,9 +533,10 @@
         <div class="challenge-card"><span class="ch-num">01</span><h4>Alcance metodológico limitado</h4><p>O Pulses atende bem o público corporativo, mas não se estende adequadamente a operação, CDs e lojas.</p></div>
         <div class="challenge-card"><span class="ch-num">02</span><h4>Ferramenta sem evolução percebida</h4><p>Uso prolongado do Pulses sem novidade de funcionalidades gera busca ativa por alternativas mais atuais.</p></div>
         <div class="challenge-card"><span class="ch-num">03</span><h4>Processos de RH fragmentados</h4><p>Avaliação de Desempenho e Pesquisa de Clima rodam em fornecedores externos distintos, sem visão integrada.</p></div>
-        <div class="challenge-card"><span class="ch-num">04</span><h4>Deadline contratual em outubro</h4><p>Decisão precisa estar fechada até meados de outubro, junto à renovação do contrato atual.</p></div>
-        <div class="challenge-card"><span class="ch-num">05</span><h4>Orçamento ainda não dimensionado</h4><p>Empresa está levantando o investimento necessário para expandir a pesquisa a toda a operação.</p></div>
-        <div class="challenge-card"><span class="ch-num">06</span><h4>PDI burocrático, com baixa adesão</h4><p>O preenchimento manual e engessado do PDI faz com que as pessoas simplesmente não completem o plano, dificultando medir desenvolvimento real.</p></div>
+        <div class="centered-row">
+          <div class="challenge-card"><span class="ch-num">04</span><h4>Deadline contratual em outubro</h4><p>Decisão precisa estar fechada até meados de outubro, junto à renovação do contrato atual.</p></div>
+          <div class="challenge-card"><span class="ch-num">05</span><h4>Orçamento ainda não dimensionado</h4><p>Empresa está levantando o investimento necessário para expandir a pesquisa a toda a operação.</p></div>
+        </div>
       </div>
 
       <div class="block-title"><i class="fa-regular fa-user-tie"></i>Responsáveis pelo projeto</div>
@@ -631,10 +596,10 @@
       <table class="rfp-table">
         <thead><tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr></thead>
         <tbody>
-<tr><td>Relatórios de clima pouco confiáveis, exportação manual em Excel e risco de erro humano ao montar material de diretoria</td><td><span class="feat-tag">Análises e Relatórios</span></td><td>Mapa de calor por área, cargo e tempo de casa, exportação direta dos gráficos em imagem e da planilha em PDF ou PPT, e IA que varre os comentários sinalizando risco trabalhista ou de assédio — sem custo adicional de token</td></tr>
-<tr><td>Histórico de pesquisa se sobrepõe entre AmPm, Crispin Creamy e Millennium, com risco de perder dado a cada novo disparo</td><td><span class="feat-tag">Pesquisas</span></td><td>Cada aplicação preserva o próprio histórico e pode ser comparada com qualquer outra, mesmo entre negócios ou anos diferentes, sem sobrepor nem perder dado</td></tr>
-<tr><td>Nine Box hoje é só potencial x tempo, e simular o modelo padrão de mercado exige contratar o módulo de metas à parte</td><td><span class="feat-tag">Matriz n-Box</span></td><td>Eixos e quadrantes 100% customizáveis, com metas subindo direto no Nine Box por importação de dados externos — sem precisar contratar o módulo de Metas separadamente</td></tr>
-<tr><td>Sucessão sem indicador e PDI burocrático, com baixa adesão do time</td><td><span class="feat-tag">Sucessão + PDI</span></td><td>Organograma de sucessão com risco e impacto de saída filtráveis direto no Nine Box, e PDI com biblioteca de ações prontas para reduzir a barreira que hoje trava a adesão</td></tr>
+<tr><td>Relatórios de clima pouco confiáveis, exportação manual em Excel e risco de erro humano ao montar material de diretoria</td><td><span class="feat-tag">Análises e Relatórios</span></td><td>Mapa de calor automático, gráfico de favorabilidade e exportação direta em PDF ou PPT</td></tr>
+<tr><td>Histórico de pesquisa se sobrepõe entre AmPm, Crispin Creamy e Millennium, com risco de perder dado a cada novo disparo</td><td><span class="feat-tag">Pesquisas</span></td><td>Cada pesquisa preserva o próprio histórico, com comparativo entre os três negócios lado a lado</td></tr>
+<tr><td>Nine Box hoje é só potencial x tempo, e simular o modelo padrão de mercado exige contratar o módulo de metas à parte</td><td><span class="feat-tag">Matriz n-Box</span></td><td>Eixos customizáveis para simular cenários e metas sobem direto no Nine Box, sem precisar contratar módulo separado</td></tr>
+<tr><td>Sucessão sem indicador e PDI burocrático, com baixa adesão do time</td><td><span class="feat-tag">Sucessão + PDI</span></td><td>Organograma de sucessão com risco e impacto de saída nativos, e PDI conectado direto à avaliação</td></tr>
 </tbody></table>
 
 
@@ -656,7 +621,7 @@
         <p>Assim que o closer finalizar o diagnóstico, esta aba mostra o comparativo entre a impulseup e os concorrentes identificados na conversa. Se nenhum concorrente específico for mencionado, o comparativo é feito contra "Outras soluções", com resultado mediano.</p>
       </div>
       <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:block;">
-        <table class="rfp-table" id="tab4Table"><thead><tr><th>Critério</th><th class="iup-col">impulseup</th><th>Pulses (Gupy)</th><th>Qulture.Rocks</th></tr></thead><tbody><tr><td><div class="feat-name">Comparativo histórico de resultados de pesquisas</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">IA para análise de comentários e questões abertas</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Perfil 360 (todas as informações do colaborador em uma única página)</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Customização dos eixos da matriz n-Box</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Cruzamento automático de Avaliação e Metas</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Planejamento de carreira e sucessão</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Conexão de gaps da avaliação com PDI e cursos de desenvolvimento</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Envio de pesquisas por SMS e WhatsApp, com API oficial e sem custo por mensagem</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Gestores acompanham em tempo real quem já respondeu, iniciou ou concluiu</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Importação de dados externos para o Nine Box, sem precisar contratar o módulo de Metas</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Biblioteca de ações de desenvolvimento prontas para montar o PDI</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr></tbody></table>
+        <table class="rfp-table" id="tab4Table"><thead><tr><th>Critério</th><th class="iup-col">impulseup</th><th>Pulses (Gupy)</th><th>Qulture.Rocks</th></tr></thead><tbody><tr><td><div class="feat-name">Comparativo histórico de resultados de pesquisas</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">IA para análise de comentários e questões abertas</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Perfil 360 (todas as informações do colaborador em uma única página)</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Customização dos eixos da matriz n-Box</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Cruzamento automático de Avaliação e Metas</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Planejamento de carreira e sucessão</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr><tr><td><div class="feat-name">Conexão de gaps da avaliação com PDI e cursos de desenvolvimento</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr></tbody></table>
       </div>
     </section>
 
@@ -679,22 +644,19 @@
       <h1 class="section-title">Processo de implementação</h1>
       <p class="section-sub">Como será a jornada de implementação da AmPm com a impulseup</p>
 
-      <div class="empty-state" id="tab6EmptyState" style="display:none;">
+      <div class="empty-state" id="tab6EmptyState">
         <i class="fa-regular fa-map"></i>
         <h3>Aba liberada após o closer confirmar cluster, módulos e Weeklies (se Enterprise)</h3>
         <p>Assim que o cluster de implementação (Low/Mid, High ou Enterprise) e os módulos da proposta forem confirmados, esta aba mostra a cadeia de implementação de cada módulo: etapas e responsáveis do nosso lado.</p>
       </div>
 
-      <div id="tab6ProcessWrap" style="display:block;">
+      <div id="tab6ProcessWrap" style="display:none;">
         <!--IMPL_PROCESSO-->
-        <p style="font-size:12.5px;color:var(--color-fg-muted);margin-bottom:18px;">Fases e etapas da implementação para os módulos de Avaliação de Desempenho e Pesquisa. Datas e status entram assim que o cluster de serviço (Low/Mid, High ou Enterprise) for confirmado com o cronograma real.</p>
-        <div class="block-title"><i class="fa-regular fa-list-check"></i>Fases detalhadas de implementação</div>
-<table class="rfp-table impl-detail-table">
-<thead><tr><th>Fase</th><th>Nome da Reunião/Etapa</th><th>Tipo</th><th>Responsável</th><th>Status</th><th>Observações</th></tr></thead>
-<tbody>
-<tr><td rowspan="8" class="fase-cell"><b>Jornada inicial</b></td><td>Planejamento inicial</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + CSM + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Preenchimento da planilha de usuários</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Coleta de cronograma</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Importação da planilha de usuários</td><td class="check-cell">Atividade</td><td class="check-cell">Suporte</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td>SLA: 3 dias úteis</td></tr><tr><td>Workshop do sistema</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Estratégia de 1º acesso</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Apresentação da plataforma</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Lançamento da plataforma</td><td class="check-cell">Atividade</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td rowspan="22" class="fase-cell"><b>Implementação da avaliação de desempenho</b></td><td>Preencher formulário de requisitos</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Coleta de requisitos da avaliação</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Definição da etapa 4*</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Preenchimento da base de competências</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Importação da base competências</td><td class="check-cell">Atividade</td><td class="check-cell">Suporte</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td>SLA: 3 dias úteis</td></tr><tr><td>Validação inicial da avaliação</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Testes da avaliação</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Validação final da avaliação</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Sensibilização</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Treinamento para a empresa (1h)</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Envio da avaliação + acompanhamento</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Período avaliativo</td><td class="check-cell">Atividade</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Relatório, devolutiva e PDI</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Ninebox e sucessão</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Analytics</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Envio dos relatórios para gestor</td><td class="check-cell">Atividade</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Comitês de calibração</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Apresentação de resultados</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + CSM + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Envio dos relatórios para liderado</td><td class="check-cell">Atividade</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Devolutiva</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Definição dos PDI</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Programa de reconhecimento</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td rowspan="13" class="fase-cell"><b>Implementação de pesquisa</b></td><td>Preencher formulário de requisitos</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Coleta de requisitos da pesquisa</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Preenchimento do formulário da pesquisa</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Validação da pesquisa</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Testes da pesquisa</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Ajustes finais na pesquisa</td><td class="check-cell">Atividade</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Sensibilização</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Abertura do ciclo + acompanhamento</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Pesquisa em andamento</td><td class="check-cell">Atividade</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Analytics</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Apresentação de resultados</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + CSM + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Apresentações para a diretoria</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Definição de planos de ação</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr>
-</tbody>
-</table>
+        <div class="impl-legend">
+          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#CC0088;"></span>Consultor de implementação</div>
+          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#4B4B8A;"></span>CSI</div>
+          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#111;"></span>Gerente de contas</div>
+        </div>
       </div>
     </section>
 
@@ -703,222 +665,118 @@
       <h1 class="section-title">Proposta comercial</h1>
       <p class="section-sub">Investimento para a AmPm</p>
 
-      <div class="empty-state" id="tab7EmptyState" style="display:none;">
+      <div class="empty-state" id="tab7EmptyState">
         <i class="fa-regular fa-file-invoice-dollar"></i>
         <h3>Aba liberada após o closer informar a proposta comercial</h3>
         <p>Assim que o closer passar os valores definidos na ferramenta de precificação da impulseup, esta aba mostra o investimento, os módulos e serviços incluídos e o detalhamento de valores.</p>
       </div>
 
-      <div id="tab7ProposalWrap" style="display:block;">
-<div class="cenario-block">
-  <div class="cenario-block-header">
-    <div>
-      <div class="eyebrow-card">Cenário 1</div>
-      <h3>Público corporativo (700 usuários)</h3>
-    </div>
-    <div style="text-align:right;">
-      <div class="hero-value">R$ 8.454,00<span style="font-size:13px;font-weight:500;color:var(--color-fg-muted);">/mês</span></div>
-      <div class="hero-meta">Investimento total do contrato: R$ 101.448,00 · Validade da proposta: 5 dias</div>
-    </div>
-  </div>
-  <div class="empresa-cards-grid"><div class="empresa-card total">
-  <div class="empresa-card-name">TOTAL DO GRUPO</div>
-  <div class="empresa-card-pct">700 usuários</div>
-  <div class="empresa-card-total">R$ 101.448,00</div>
-  <div class="empresa-card-mensal">R$ 8.454,00/mês (12x)</div>
-  <div class="mod-row">
-  <div class="mod-name">Avaliações</div>
-  <div class="mod-line"><span class="mod-unit">R$ 70,68/crédito</span><span class="mod-total">R$ 49.476,00</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Pesquisas (12 meses)</div>
-  <div class="mod-line"><span class="mod-unit">R$ 3,33/mês</span><span class="mod-total">R$ 27.972,00</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Plano de Serviço III</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 9.000,00</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Integração</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 15.000,00</span></div>
-</div>
-</div><div class="empresa-card">
-  <div class="empresa-card-name">AMPM</div>
-  <div class="empresa-card-pct">424 usuários · 60,6% do grupo</div>
-  <div class="empresa-card-total">R$ 61.448,50</div>
-  <div class="empresa-card-mensal">R$ 5.120,71/mês (12x)</div>
-  <div class="mod-row">
-  <div class="mod-name">Avaliações</div>
-  <div class="mod-line"><span class="mod-unit">R$ 70,68/crédito</span><span class="mod-total">R$ 29.968,32</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Pesquisas (12 meses)</div>
-  <div class="mod-line"><span class="mod-unit">R$ 3,33/mês</span><span class="mod-total">R$ 16.943,04</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Plano de Serviço III (rateado)</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 5.451,43</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Integração</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 9.085,71</span></div>
-</div>
-</div><div class="empresa-card">
-  <div class="empresa-card-name">MILLENNIUM</div>
-  <div class="empresa-card-pct">127 usuários · 18,1% do grupo</div>
-  <div class="empresa-card-total">R$ 18.405,57</div>
-  <div class="empresa-card-mensal">R$ 1.533,80/mês (12x)</div>
-  <div class="mod-row">
-  <div class="mod-name">Avaliações</div>
-  <div class="mod-line"><span class="mod-unit">R$ 70,68/crédito</span><span class="mod-total">R$ 8.976,36</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Pesquisas (12 meses)</div>
-  <div class="mod-line"><span class="mod-unit">R$ 3,33/mês</span><span class="mod-total">R$ 5.074,92</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Plano de Serviço III (rateado)</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 1.632,86</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Integração</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 2.721,43</span></div>
-</div>
-</div><div class="empresa-card">
-  <div class="empresa-card-name">KRISPY KREME</div>
-  <div class="empresa-card-pct">149 usuários · 21,3% do grupo</div>
-  <div class="empresa-card-total">R$ 21.593,93</div>
-  <div class="empresa-card-mensal">R$ 1.799,49/mês (12x)</div>
-  <div class="mod-row">
-  <div class="mod-name">Avaliações</div>
-  <div class="mod-line"><span class="mod-unit">R$ 70,68/crédito</span><span class="mod-total">R$ 10.531,32</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Pesquisas (12 meses)</div>
-  <div class="mod-line"><span class="mod-unit">R$ 3,33/mês</span><span class="mod-total">R$ 5.954,04</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Plano de Serviço III (rateado)</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 1.915,71</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Integração</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 3.192,86</span></div>
-</div>
-</div></div>
-</div>
+      <div id="tab7ProposalWrap" style="display:none;">
+        <div class="investment-hero">
+          <div class="label">Investimento mensal</div>
+          <div class="value">R$ 12.400/mês</div>
+        </div>
+        <p class="investment-hero-meta">Investimento total do contrato: R$ 148.800 · Validade da proposta: 15 dias · Duração do contrato: 12 meses</p>
 
-<div class="cenario-block">
-  <div class="cenario-block-header">
-    <div>
-      <div class="eyebrow-card">Cenário 2</div>
-      <h3>Corporativo + operação completa (2.465 usuários)</h3>
-    </div>
-    <div style="text-align:right;">
-      <div class="hero-value">R$ 22.692,30<span style="font-size:13px;font-weight:500;color:var(--color-fg-muted);">/mês</span></div>
-      <div class="hero-meta">Investimento total do contrato: R$ 272.307,55 · Validade da proposta: 5 dias</div>
-    </div>
-  </div>
-  <div class="empresa-cards-grid"><div class="empresa-card total">
-  <div class="empresa-card-name">TOTAL DO GRUPO</div>
-  <div class="empresa-card-pct">2.465 usuários</div>
-  <div class="empresa-card-total">R$ 272.307,55</div>
-  <div class="empresa-card-mensal">R$ 22.692,30/mês (12x)</div>
-  <div class="mod-row">
-  <div class="mod-name">Avaliações</div>
-  <div class="mod-line"><span class="mod-unit">R$ 60,08/crédito</span><span class="mod-total">R$ 148.097,20</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Pesquisas (12 meses)</div>
-  <div class="mod-line"><span class="mod-unit">R$ 2,83/mês</span><span class="mod-total">R$ 83.711,40</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Plano de Serviço Enterprise</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 25.498,95</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Integração</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 15.000,00</span></div>
-</div>
-</div><div class="empresa-card">
-  <div class="empresa-card-name">AMPM</div>
-  <div class="empresa-card-pct">432 usuários · 17,5% do grupo</div>
-  <div class="empresa-card-total">R$ 47.722,86</div>
-  <div class="empresa-card-mensal">R$ 3.976,91/mês (12x)</div>
-  <div class="mod-row">
-  <div class="mod-name">Avaliações</div>
-  <div class="mod-line"><span class="mod-unit">R$ 60,08/crédito</span><span class="mod-total">R$ 25.954,56</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Pesquisas (12 meses)</div>
-  <div class="mod-line"><span class="mod-unit">R$ 2,83/mês</span><span class="mod-total">R$ 14.670,72</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Plano Enterprise (rateado)</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 4.468,78</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Integração</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 2.628,80</span></div>
-</div>
-</div><div class="empresa-card">
-  <div class="empresa-card-name">MILLENNIUM</div>
-  <div class="empresa-card-pct">913 usuários · 37,0% do grupo</div>
-  <div class="empresa-card-total">R$ 100.858,74</div>
-  <div class="empresa-card-mensal">R$ 8.404,90/mês (12x)</div>
-  <div class="mod-row">
-  <div class="mod-name">Avaliações</div>
-  <div class="mod-line"><span class="mod-unit">R$ 60,08/crédito</span><span class="mod-total">R$ 54.853,04</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Pesquisas (12 meses)</div>
-  <div class="mod-line"><span class="mod-unit">R$ 2,83/mês</span><span class="mod-total">R$ 31.005,48</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Plano Enterprise (rateado)</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 9.444,44</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Integração</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 5.555,78</span></div>
-</div>
-</div><div class="empresa-card">
-  <div class="empresa-card-name">KRISPY KREME</div>
-  <div class="empresa-card-pct">1.120 usuários · 45,4% do grupo</div>
-  <div class="empresa-card-total">R$ 123.725,95</div>
-  <div class="empresa-card-mensal">R$ 10.310,50/mês (12x)</div>
-  <div class="mod-row">
-  <div class="mod-name">Avaliações</div>
-  <div class="mod-line"><span class="mod-unit">R$ 60,08/crédito</span><span class="mod-total">R$ 67.289,60</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Pesquisas (12 meses)</div>
-  <div class="mod-line"><span class="mod-unit">R$ 2,83/mês</span><span class="mod-total">R$ 38.035,20</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Plano Enterprise (rateado)</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 11.585,73</span></div>
-</div>
-  <div class="mod-row">
-  <div class="mod-name">Integração</div>
-  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 6.815,42</span></div>
-</div>
-</div></div>
-</div>
+        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos</div>
+        <div class="module-list">
+          <div class="module-row">
+            <div class="module-row-main"><h4>Avaliação de Desempenho</h4><p>Ciclos completos com nine-box e PDI integrado.</p></div>
+            <div class="module-row-users">500 usuários</div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Plano de Serviço III</h4><p>Implementação assistida por especialista em DHO.</p></div>
+            <div class="module-row-users"></div>
+          </div>
+        </div>
 
-<p style="font-size:11.5px;color:var(--color-fg-muted);margin-top:6px;">Avaliações e Pesquisas calculadas direto por usuário/crédito de cada empresa. Plano de Serviço e Integração são taxas fixas do grupo, rateadas proporcionalmente ao headcount de cada negócio no card &quot;Total do grupo&quot; elas aparecem cheias, não rateadas.</p>
-<label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
-  <div id="proposalPlaceholder">
-    <i class="fa-regular fa-image" style="font-size:22px;color:var(--color-border);display:block;margin-bottom:10px;"></i>
-    <span style="font-size:13px;color:var(--color-fg-muted);">Clique para anexar</span>
-  </div>
-  <input type="file" accept="image/*" id="proposalInput">
-</label>
+        <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
+        <table class="rfp-table" id="proposalValuesTable">
+          <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
+          <tr><td><div class="feat-name">Avaliação de Desempenho</div></td><td class="check-cell">500</td><td class="check-cell">R$ 22,00</td><td class="check-cell">R$ 11.000,00</td><td class="check-cell">—</td></tr>
+          <tr><td><div class="feat-name">Plano de Serviço III</div></td><td class="check-cell">—</td><td class="check-cell">R$ 16.800,00</td><td class="check-cell">—</td><td class="check-cell">Cobrança única</td></tr>
+          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 148.800</td></tr>
+        </table>
+
+        <label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
+          <div id="proposalPlaceholder">
+            <i class="fa-regular fa-image" style="font-size:22px;color:var(--color-border);display:block;margin-bottom:10px;"></i>
+            <span style="font-size:13px;color:var(--color-fg-muted);">Clique para anexar</span>
+          </div>
+          <input type="file" accept="image/*" id="proposalInput">
+        </label>
       </div>
     </section>
 
-    <!-- ABA 8 — PRÓXIMOS PASSOS -->
     <section class="tab-panel" id="tab-8">
+      <h1 class="section-title">Proposta Comercial · Pesquisa</h1>
+      <p class="section-sub">Dois cenários de volume para o grupo Ipiranga (AmPm, Millennium e Krispy Kreme)</p>
+
+      <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos incluídos em ambos os cenários</div>
+      <div class="module-list">
+        <div class="module-row">
+          <div class="module-row-main"><h4>Pesquisas</h4><p>Clima, Pulso e Engajamento.</p></div>
+          <div class="module-row-users"></div>
+        </div>
+        <div class="module-row">
+          <div class="module-row-main"><h4>Desenvolvimento</h4><p>PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas.</p></div>
+          <div class="module-row-users">Incluso</div>
+        </div>
+        <div class="module-row">
+          <div class="module-row-main"><h4>Plano de Serviço III</h4><p>Implementação assistida, incluso em Pesquisas.</p></div>
+          <div class="module-row-users">R$ 7.500,00</div>
+        </div>
+        <div class="module-row">
+          <div class="module-row-main"><h4>Integração</h4><p>Outros sistemas do grupo.</p></div>
+          <div class="module-row-users">R$ 15.000,00</div>
+        </div>
+      </div>
+
+      <div class="block-title"><i class="fa-solid fa-users"></i>Cenário 1 — Grupo completo (2.465 usuários)</div>
+      <div class="investment-hero">
+        <div class="label">Valor da parcela (12x)</div>
+        <div class="value">R$ 12.622,40</div>
+      </div>
+      <p class="investment-hero-meta">Investimento total do contrato: R$ 151.468,80 · Contrato de 12 meses · Validade da proposta: 5 dias</p>
+
+      <div class="challenges">
+        <div class="challenge-card">
+          <h4>AmPm</h4>
+          <table class="rfp-table" style="margin-top:10px;">
+            <tr><th></th><th>Cenário 1 (432 usuários)</th><th>Cenário 2 (424 usuários)</th></tr>
+            <tr><td>Valor mensal</td><td class="check-cell">R$ 1.883,53</td><td class="check-cell">R$ 2.170,88</td></tr>
+            <tr><td>Valor anual (12x)</td><td class="check-cell">R$ 22.602,36</td><td class="check-cell">R$ 26.050,56</td></tr>
+          </table>
+        </div>
+        <div class="challenge-card">
+          <h4>Millennium (MLN)</h4>
+          <table class="rfp-table" style="margin-top:10px;">
+            <tr><th></th><th>Cenário 1 (913 usuários)</th><th>Cenário 2 (127 usuários)</th></tr>
+            <tr><td>Valor mensal</td><td class="check-cell">R$ 3.980,76</td><td class="check-cell">R$ 650,24</td></tr>
+            <tr><td>Valor anual (12x)</td><td class="check-cell">R$ 47.769,12</td><td class="check-cell">R$ 7.802,88</td></tr>
+          </table>
+        </div>
+        <div class="challenge-card">
+          <h4>Krispy Kreme (KK)</h4>
+          <table class="rfp-table" style="margin-top:10px;">
+            <tr><th></th><th>Cenário 1 (1.120 usuários)</th><th>Cenário 2 (149 usuários)</th></tr>
+            <tr><td>Valor mensal</td><td class="check-cell">R$ 4.883,11</td><td class="check-cell">R$ 762,88</td></tr>
+            <tr><td>Valor anual (12x)</td><td class="check-cell">R$ 58.597,32</td><td class="check-cell">R$ 9.154,56</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="block-title" style="margin-top:32px;"><i class="fa-solid fa-users"></i>Cenário 2 — Grupo completo (700 usuários)</div>
+      <div class="investment-hero">
+        <div class="label">Valor da parcela (12x)</div>
+        <div class="value">R$ 5.459,00</div>
+      </div>
+      <p class="investment-hero-meta">Investimento total do contrato: R$ 65.508,00 · Contrato de 12 meses · Validade da proposta: 5 dias</p>
+      <p class="section-sub" style="margin-top:8px;">Detalhamento individual do Cenário 2 disponível na tabela de cada empresa acima.</p>
+        </section>
+
+    <!-- ABA 8 — PRÓXIMOS PASSOS -->
+    <section class="tab-panel" id="tab-9">
       <h1 class="section-title">Próximos passos</h1>
       <p class="section-sub">Jornada de compra da AmPm</p>
       <div class="timeline">
