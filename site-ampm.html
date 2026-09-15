@@ -356,6 +356,13 @@
   .mod-row .mod-total{font-weight:700;color:var(--color-fg);text-align:right;}
   .empresa-card.total .mod-row .mod-total{color:#fff;}
 
+  /* ABA 6 — Tabela detalhada de fases/etapas (sem modelo cadeia/cronograma) */
+  .impl-detail-table td, .impl-detail-table th{font-size:12px;vertical-align:top;}
+  .impl-detail-table .fase-cell{background:var(--color-bg-alt);font-size:12.5px;vertical-align:top;min-width:160px;}
+  .impl-detail-table .status-pill{
+    display:inline-block;font-size:10px;font-weight:600;color:var(--color-fg-muted);white-space:nowrap;
+    background:var(--color-bg-alt);border:1px solid var(--color-border);border-radius:20px;padding:3px 10px;
+  }
   /* ABA 7 — PROCESSO DE IMPLEMENTAÇÃO (modelo v4 — cadeia por cluster) */
   .impl-processo{}
   .impl-suporte-note{
@@ -673,19 +680,22 @@
       <h1 class="section-title">Processo de implementação</h1>
       <p class="section-sub">Como será a jornada de implementação da AmPm com a impulseup</p>
 
-      <div class="empty-state" id="tab6EmptyState">
+      <div class="empty-state" id="tab6EmptyState" style="display:none;">
         <i class="fa-regular fa-map"></i>
         <h3>Aba liberada após o closer confirmar cluster, módulos e Weeklies (se Enterprise)</h3>
         <p>Assim que o cluster de implementação (Low/Mid, High ou Enterprise) e os módulos da proposta forem confirmados, esta aba mostra a cadeia de implementação de cada módulo: etapas e responsáveis do nosso lado.</p>
       </div>
 
-      <div id="tab6ProcessWrap" style="display:none;">
+      <div id="tab6ProcessWrap" style="display:block;">
         <!--IMPL_PROCESSO-->
-        <div class="impl-legend">
-          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#CC0088;"></span>Consultor de implementação</div>
-          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#4B4B8A;"></span>CSI</div>
-          <div class="impl-legend-item"><span class="impl-legend-dot" style="background:#111;"></span>Gerente de contas</div>
-        </div>
+        <p style="font-size:12.5px;color:var(--color-fg-muted);margin-bottom:18px;">Fases e etapas da implementação para os módulos de Avaliação de Desempenho e Pesquisa. Datas e status entram assim que o cluster de serviço (Low/Mid, High ou Enterprise) for confirmado com o cronograma real.</p>
+        <div class="block-title"><i class="fa-regular fa-list-check"></i>Fases detalhadas de implementação</div>
+<table class="rfp-table impl-detail-table">
+<thead><tr><th>Fase</th><th>Nome da Reunião/Etapa</th><th>Tipo</th><th>Responsável</th><th>Status</th><th>Observações</th></tr></thead>
+<tbody>
+<tr><td rowspan="8" class="fase-cell"><b>Jornada inicial</b></td><td>Planejamento inicial</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + CSM + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Preenchimento da planilha de usuários</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Coleta de cronograma</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Importação da planilha de usuários</td><td class="check-cell">Atividade</td><td class="check-cell">Suporte</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td>SLA: 3 dias úteis</td></tr><tr><td>Workshop do sistema</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Estratégia de 1º acesso</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Apresentação da plataforma</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Lançamento da plataforma</td><td class="check-cell">Atividade</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td rowspan="22" class="fase-cell"><b>Implementação da avaliação de desempenho</b></td><td>Preencher formulário de requisitos</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Coleta de requisitos da avaliação</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Definição da etapa 4*</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Preenchimento da base de competências</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Importação da base competências</td><td class="check-cell">Atividade</td><td class="check-cell">Suporte</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td>SLA: 3 dias úteis</td></tr><tr><td>Validação inicial da avaliação</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Testes da avaliação</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Validação final da avaliação</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Sensibilização</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Treinamento para a empresa (1h)</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Envio da avaliação + acompanhamento</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Período avaliativo</td><td class="check-cell">Atividade</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Relatório, devolutiva e PDI</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Ninebox e sucessão</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Analytics</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Envio dos relatórios para gestor</td><td class="check-cell">Atividade</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Comitês de calibração</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Apresentação de resultados</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + CSM + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Envio dos relatórios para liderado</td><td class="check-cell">Atividade</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Devolutiva</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Definição dos PDI</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Programa de reconhecimento</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td rowspan="13" class="fase-cell"><b>Implementação de pesquisa</b></td><td>Preencher formulário de requisitos</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Coleta de requisitos da pesquisa</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Preenchimento do formulário da pesquisa</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Validação da pesquisa</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Testes da pesquisa</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Ajustes finais na pesquisa</td><td class="check-cell">Atividade</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Sensibilização</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Abertura do ciclo + acompanhamento</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Pesquisa em andamento</td><td class="check-cell">Atividade</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Analytics</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Apresentação de resultados</td><td class="check-cell">Reunião</td><td class="check-cell">CSI + CSM + cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Apresentações para a diretoria</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr><tr><td>Definição de planos de ação</td><td class="check-cell">Atividade</td><td class="check-cell">Cliente</td><td class="check-cell"><span class="status-pill">A iniciar</span></td><td></td></tr>
+</tbody>
+</table>
       </div>
     </section>
 
@@ -912,197 +922,203 @@
       <h1 class="section-title">Proposta Comercial · Pesquisa</h1>
       <p class="section-sub">Dois cenários de volume para o grupo Ipiranga (AmPm, Millennium e Krispy Kreme) · Validade da proposta: 5 dias</p>
 
-      <div class="cenarios-comparativo">
-        <div class="additional-title" style="margin-top:0;">Cenário 1 — Grupo completo (2.465 usuários)</div>
-        <div class="cards" style="grid-template-columns:1fr;margin-bottom:18px;">
-          <div class="card recommended">
-          <div class="card-header">
-            <span class="badge-recommended">Grupo</span>
-            <div class="eyebrow-card">Cenário 1 · Total do grupo</div>
-            <div class="card-title">Grupo Ipiranga</div>
-          </div>
-          <div class="card-body">
-            <div class="price-line"><span class="price-value">R$ 12.622,40</span><span class="price-unit">/mês</span></div>
-            <div class="price-base">12x · Investimento total do contrato: R$ 151.468,80</div>
-            <hr class="divider">
-            <div class="inclui-label">Detalhamento dos módulos</div>
-            <p class="module-desc"><b>Pesquisas</b> — Clima, Pulso e Engajamento<br>Usuários: 2.465 · Valor unit.: R$ 4,36/mês · Total: R$ 10.747,40/mês</p>
-            <p class="module-desc"><b>Desenvolvimento</b> — PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas<br>Usuários: 2.465 · <span style="color:var(--color-primary);font-weight:700;">Incluso</span></p>
-            <ul class="check-list">
-              <li><span class="tick">✓</span>Metodologia única para os 3 negócios do grupo</li>
-              <li><span class="tick">✓</span>Histórico preservado entre pesquisas</li>
-            </ul>
-            
-          <div class="additional-title">Serviços de Ativação e Sucesso</div>
-          <div class="additional-list">
-            <div class="additional-row">
-              <div><div class="additional-name">Plano de Serviço III</div><div class="additional-desc">Incluso: Pesquisas</div></div>
-              <div class="additional-right"><div class="additional-value">R$ 7.500,00</div></div>
-            </div>
-            <div class="additional-row">
-              <div><div class="additional-name">Integração</div><div class="additional-desc">Outros sistemas do grupo</div></div>
-              <div class="additional-right"><div class="additional-value">R$ 15.000,00</div></div>
-            </div>
-          </div>
-          </div>
-        </div>
-        </div>
-        <div class="cards">
-          <div class="card">
-          <div class="card-header">
-            
-            <div class="eyebrow-card">Cenário 1</div>
-            <div class="card-title">AmPm</div>
-          </div>
-          <div class="card-body">
-            <div class="price-line"><span class="price-value">R$ 1.883,53</span><span class="price-unit">/mês</span></div>
-            <div class="price-base">12x · Investimento total do contrato: R$ 22.602,36</div>
-            <hr class="divider">
-            <div class="inclui-label">Detalhamento dos módulos</div>
-            <p class="module-desc"><b>Pesquisas</b> — Clima, Pulso e Engajamento<br>Usuários: 432 · Valor unit.: R$ 4,36/mês · Total: R$ 1.883,53/mês</p>
-            <p class="module-desc"><b>Desenvolvimento</b> — PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas<br>Usuários: 432 · <span style="color:var(--color-primary);font-weight:700;">Incluso</span></p>
-            <ul class="check-list">
-              <li><span class="tick">✓</span>Metodologia única para os 3 negócios do grupo</li>
-              <li><span class="tick">✓</span>Histórico preservado entre pesquisas</li>
-            </ul>
-            
-          </div>
-        </div><div class="card">
-          <div class="card-header">
-            
-            <div class="eyebrow-card">Cenário 1</div>
-            <div class="card-title">Millennium (MLN)</div>
-          </div>
-          <div class="card-body">
-            <div class="price-line"><span class="price-value">R$ 3.980,76</span><span class="price-unit">/mês</span></div>
-            <div class="price-base">12x · Investimento total do contrato: R$ 47.769,12</div>
-            <hr class="divider">
-            <div class="inclui-label">Detalhamento dos módulos</div>
-            <p class="module-desc"><b>Pesquisas</b> — Clima, Pulso e Engajamento<br>Usuários: 913 · Valor unit.: R$ 4,36/mês · Total: R$ 3.980,76/mês</p>
-            <p class="module-desc"><b>Desenvolvimento</b> — PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas<br>Usuários: 913 · <span style="color:var(--color-primary);font-weight:700;">Incluso</span></p>
-            <ul class="check-list">
-              <li><span class="tick">✓</span>Metodologia única para os 3 negócios do grupo</li>
-              <li><span class="tick">✓</span>Histórico preservado entre pesquisas</li>
-            </ul>
-            
-          </div>
-        </div><div class="card">
-          <div class="card-header">
-            
-            <div class="eyebrow-card">Cenário 1</div>
-            <div class="card-title">Krispy Kreme (KK)</div>
-          </div>
-          <div class="card-body">
-            <div class="price-line"><span class="price-value">R$ 4.883,11</span><span class="price-unit">/mês</span></div>
-            <div class="price-base">12x · Investimento total do contrato: R$ 58.597,32</div>
-            <hr class="divider">
-            <div class="inclui-label">Detalhamento dos módulos</div>
-            <p class="module-desc"><b>Pesquisas</b> — Clima, Pulso e Engajamento<br>Usuários: 1.120 · Valor unit.: R$ 4,36/mês · Total: R$ 4.883,11/mês</p>
-            <p class="module-desc"><b>Desenvolvimento</b> — PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas<br>Usuários: 1.120 · <span style="color:var(--color-primary);font-weight:700;">Incluso</span></p>
-            <ul class="check-list">
-              <li><span class="tick">✓</span>Metodologia única para os 3 negócios do grupo</li>
-              <li><span class="tick">✓</span>Histórico preservado entre pesquisas</li>
-            </ul>
-            
-          </div>
-        </div>
-        </div>
+      <div class="cenario-block">
+  <div class="cenario-block-header">
+    <div>
+      <div class="eyebrow-card">Cenário 1</div>
+      <h3>Grupo completo — Pesquisa (2.465 usuários)</h3>
+    </div>
+    <div style="text-align:right;">
+      <div class="hero-value">R$ 12.622,40<span style="font-size:13px;font-weight:500;color:var(--color-fg-muted);">/mês</span></div>
+      <div class="hero-meta">Investimento total do contrato: R$ 151.468,80 · Validade da proposta: 5 dias</div>
+    </div>
+  </div>
+  <div class="empresa-cards-grid"><div class="empresa-card total">
+  <div class="empresa-card-name">TOTAL DO GRUPO</div>
+  <div class="empresa-card-pct">2.465 usuários</div>
+  <div class="empresa-card-total">R$ 151.468,80</div>
+  <div class="empresa-card-mensal">R$ 12.622,40/mês (12x)</div>
+  <div class="mod-row">
+  <div class="mod-name">Pesquisas (12 meses)</div>
+  <div class="mod-line"><span class="mod-unit">R$ 4,36/mês</span><span class="mod-total">R$ 128.968,80</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Desenvolvimento</div>
+  <div class="mod-line"><span class="mod-unit"></span><span class="mod-total">Incluso</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Plano de Serviço III</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 7.500,00</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Integração</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 15.000,00</span></div>
+</div>
+</div><div class="empresa-card">
+  <div class="empresa-card-name">AMPM</div>
+  <div class="empresa-card-pct">432 usuários · 17,5% do grupo</div>
+  <div class="empresa-card-total">R$ 26.545,44</div>
+  <div class="empresa-card-mensal">R$ 2.212,12/mês (12x)</div>
+  <div class="mod-row">
+  <div class="mod-name">Pesquisas (12 meses)</div>
+  <div class="mod-line"><span class="mod-unit">R$ 4,36/mês</span><span class="mod-total">R$ 22.602,24</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Desenvolvimento</div>
+  <div class="mod-line"><span class="mod-unit"></span><span class="mod-total">Incluso</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Plano de Serviço III</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 1.314,40</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Integração</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 2.628,80</span></div>
+</div>
+</div><div class="empresa-card">
+  <div class="empresa-card-name">MILLENNIUM</div>
+  <div class="empresa-card-pct">913 usuários · 37,0% do grupo</div>
+  <div class="empresa-card-total">R$ 56.101,83</div>
+  <div class="empresa-card-mensal">R$ 4.675,15/mês (12x)</div>
+  <div class="mod-row">
+  <div class="mod-name">Pesquisas (12 meses)</div>
+  <div class="mod-line"><span class="mod-unit">R$ 4,36/mês</span><span class="mod-total">R$ 47.768,16</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Desenvolvimento</div>
+  <div class="mod-line"><span class="mod-unit"></span><span class="mod-total">Incluso</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Plano de Serviço III</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 2.777,89</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Integração</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 5.555,78</span></div>
+</div>
+</div><div class="empresa-card">
+  <div class="empresa-card-name">KRISPY KREME</div>
+  <div class="empresa-card-pct">1.120 usuários · 45,4% do grupo</div>
+  <div class="empresa-card-total">R$ 68.821,53</div>
+  <div class="empresa-card-mensal">R$ 5.735,13/mês (12x)</div>
+  <div class="mod-row">
+  <div class="mod-name">Pesquisas (12 meses)</div>
+  <div class="mod-line"><span class="mod-unit">R$ 4,36/mês</span><span class="mod-total">R$ 58.598,40</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Desenvolvimento</div>
+  <div class="mod-line"><span class="mod-unit"></span><span class="mod-total">Incluso</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Plano de Serviço III</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 3.407,71</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Integração</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 6.815,42</span></div>
+</div>
+</div></div>
+</div>
 
-        <div class="additional-title" style="margin-top:36px;">Cenário 2 — Grupo completo (700 usuários)</div>
-        <div class="cards" style="grid-template-columns:1fr;margin-bottom:18px;">
-          <div class="card recommended">
-          <div class="card-header">
-            <span class="badge-recommended">Grupo</span>
-            <div class="eyebrow-card">Cenário 2 · Total do grupo</div>
-            <div class="card-title">Grupo Ipiranga</div>
-          </div>
-          <div class="card-body">
-            <div class="price-line"><span class="price-value">R$ 5.459,00</span><span class="price-unit">/mês</span></div>
-            <div class="price-base">12x · Investimento total do contrato: R$ 65.508,00</div>
-            <hr class="divider">
-            <div class="inclui-label">Detalhamento dos módulos</div>
-            <p class="module-desc"><b>Pesquisas</b> — Clima, Pulso e Engajamento<br>Usuários: 700 · Valor unit.: R$ 5,12/mês · Total: R$ 3.584,00/mês</p>
-            <p class="module-desc"><b>Desenvolvimento</b> — PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas<br>Usuários: 700 · <span style="color:var(--color-primary);font-weight:700;">Incluso</span></p>
-            <ul class="check-list">
-              <li><span class="tick">✓</span>Metodologia única para os 3 negócios do grupo</li>
-              <li><span class="tick">✓</span>Histórico preservado entre pesquisas</li>
-            </ul>
-            
-          <div class="additional-title">Serviços de Ativação e Sucesso</div>
-          <div class="additional-list">
-            <div class="additional-row">
-              <div><div class="additional-name">Plano de Serviço III</div><div class="additional-desc">Incluso: Pesquisas</div></div>
-              <div class="additional-right"><div class="additional-value">R$ 7.500,00</div></div>
-            </div>
-            <div class="additional-row">
-              <div><div class="additional-name">Integração</div><div class="additional-desc">Outros sistemas do grupo</div></div>
-              <div class="additional-right"><div class="additional-value">R$ 15.000,00</div></div>
-            </div>
-          </div>
-          </div>
-        </div>
-        </div>
-        <div class="cards">
-          <div class="card">
-          <div class="card-header">
-            
-            <div class="eyebrow-card">Cenário 2</div>
-            <div class="card-title">AmPm</div>
-          </div>
-          <div class="card-body">
-            <div class="price-line"><span class="price-value">R$ 2.170,88</span><span class="price-unit">/mês</span></div>
-            <div class="price-base">12x · Investimento total do contrato: R$ 26.050,56</div>
-            <hr class="divider">
-            <div class="inclui-label">Detalhamento dos módulos</div>
-            <p class="module-desc"><b>Pesquisas</b> — Clima, Pulso e Engajamento<br>Usuários: 424 · Valor unit.: R$ 5,12/mês · Total: R$ 2.170,88/mês</p>
-            <p class="module-desc"><b>Desenvolvimento</b> — PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas<br>Usuários: 424 · <span style="color:var(--color-primary);font-weight:700;">Incluso</span></p>
-            <ul class="check-list">
-              <li><span class="tick">✓</span>Metodologia única para os 3 negócios do grupo</li>
-              <li><span class="tick">✓</span>Histórico preservado entre pesquisas</li>
-            </ul>
-            
-          </div>
-        </div><div class="card">
-          <div class="card-header">
-            
-            <div class="eyebrow-card">Cenário 2</div>
-            <div class="card-title">Millennium (MLN)</div>
-          </div>
-          <div class="card-body">
-            <div class="price-line"><span class="price-value">R$ 650,24</span><span class="price-unit">/mês</span></div>
-            <div class="price-base">12x · Investimento total do contrato: R$ 7.802,88</div>
-            <hr class="divider">
-            <div class="inclui-label">Detalhamento dos módulos</div>
-            <p class="module-desc"><b>Pesquisas</b> — Clima, Pulso e Engajamento<br>Usuários: 127 · Valor unit.: R$ 5,12/mês · Total: R$ 650,24/mês</p>
-            <p class="module-desc"><b>Desenvolvimento</b> — PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas<br>Usuários: 127 · <span style="color:var(--color-primary);font-weight:700;">Incluso</span></p>
-            <ul class="check-list">
-              <li><span class="tick">✓</span>Metodologia única para os 3 negócios do grupo</li>
-              <li><span class="tick">✓</span>Histórico preservado entre pesquisas</li>
-            </ul>
-            
-          </div>
-        </div><div class="card">
-          <div class="card-header">
-            
-            <div class="eyebrow-card">Cenário 2</div>
-            <div class="card-title">Krispy Kreme (KK)</div>
-          </div>
-          <div class="card-body">
-            <div class="price-line"><span class="price-value">R$ 762,88</span><span class="price-unit">/mês</span></div>
-            <div class="price-base">12x · Investimento total do contrato: R$ 9.154,56</div>
-            <hr class="divider">
-            <div class="inclui-label">Detalhamento dos módulos</div>
-            <p class="module-desc"><b>Pesquisas</b> — Clima, Pulso e Engajamento<br>Usuários: 149 · Valor unit.: R$ 5,12/mês · Total: R$ 762,88/mês</p>
-            <p class="module-desc"><b>Desenvolvimento</b> — PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas<br>Usuários: 149 · <span style="color:var(--color-primary);font-weight:700;">Incluso</span></p>
-            <ul class="check-list">
-              <li><span class="tick">✓</span>Metodologia única para os 3 negócios do grupo</li>
-              <li><span class="tick">✓</span>Histórico preservado entre pesquisas</li>
-            </ul>
-            
-          </div>
-        </div>
-        </div>
-      </div>
+<div class="cenario-block">
+  <div class="cenario-block-header">
+    <div>
+      <div class="eyebrow-card">Cenário 2</div>
+      <h3>Grupo completo — Pesquisa (700 usuários)</h3>
+    </div>
+    <div style="text-align:right;">
+      <div class="hero-value">R$ 5.459,00<span style="font-size:13px;font-weight:500;color:var(--color-fg-muted);">/mês</span></div>
+      <div class="hero-meta">Investimento total do contrato: R$ 65.508,00 · Validade da proposta: 5 dias</div>
+    </div>
+  </div>
+  <div class="empresa-cards-grid"><div class="empresa-card total">
+  <div class="empresa-card-name">TOTAL DO GRUPO</div>
+  <div class="empresa-card-pct">700 usuários</div>
+  <div class="empresa-card-total">R$ 65.508,00</div>
+  <div class="empresa-card-mensal">R$ 5.459,00/mês (12x)</div>
+  <div class="mod-row">
+  <div class="mod-name">Pesquisas (12 meses)</div>
+  <div class="mod-line"><span class="mod-unit">R$ 5,12/mês</span><span class="mod-total">R$ 43.008,00</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Desenvolvimento</div>
+  <div class="mod-line"><span class="mod-unit"></span><span class="mod-total">Incluso</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Plano de Serviço III</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 7.500,00</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Integração</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 15.000,00</span></div>
+</div>
+</div><div class="empresa-card">
+  <div class="empresa-card-name">AMPM</div>
+  <div class="empresa-card-pct">424 usuários · 60,6% do grupo</div>
+  <div class="empresa-card-total">R$ 39.679,13</div>
+  <div class="empresa-card-mensal">R$ 3.306,59/mês (12x)</div>
+  <div class="mod-row">
+  <div class="mod-name">Pesquisas (12 meses)</div>
+  <div class="mod-line"><span class="mod-unit">R$ 5,12/mês</span><span class="mod-total">R$ 26.050,56</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Desenvolvimento</div>
+  <div class="mod-line"><span class="mod-unit"></span><span class="mod-total">Incluso</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Plano de Serviço III</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 4.542,86</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Integração</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 9.085,71</span></div>
+</div>
+</div><div class="empresa-card">
+  <div class="empresa-card-name">MILLENNIUM</div>
+  <div class="empresa-card-pct">127 usuários · 18,1% do grupo</div>
+  <div class="empresa-card-total">R$ 11.885,02</div>
+  <div class="empresa-card-mensal">R$ 990,42/mês (12x)</div>
+  <div class="mod-row">
+  <div class="mod-name">Pesquisas (12 meses)</div>
+  <div class="mod-line"><span class="mod-unit">R$ 5,12/mês</span><span class="mod-total">R$ 7.802,88</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Desenvolvimento</div>
+  <div class="mod-line"><span class="mod-unit"></span><span class="mod-total">Incluso</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Plano de Serviço III</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 1.360,71</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Integração</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 2.721,43</span></div>
+</div>
+</div><div class="empresa-card">
+  <div class="empresa-card-name">KRISPY KREME</div>
+  <div class="empresa-card-pct">149 usuários · 21,3% do grupo</div>
+  <div class="empresa-card-total">R$ 13.943,85</div>
+  <div class="empresa-card-mensal">R$ 1.161,99/mês (12x)</div>
+  <div class="mod-row">
+  <div class="mod-name">Pesquisas (12 meses)</div>
+  <div class="mod-line"><span class="mod-unit">R$ 5,12/mês</span><span class="mod-total">R$ 9.154,56</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Desenvolvimento</div>
+  <div class="mod-line"><span class="mod-unit"></span><span class="mod-total">Incluso</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Plano de Serviço III</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 1.596,43</span></div>
+</div>
+  <div class="mod-row">
+  <div class="mod-name">Integração</div>
+  <div class="mod-line"><span class="mod-unit">Valor único</span><span class="mod-total">R$ 3.192,86</span></div>
+</div>
+</div></div>
+</div>
+
+<p style="font-size:11.5px;color:var(--color-fg-muted);margin-top:6px;">Proposta apenas de Pesquisas (Clima, Pulso e Engajamento), com Desenvolvimento incluso. Plano de Serviço III e Integração rateados proporcionalmente ao headcount de cada negócio; no card &quot;Total do grupo&quot; aparecem no valor cheio.</p>      </div>
     </section>
 
     <!-- ABA 8 — PRÓXIMOS PASSOS -->
