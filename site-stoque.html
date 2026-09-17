@@ -526,12 +526,13 @@
 
       <div class="block-title"><i class="fa-regular fa-flag"></i>Desafios mapeados</div>
             <div class="challenges">
-        <div class="challenge-card"><span class="ch-num">01</span><h4>Substituição do Qulture.Rocks</h4><p>Contrato de renovação automática, cancelável a qualquer momento; decisão de troca mira a virada de ano.</p></div>
-        <div class="challenge-card"><span class="ch-num">02</span><h4>People analytics como prioridade</h4><p>Foco declarado em análise de dados como diferencial na escolha da nova plataforma de DHO.</p></div>
-        <div class="challenge-card"><span class="ch-num">03</span><h4>Reconhecimento sem ferramenta formal</h4><p>Hoje não existe um espaço estruturado para compartilhar elogios e feedbacks positivos entre times.</p></div>
+        <div class="challenge-card"><span class="ch-num">01</span><h4>People Analytics limitado no Qulture.Rocks</h4><p>Relatórios pouco customizáveis; hoje o time exporta dados e faz o cruzamento por fora, num BI que "não está funcionando tão bem".</p></div>
+        <div class="challenge-card"><span class="ch-num">02</span><h4>Cadastro de colaboradores 100% manual</h4><p>Sem integração com o Sankhya (ERP interno), admissão, desligamento e mudança de gestor são atualizados à mão, com risco reconhecido de erro humano.</p></div>
+        <div class="challenge-card"><span class="ch-num">03</span><h4>Avaliação de experiência fora da ferramenta principal</h4><p>Hoje roda na plataforma interna própria (Ziv), separada do histórico de desempenho do colaborador.</p></div>
+        <div class="challenge-card"><span class="ch-num">04</span><h4>Sucessão e movimentações em planilha</h4><p>Mapeamento de sucessão e movimentações internas ainda dependem de planilha e da plataforma interna, sem centralização.</p></div>
         <div class="centered-row">
-          <div class="challenge-card"><span class="ch-num">04</span><h4>Pesquisas pouco contínuas</h4><p>Pesquisas de clima acontecem em ciclo semestral, com disparos extras só quando necessário.</p></div>
-          <div class="challenge-card"><span class="ch-num">05</span><h4>Orçamento ainda em discussão</h4><p>Projeto sem verba formalmente aprovada; decisão interna sobre investimento segue em aberto.</p></div>
+          <div class="challenge-card"><span class="ch-num">05</span><h4>Liderança sem visibilidade de adesão</h4><p>Mais de 100 líderes, alguns com 50 liderados, sem dashboard para acompanhar devolutivas pendentes.</p></div>
+          <div class="challenge-card"><span class="ch-num">06</span><h4>Gestão de cargos ainda não estruturada</h4><p>Projeto de cargos e salários previsto para o próximo ano; ferramenta atual não sustenta essa camada.</p></div>
         </div>
       </div>
 
@@ -545,17 +546,17 @@
           </div>
         </div>
         <div class="person-card">
-          <label class="person-photo" data-initials="??"><span>??</span><input type="file" accept="image/*" class="personPhotoInput"></label>
+          <label class="person-photo" data-initials="BP"><span>BP</span><input type="file" accept="image/*" class="personPhotoInput"></label>
           <div>
             <h4 contenteditable="true" class="person-name">Nome a preencher</h4>
-            <p contenteditable="true" class="person-role">Gerente de RH</p>
+            <p contenteditable="true" class="person-role">Business Partner — apoia sucessão e movimentações</p>
           </div>
         </div>
         <div class="person-card">
           <label class="person-photo" data-initials="??"><span>??</span><input type="file" accept="image/*" class="personPhotoInput"></label>
           <div>
             <h4 contenteditable="true" class="person-name">Nome a preencher</h4>
-            <p contenteditable="true" class="person-role">Diretor(a) de RH</p>
+            <p contenteditable="true" class="person-role">Liderança de Gente e Cultura — decisão final colegiada</p>
           </div>
         </div>
       </div>
@@ -563,8 +564,8 @@
 
       <div class="block-title"><i class="fa-regular fa-calendar"></i>Cronograma preliminar</div>
             <div class="timeline">
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">A confirmar</span><span class="tl-desc">Diagnóstico e demonstração da plataforma</span></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">A confirmar</span><span class="tl-desc">Construção e aprovação da proposta</span></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Concluído</span><span class="tl-desc">Reunião de Diagnóstico realizada</span></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Quinta-feira, 11h</span><span class="tl-desc">Demonstração da plataforma, focada em People Analytics e integração</span></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Dezembro</span><span class="tl-desc">Janela provável de decisão e assinatura, alinhada à virada de ano</span></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">A confirmar</span><span class="tl-desc">Kickoff e primeiro ciclo na plataforma</span></div>
       </div>
@@ -638,16 +639,30 @@
     <section class="tab-panel" id="tab-4">
       <h1 class="section-title">Diferenciais impulseup</h1>
       <p class="section-sub">Comparativo com base nos critérios mais importantes para este projeto</p>
-      <div class="empty-state" id="tab4EmptyState">
-        <i class="fa-regular fa-list-check"></i>
-        <h3>Aba liberada após a reunião de Diagnóstico</h3>
-        <p>Assim que o closer finalizar o diagnóstico, esta aba mostra o comparativo entre a impulseup e os concorrentes identificados na conversa. Se nenhum concorrente específico for mencionado, o comparativo é feito contra "Outras soluções", com resultado mediano.</p>
-      </div>
-      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;display:none;">
+      <div id="tab4TableWrap" style="margin-top:24px;overflow-x:auto;">
         <table class="rfp-table" id="tab4Table">
-          <!-- Preenchido pela skill site-cliente-impulseup a partir da transcrição da reunião de Diagnóstico e de references/rfp-criterios.json.
-               Cada critério exibe sua tag (campo "tags" do JSON) junto ao nome, ex:
-               <tr><td><div class="feat-name">Formatos de avaliação diferentes (90/180/360)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td>...</tr> -->
+          <thead><tr><th>Critério — desafios mapeados com a Stoque</th><th class="iup-col">impulseup</th><th>Qulture.Rocks</th></tr></thead>
+          <tbody>
+<tr><td><div class="feat-name">Criação de campos customizados para análises e filtros</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Competências específicas e exclusivas (líder, não líder, cargo, área)</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Gestores podem acompanhar o status das respostas de suas equipes</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Gestores podem liberar os relatórios diretamente para seus liderados</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Comparação de resultados por cargo, área, diretoria, etc.</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Perfil 360 (todas as informações do colaborador em uma única página)</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Análises avançadas com filtros customizados</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Comparação de performance e desenvolvimento ao longo do tempo</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Inteligência Artificial para insights automáticos</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Planejamento de carreira e sucessão</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Importação de dados externos</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Comparativo histórico de resultados de pesquisas</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">IA para análise de comentários e questões abertas</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Criação de planos de ação a partir dos resultados</div><span class="feat-tag">Liderança</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-xmark icon-no"></i></td></tr>
+<tr><td><div class="feat-name">Construção de PDI com biblioteca e IA</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Registro de feedbacks (categorizados, compartilhados)</div><span class="feat-tag">Confiável</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Ajuda de IA para escrever feedbacks</div><span class="feat-tag">Inteligente</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Contratação modular, conforme necessidade</div><span class="feat-tag">Flexível</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+<tr><td><div class="feat-name">Acesso sem e-mail corporativo</div><span class="feat-tag">Fácil</span></td><td class="iup-col check-cell"><i class="fa-solid fa-check icon-yes"></i></td><td class="check-cell"><i class="fa-solid fa-check icon-yes"></i></td></tr>
+          </tbody>
         </table>
       </div>
     </section>
@@ -656,13 +671,304 @@
     <section class="tab-panel" id="tab-5">
       <h1 class="section-title">Aprovação e plano de ação</h1>
       <p class="section-sub">Objetivos de negócio da Stoque, o caminho para chegar lá e o estado futuro com a impulseup</p>
-      <div class="empty-state" id="tab5EmptyState">
-        <i class="fa-regular fa-clipboard"></i>
-        <h3>Aba liberada após a reunião de Diagnóstico</h3>
-        <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
-      </div>
-      <div id="tab5PlanoWrap" style="display:none;">
-        <!--OBJETIVOS-->
+      <div id="tab5PlanoWrap" style="display:block;">
+        <p style="font-size:11.5px;color:var(--color-fg-muted);margin-bottom:16px;"><i class="fa-regular fa-clock"></i> Os prazos abaixo são estimativa padrão de onboarding, ainda sem cronograma comercial/CS confirmado com a Stoque.</p>
+
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <span class="objetivo-num">1</span>
+            <div>
+              <h3>Transformar dados em decisão estratégica de People Analytics</h3>
+              <p>Dar ao DHO relatórios nativos e customizáveis, sem depender de exportação manual para um BI paralelo.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>O time exporta os resultados do Qulture.Rocks e faz o cruzamento por fora, usando BI que, nas palavras da Dária, "não está funcionando tão bem".</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>Dashboards nativos com filtros por BU, cargo e departamento, configuráveis pelo próprio DHO, sem depender de ferramenta externa.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-flag-checkered"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p style="color:#fff;font-size:12px;">Zero exportação manual para BI externo na leitura dos resultados de um ciclo completo.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">1</span><span class="objetivo-etapa-line"></span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 1 (estimativa)</span>
+                    <h4>Parametrização de campos customizados</h4>
+                    <p>Configuração dos campos usados hoje pela Stoque (BU, cargo, unidade) para segmentar formulários, relatórios e filtros.</p>
+                    <span class="objetivo-etapa-resp">conjunta</span>
+                  </div>
+                </div>
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">2</span><span class="objetivo-etapa-line"></span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 1–2 (estimativa)</span>
+                    <h4>Configuração de relatórios e dashboards</h4>
+                    <p>Definição, junto ao DHO, dos indicadores que passam a ficar disponíveis nativamente na plataforma.</p>
+                    <span class="objetivo-etapa-resp">impulseup</span>
+                  </div>
+                </div>
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">3</span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 3 em diante (estimativa)</span>
+                    <h4>Acompanhamento contínuo</h4>
+                    <p>Ajuste de indicadores e filtros conforme o ciclo avança e novas necessidades de análise surgem.</p>
+                    <span class="objetivo-etapa-resp">conjunta</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-arrow-trend-up"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro">
+                <span class="approval-stage-label">Para o RH/DHO</span>
+                <p>Dária consegue cruzar dados de desempenho e pesquisas por BU e cargo direto na plataforma, sem depender de exportação e BI paralelo.</p>
+              </div>
+              <div class="approval-stage negocio">
+                <span class="approval-stage-label">Impacto no negócio</span>
+                <p>Decisões de liderança mais rápidas e embasadas, com dados confiáveis disponíveis no momento em que são necessários.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <span class="objetivo-num">2</span>
+            <div>
+              <h3>Eliminar o cadastro manual com integração ao Sankhya</h3>
+              <p>Tirar do RH a responsabilidade de atualizar manualmente admissões, desligamentos e mudanças de gestor.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>Cadastro e atualização de colaboradores 100% manuais. A própria Dária reconhece o risco: "alguém pode esquecer de passar uma coisa" ou preencher errado.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>Integração automática com o Sankhya via API/webhook, com o colaborador já nascendo cadastrado e atualizado na plataforma.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-flag-checkered"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p style="color:#fff;font-size:12px;">Zero cadastro manual de colaborador após o go-live da integração.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">1</span><span class="objetivo-etapa-line"></span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 1 (estimativa)</span>
+                    <h4>Alinhamento técnico com o time de produto</h4>
+                    <p>Reunião entre TI da Stoque e time de produto impulseup para definir acesso ao webhook e escopo da integração com o Sankhya.</p>
+                    <span class="objetivo-etapa-resp">conjunta</span>
+                  </div>
+                </div>
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">2</span><span class="objetivo-etapa-line"></span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 1–2 (estimativa)</span>
+                    <h4>Desenvolvimento e testes da integração</h4>
+                    <p>Construção da integração e validação com uma amostra de colaboradores antes do rollout completo.</p>
+                    <span class="objetivo-etapa-resp">impulseup</span>
+                  </div>
+                </div>
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">3</span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 2 (estimativa)</span>
+                    <h4>Rollout para toda a base</h4>
+                    <p>Ativação da sincronização automática para os cerca de 500 colaboradores da Stoque.</p>
+                    <span class="objetivo-etapa-resp">impulseup</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-arrow-trend-up"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro">
+                <span class="approval-stage-label">Para o RH/DHO</span>
+                <p>Admissão, desligamento e mudança de gestor refletem automaticamente na plataforma, sem intervenção manual do time de DHO.</p>
+              </div>
+              <div class="approval-stage negocio">
+                <span class="approval-stage-label">Impacto no negócio</span>
+                <p>Elimina retrabalho e o risco de erro humano que hoje pode impactar diretamente a apuração de um ciclo de avaliação.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <span class="objetivo-num">3</span>
+            <div>
+              <h3>Dar autonomia e visibilidade a mais de 100 líderes</h3>
+              <p>Tirar do DHO a tarefa de cobrar individualmente a adesão de cada líder às devolutivas.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>Mais de 100 líderes, alguns com 50 liderados, sem dashboard de acompanhamento. Hoje o Qulture.Rocks "não mostra isso" e o líder não sabe quanto já entregou.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>Dashboard próprio da liderança, com notificações e alertas automáticos de pendência, visão de PDIs e feedbacks do time.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-flag-checkered"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p style="color:#fff;font-size:12px;">Percentual de devolutivas concluídas no prazo por ciclo, acompanhado no dashboard.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">1</span><span class="objetivo-etapa-line"></span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 1 (estimativa)</span>
+                    <h4>Treinamento de lideranças em turmas</h4>
+                    <p>Time de implantação impulseup treina os mais de 100 líderes em turmas, sobre o painel "Minha Equipe" e devolutivas.</p>
+                    <span class="objetivo-etapa-resp">impulseup</span>
+                  </div>
+                </div>
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">2</span><span class="objetivo-etapa-line"></span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 1 (estimativa)</span>
+                    <h4>Ativação de notificações e alertas</h4>
+                    <p>Configuração dos alertas de pendência de devolutiva e PDI para cada gestor.</p>
+                    <span class="objetivo-etapa-resp">impulseup</span>
+                  </div>
+                </div>
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">3</span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 2 em diante (estimativa)</span>
+                    <h4>Acompanhamento do primeiro ciclo</h4>
+                    <p>DHO acompanha adesão via dashboard, sem precisar cobrar líder por líder individualmente.</p>
+                    <span class="objetivo-etapa-resp">Stoque</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-arrow-trend-up"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro">
+                <span class="approval-stage-label">Para o RH/DHO</span>
+                <p>Liderança passa a ser autônoma para acompanhar a adesão do próprio time, sem intervenção constante do DHO.</p>
+              </div>
+              <div class="approval-stage negocio">
+                <span class="approval-stage-label">Impacto no negócio</span>
+                <p>Menos desgaste operacional para a área de Gente e Cultura e devolutivas mais consistentes entre os mais de 500 colaboradores.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="objetivo-card">
+          <div class="objetivo-header">
+            <span class="objetivo-num">4</span>
+            <div>
+              <h3>Unificar experiência, desempenho e sucessão em um só lugar</h3>
+              <p>Encerrar a fragmentação entre o Qulture.Rocks, a plataforma interna Ziv e as planilhas de movimentação.</p>
+            </div>
+          </div>
+          <div class="objetivo-body">
+            <div class="objetivo-compare-col">
+              <div class="objetivo-compare-box atual">
+                <span class="objetivo-compare-label">Situação atual</span>
+                <p>Avaliação de experiência roda na plataforma interna Ziv; sucessão e movimentações ainda dependem de planilha, separadas do histórico de desempenho.</p>
+              </div>
+              <div class="objetivo-compare-box meta">
+                <span class="objetivo-compare-label">Meta</span>
+                <p>Todo o ciclo, experiência, desempenho, PDI e sucessão, centralizado numa única plataforma, com histórico completo do colaborador.</p>
+              </div>
+              <div class="objetivo-indicador">
+                <i class="fa-solid fa-flag-checkered"></i>
+                <div>
+                  <span class="objetivo-indicador-label">Indicador de sucesso</span>
+                  <p style="color:#fff;font-size:12px;">100% do ciclo, da experiência à sucessão, rodando dentro da impulseup, sem sistema paralelo.</p>
+                </div>
+              </div>
+            </div>
+            <div class="objetivo-plan-col">
+              <div class="objetivo-etapas-title">Plano de ação</div>
+              <div class="objetivo-etapas">
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">1</span><span class="objetivo-etapa-line"></span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 1 (estimativa)</span>
+                    <h4>Migração do histórico do Qulture.Rocks</h4>
+                    <p>Stoque preenche a planilha-modelo com ciclos, feedbacks e organograma; impulseup valida e realiza a migração.</p>
+                    <span class="objetivo-etapa-resp">conjunta</span>
+                  </div>
+                </div>
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">2</span><span class="objetivo-etapa-line"></span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 1–2 (estimativa)</span>
+                    <h4>Configuração da avaliação de experiência</h4>
+                    <p>Fluxo automatizado por data de admissão (10, 30, 60 e 90 dias), integrado ao cadastro do Sankhya.</p>
+                    <span class="objetivo-etapa-resp">impulseup</span>
+                  </div>
+                </div>
+                <div class="objetivo-etapa">
+                  <span class="objetivo-etapa-dot">3</span>
+                  <div class="objetivo-etapa-content">
+                    <span class="objetivo-etapa-period">Mês 3 em diante (estimativa)</span>
+                    <h4>Estruturação do módulo de sucessão</h4>
+                    <p>Mapeamento de sucessão centralizado na plataforma, com base preparada para o projeto de cargos e salários do próximo ano.</p>
+                    <span class="objetivo-etapa-resp">conjunta</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-outcome">
+            <div class="approval-outcome-title"><i class="fa-solid fa-arrow-trend-up"></i>Estado futuro</div>
+            <div class="approval-outcome-grid">
+              <div class="approval-stage futuro">
+                <span class="approval-stage-label">Para o RH/DHO</span>
+                <p>Histórico completo da trajetória do colaborador, da admissão à sucessão, em um único lugar, sem depender de sistemas paralelos.</p>
+              </div>
+              <div class="approval-stage negocio">
+                <span class="approval-stage-label">Impacto no negócio</span>
+                <p>Menos ferramentas para manter, decisões de sucessão embasadas em dados centralizados e base pronta para sustentar o projeto de cargos e salários de 2027.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -740,8 +1046,8 @@
       <h1 class="section-title">Próximos passos</h1>
       <p class="section-sub">Jornada de compra da Stoque</p>
       <div class="timeline">
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A confirmar</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Dária Lobo</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Concluída</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Contexto e desafios mapeados com Dária Lobo</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Quinta-feira, 11h</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Dois módulos, cerca de 1h · foco em People Analytics e integração com o Sankhya</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Marina apresenta o projeto internamente</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
@@ -764,13 +1070,29 @@
 {
   "nomeEmpresa": "Stoque",
   "slugEmpresa": "stoque",
-  "contexto": null,
-  "desafiosCentrais": [],
-  "objetivos": [],
+  "contexto": "Empresa brasileira de automação de processos com IA, ~500 colaboradores, avaliando a substituição do Qulture.Rocks. Decisão prevista em até 2 meses após a demo.",
+  "desafiosCentrais": [
+    "People Analytics limitado no Qulture.Rocks",
+    "Cadastro de colaboradores 100% manual, sem integração com o Sankhya",
+    "Avaliação de experiência fora da ferramenta principal (plataforma interna Ziv)",
+    "Sucessão e movimentações internas ainda em planilha",
+    "Liderança (100+ líderes) sem visibilidade de adesão às devolutivas",
+    "Gestão de cargos ainda não estruturada"
+  ],
+  "objetivos": [
+    "Transformar dados em decisão estratégica de People Analytics",
+    "Eliminar o cadastro manual com integração ao Sankhya",
+    "Dar autonomia e visibilidade a mais de 100 líderes",
+    "Unificar experiência, desempenho e sucessão em um só lugar"
+  ],
   "pilaresDestaque": [],
   "comparativo": null,
   "investimento": null,
-  "cronogramaMacro": []
+  "cronogramaMacro": [
+    "Diagnóstico — concluído",
+    "Demonstração — quinta-feira, 11h",
+    "Construção e aprovação da proposta — a definir"
+  ]
 }
 </script>
 
