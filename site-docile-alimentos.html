@@ -540,9 +540,9 @@
       <div class="block-title"><i class="fa-regular fa-calendar"></i>Cronograma preliminar</div>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Setembro</span><span class="tl-desc">Diagnóstico e mapeamento de desafios</span></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Outubro</span><span class="tl-desc">Demonstração em dois momentos: (1) avaliação, pesquisa e learning; (2) metas, RV e TI/segurança</span></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Novembro</span><span class="tl-desc">Construção e apresentação da proposta</span></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Dezembro</span><span class="tl-desc">Negociação, após o retorno de férias da Paloma</span></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">15 set</span><span class="tl-desc">Demonstração realizada: avaliação, pesquisa, learning e metas/RV — nota 4/5 dada pela Paloma</span></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">13 out</span><span class="tl-desc">Aprofundamento específico em Learning e apresentação do processo de implementação</span></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">A definir</span><span class="tl-desc">Construção e apresentação da proposta, condicionada à aprovação orçamentária</span></div>
       </div>
 
     </section>
@@ -551,15 +551,16 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Docile Alimentos</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">15 dias</div><div class="label">gastos manualmente para consolidar cada ciclo de pesquisa de clima em Excel</div></div>
+          <div class="stat-card"><div class="num">1.600</div><div class="label">colaboradores atendidos em Pesquisa e Learning desde o início</div></div>
+          <div class="stat-card"><div class="num">4/5</div><div class="label">nota dada pela Paloma para a aderência da impulseup ao projeto, na própria demo</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -567,46 +568,36 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Histórico do colaborador espalhado entre sistemas e perdido quando ele muda de área ou de líder</td><td class="feat-name">Perfil 360 (Avaliação)</td><td>Histórico completo — avaliações, PDIs, feedbacks — numa única tela, e que se mantém mesmo se o colaborador mudar de área</td></tr>
+              <tr><td>Pesquisa de pulso do Sênior só segmenta por Sul e Nordeste</td><td class="feat-name">Pesquisa</td><td>Segmentação por unidade, área, cargo e senioridade, com análise por tema e plano de ação vinculado ao resultado</td></tr>
+              <tr><td>Universidade corporativa (WOLI) sem integração com matriz de treinamento e percebida como pouco engajadora</td><td class="feat-name">Learning</td><td>Trilhas e catálogo próprios, cursos presenciais e online com certificado, e rastreabilidade ligada à matriz de treinamento</td></tr>
+              <tr><td>Planejamento estratégico sem desdobramento visível em metas de área e individuais</td><td class="feat-name">Metas</td><td>Árvore de metas conectando resultado organizacional, de área e individual, com fluxo de aprovação bilateral configurável</td></tr>
             </tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
-          <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
-               Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
-
-               Caso 1 — url_video já veio do closer (link de Drive ou YouTube) e foi reconhecida:
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap">
-                   <iframe src="{{embed_url}}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                 </div>
-               </div>
-
-               Caso 2 — url_video veio mas não foi possível gerar embed (ex: link de pasta do Drive,
-               sem permissão de embed): mostrar card de link em vez de iframe.
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-link-card">
-                   <i class="fa-brands fa-google-drive"></i>
-                   <p>Vídeo disponível para acesso externo</p>
-                   <a href="{{url_video}}" target="_blank" rel="noopener" class="video-link-btn">Assistir vídeo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
-               </div>
-
-               Caso 3 — vídeo ainda sem url_video: slot de colagem manual, para o closer colar o link
-               direto no site (fica salvo no localStorage do navegador via saveImage/loadStore).
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap video-embed-empty" data-video-idx="{{indice}}">
-                   <label class="video-paste-label">
-                     <i class="fa-regular fa-circle-play"></i>
-                     <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
-                   </label>
-                   <input type="text" class="video-url-input" data-video-idx="{{indice}}" placeholder="https://...">
-                 </div>
-               </div> -->
+          <div class="video-card">
+            <h4>Avaliação, Pesquisa e Learning — visão geral</h4>
+            <p>Gravação da demonstração personalizada com a Paloma, cobrindo os três pilares apresentados: flexibilidade, dados e usabilidade.</p>
+            <div class="video-embed-wrap video-embed-empty" data-video-idx="0">
+              <label class="video-paste-label">
+                <i class="fa-regular fa-circle-play"></i>
+                <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
+              </label>
+              <input type="text" class="video-url-input" data-video-idx="0" placeholder="https://...">
+            </div>
+          </div>
+          <div class="video-card">
+            <h4>Learning — aprofundamento (13/out)</h4>
+            <p>Espaço reservado para a gravação da sessão específica de Learning, com foco na integração da matriz de treinamento e nas pontas soltas hoje espalhadas entre sistemas.</p>
+            <div class="video-embed-wrap video-embed-empty" data-video-idx="1">
+              <label class="video-paste-label">
+                <i class="fa-regular fa-circle-play"></i>
+                <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
+              </label>
+              <input type="text" class="video-url-input" data-video-idx="1" placeholder="https://...">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -955,10 +946,12 @@
       <h1 class="section-title">Próximos passos</h1>
       <p class="section-sub">Jornada de compra da Docile Alimentos</p>
       <div class="timeline">
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">15 set</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Paloma Lima</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Dia 15</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">16h · mês a confirmar · 1º momento: avaliação, pesquisa e learning · 2º momento (metas, RV e TI/segurança) após retorno de férias da Paloma</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Set</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Paloma Lima</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">15 set (realizada)</span><div><span class="tl-desc">Demonstração personalizada — Avaliação, Pesquisa e Learning</span><div class="tl-meta">Nota 4/5 dada pela Paloma · prioridade sinalizada: Learning &gt; Pesquisa &gt; Desempenho · Metas em stand-by (mínimo ~100 usuários, sem urgência agora)</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">21 set – 6 out</span><div><span class="tl-desc">Férias da Paloma</span><div class="tl-meta">Combinado: Paloma envia por e-mail, ainda esta semana, os pontos de treinamento prioritários para o Learning</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">13 out</span><div><span class="tl-desc">Aprofundamento em Learning + Processo de implementação</span><div class="tl-meta">Demo específica de Learning a partir dos pontos enviados por e-mail · apresentação de como funciona a implantação, já que Paloma toca o projeto sozinha internamente</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção e apresentação da proposta</span><div class="tl-meta">Modularização por quantidade de usuários: Learning e Pesquisa para 1.600, Desempenho para ~500, Metas com mínimo de ~100 · decisão condicionada à aprovação orçamentária (pode iniciar ainda este ano ou ficar para o orçamento do ano que vem)</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Michelle (diretora) no centro da decisão · BPs e supervisora de RH do Nordeste podem ser envolvidas em caráter consultivo · módulo de Remuneração Variável depende de alinhamento com a Nadine</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Revisão jurídica</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Assinatura e kickoff</span></div></div>
@@ -1098,16 +1091,16 @@
       "titulo": "Diagnóstico"
     },
     {
-      "data": "Out/26",
-      "titulo": "Demonstração (2 momentos)"
+      "data": "15 set/26",
+      "titulo": "Demonstração — Avaliação, Pesquisa e Learning (realizada, nota 4/5)"
     },
     {
-      "data": "Nov/26",
-      "titulo": "Proposta"
+      "data": "13 out/26",
+      "titulo": "Aprofundamento em Learning + Processo de implementação"
     },
     {
-      "data": "Dez/26",
-      "titulo": "Negociação"
+      "data": "A definir",
+      "titulo": "Proposta e aprovação orçamentária"
     }
   ]
 }
