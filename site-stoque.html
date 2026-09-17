@@ -567,7 +567,7 @@
       <div class="block-title"><i class="fa-regular fa-calendar"></i>Cronograma preliminar</div>
             <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Concluído</span><span class="tl-desc">Reunião de Diagnóstico realizada</span></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Quinta-feira, 11h</span><span class="tl-desc">Demonstração da plataforma, focada em People Analytics e integração</span></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Concluído</span><span class="tl-desc">Demonstração realizada — nota 4/5 dada pela Dária</span></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">Dezembro</span><span class="tl-desc">Janela provável de decisão e assinatura, alinhada à virada de ano</span></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">A confirmar</span><span class="tl-desc">Kickoff e primeiro ciclo na plataforma</span></div>
       </div>
@@ -577,15 +577,11 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Stoque</p>
-      <div class="empty-state" id="tab3EmptyState">
-        <i class="fa-regular fa-circle-play"></i>
-        <h3>Aba liberada após a reunião de Demo</h3>
-        <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
-      </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content" style="display:block;">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">4/5</div><div class="label">nota dada pela Dária logo após a demo — "atende bem o que a gente está precisando"</div></div>
+          <div class="stat-card"><div class="num">25</div><div class="label">campos personalizados disponíveis para cadastro e segmentação (ex: salário, escolaridade, tempo de empresa)</div></div>
+          <div class="stat-card"><div class="num">360+</div><div class="label">ações de desenvolvimento já mapeadas na biblioteca de PDI da impulseup</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -593,46 +589,25 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Campo de salário não disponibilizado hoje no perfil do colaborador</td><td class="feat-name">Campos customizados</td><td>Até 25 campos próprios, alimentados automaticamente após a integração com o Sankhya</td></tr>
+              <tr><td>Gestor responde avaliação colaborador por colaborador, saindo e voltando de tela</td><td class="feat-name">Avaliação por competência</td><td>Autoavaliação e avaliação de todos os liderados na mesma tela, por competência</td></tr>
+              <tr><td>Sucessão e risco de saída mapeados fora do fluxo de avaliação, via planilha</td><td class="feat-name">Sucessão + n-Box</td><td>Mapeamento de risco e plano de sucessão nascem prontos a partir da própria avaliação, sem trabalho manual da BP</td></tr>
+              <tr><td>Análise de dados depende de exportação e cruzamento manual fora da ferramenta</td><td class="feat-name">Insights (IA conversacional)</td><td>DHO pergunta em linguagem natural e recebe rankings por área, competência e colaborador na hora</td></tr>
             </tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
-          <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
-               Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
-
-               Caso 1 — url_video já veio do closer (link de Drive ou YouTube) e foi reconhecida:
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap">
-                   <iframe src="{{embed_url}}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                 </div>
-               </div>
-
-               Caso 2 — url_video veio mas não foi possível gerar embed (ex: link de pasta do Drive,
-               sem permissão de embed): mostrar card de link em vez de iframe.
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-link-card">
-                   <i class="fa-brands fa-google-drive"></i>
-                   <p>Vídeo disponível para acesso externo</p>
-                   <a href="{{url_video}}" target="_blank" rel="noopener" class="video-link-btn">Assistir vídeo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
-               </div>
-
-               Caso 3 — vídeo ainda sem url_video: slot de colagem manual, para o closer colar o link
-               direto no site (fica salvo no localStorage do navegador via saveImage/loadStore).
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap video-embed-empty" data-video-idx="{{indice}}">
-                   <label class="video-paste-label">
-                     <i class="fa-regular fa-circle-play"></i>
-                     <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
-                   </label>
-                   <input type="text" class="video-url-input" data-video-idx="{{indice}}" placeholder="https://...">
-                 </div>
-               </div> -->
+          <div class="video-card">
+            <h4>Demonstração completa — Stoque</h4>
+            <p>Gravação da reunião de Demo, com todos os módulos apresentados à Dária.</p>
+            <div class="video-embed-wrap video-embed-empty" data-video-idx="0">
+              <label class="video-paste-label">
+                <i class="fa-regular fa-circle-play"></i>
+                <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
+              </label>
+              <input type="text" class="video-url-input" data-video-idx="0" placeholder="https://...">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1130,8 +1105,10 @@
       <p class="section-sub">Jornada de compra da Stoque</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Concluída</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Contexto e desafios mapeados com Dária Lobo</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Quinta-feira, 11h</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Dois módulos, cerca de 1h · foco em People Analytics e integração com o Sankhya</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Concluída</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Nota 4/5 dada pela Dária · sem objeções relevantes</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Segunda-feira</span><div><span class="tl-desc">Apresentação interna da Dária à diretoria</span><div class="tl-meta">Usa o material deste site (diagnóstico, demo, implantação e proposta) como base</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Sexta-feira (dia 25), 17h30</span><div><span class="tl-desc">Retorno da Stoque</span><div class="tl-meta">Reunião de 20 min · avaliação interna, próximos passos de teste/TI e encaminhamento de compras</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Escopo: ~500 pessoas, avaliação + pesquisa + desenvolvimento; módulo de Metas cotado à parte, com custo destacado</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Marina apresenta o projeto internamente</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Revisão jurídica</span></div></div>
@@ -1153,7 +1130,7 @@
 {
   "nomeEmpresa": "Stoque",
   "slugEmpresa": "stoque",
-  "contexto": "Empresa brasileira de automação de processos com IA, ~500 colaboradores, avaliando a substituição do Qulture.Rocks. Decisão prevista em até 2 meses após a demo.",
+  "contexto": "Empresa brasileira de automação de processos com IA, ~500 colaboradores, substituindo o Qulture.Rocks. Escopo confirmado na demo: migração geral de ~500 pessoas em avaliação, pesquisa e desenvolvimento; módulo de Metas cotado à parte. Demo avaliada em 4/5 pela Dária.",
   "desafiosCentrais": [
     "People Analytics limitado no Qulture.Rocks",
     "Cadastro de colaboradores 100% manual, sem integração com o Sankhya",
@@ -1173,7 +1150,9 @@
   "investimento": null,
   "cronogramaMacro": [
     "Diagnóstico — concluído",
-    "Demonstração — quinta-feira, 11h",
+    "Demonstração — concluída, nota 4/5",
+    "Apresentação interna à diretoria — segunda-feira",
+    "Retorno da Stoque — sexta-feira (dia 25), 17h30",
     "Construção e aprovação da proposta — a definir"
   ]
 }
