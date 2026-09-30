@@ -747,8 +747,72 @@
     <!-- ABA 7 — PROPOSTA COMERCIAL -->
     <section class="tab-panel" id="tab-7">
       <h1 class="section-title">Proposta comercial</h1>
-      <p class="section-sub">Investimento para a Redemix — Avaliações, Desenvolvimento e Learning</p>
+      <p class="section-sub">Investimento para a Redemix · dois cenários para a sua decisão</p>
+      <style>
+        .iup-cen-switch{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px;}
+        @media (max-width:760px){.iup-cen-switch{grid-template-columns:1fr;}}
+        .iup-cen-btn{all:unset;box-sizing:border-box;cursor:pointer;border:2px solid var(--color-border);border-radius:14px;padding:18px 20px;background:#fff;transition:border-color .15s, box-shadow .15s;}
+        .iup-cen-btn:hover{border-color:var(--color-primary);}
+        .iup-cen-btn.active{border-color:var(--color-primary);box-shadow:0 6px 18px rgba(0,0,0,.06);}
+        .iup-cen-btn .eb{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-fg-muted);}
+        .iup-cen-btn.active .eb{color:var(--color-primary);}
+        .iup-cen-btn .tt{font-size:15px;font-weight:700;margin:4px 0 8px;color:var(--color-fg);}
+        .iup-cen-btn .pv{font-size:22px;font-weight:800;color:var(--color-primary);}
+        .iup-cen-btn .pv small{font-size:12px;font-weight:500;color:var(--color-fg-muted);}
+        .iup-cen-btn .tv{font-size:12px;color:var(--color-fg-muted);margin-top:2px;}
+        .iup-cen-panel{display:none;}
+        .iup-cen-panel.active{display:block;}
+      </style>
       <div id="tab7ProposalWrap">
+        <div class="iup-cen-switch" role="tablist">
+          <button type="button" class="iup-cen-btn active" data-cen="1" role="tab">
+            <div class="eb">Cenário 1</div>
+            <div class="tt">Avaliações e Desenvolvimento</div>
+            <div class="pv">R$ 1.973,67 <small>/mês (12x)</small></div>
+            <div class="tv">Total do contrato: R$ 23.684,00</div>
+          </button>
+          <button type="button" class="iup-cen-btn" data-cen="2" role="tab">
+            <div class="eb">Cenário 2</div>
+            <div class="tt">Avaliações, Desenvolvimento e Learning</div>
+            <div class="pv">R$ 9.284,92 <small>/mês (12x)</small></div>
+            <div class="tv">Total do contrato: R$ 111.419,00</div>
+          </button>
+        </div>
+
+        <div class="iup-cen-panel active" data-cen-panel="1">
+        <div class="investment-hero">
+          <div class="label">Investimento mensal</div>
+          <div class="value">R$ 1.973,67/mês (12x)</div>
+        </div>
+        <p class="investment-hero-meta">Investimento total do contrato: R$ 23.684,00 · Validade da proposta: 5 dias · Duração do contrato: 12 meses</p>
+
+        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos</div>
+        <div class="module-list">
+          <div class="module-row">
+            <div class="module-row-main"><h4>Avaliações</h4><p>Ciclos 90/180/360°, Avaliação de Experiência e Feedback contínuo.</p></div>
+            <div class="module-row-users">200 créditos</div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Desenvolvimento</h4><p>PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas.</p></div>
+            <div class="module-row-users">200 usuários</div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Plano de Serviço II</h4><p>Serviço de ativação e sucesso, inclui Avaliação de Desempenho.</p></div>
+            <div class="module-row-users"></div>
+          </div>
+        </div>
+
+        <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
+        <table class="rfp-table" id="proposalValuesTable1">
+          <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
+          <tr><td><div class="feat-name">Avaliações</div></td><td class="check-cell">200 créditos</td><td class="check-cell">R$ 93,42</td><td class="check-cell">—</td><td class="check-cell">Cobrança por créditos. Total: R$ 18.684,00</td></tr>
+          <tr><td><div class="feat-name">Desenvolvimento</div></td><td class="check-cell">200 usuários</td><td class="check-cell">—</td><td class="check-cell">—</td><td class="check-cell">Incluso</td></tr>
+          <tr><td><div class="feat-name">Plano de Serviço II</div></td><td class="check-cell">—</td><td class="check-cell">R$ 5.000,00</td><td class="check-cell">—</td><td class="check-cell">Inclui Avaliação de Desempenho.</td></tr>
+          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 23.684,00</td></tr>
+        </table>
+        </div>
+
+        <div class="iup-cen-panel" data-cen-panel="2">
         <div class="investment-hero">
           <div class="label">Investimento mensal</div>
           <div class="value">R$ 9.284,92/mês (12x)</div>
@@ -780,7 +844,7 @@
         </div>
 
         <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
-        <table class="rfp-table" id="proposalValuesTable">
+        <table class="rfp-table" id="proposalValuesTable2">
           <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
           <tr><td><div class="feat-name">Avaliações</div></td><td class="check-cell">200 créditos</td><td class="check-cell">R$ 93,42</td><td class="check-cell">—</td><td class="check-cell">Cobrança anual por créditos. Total: R$ 18.684,00</td></tr>
           <tr><td><div class="feat-name">Desenvolvimento</div></td><td class="check-cell">2.500 usuários</td><td class="check-cell">—</td><td class="check-cell">—</td><td class="check-cell">Incluso</td></tr>
@@ -789,6 +853,17 @@
           <tr><td><div class="feat-name">Integração</div></td><td class="check-cell">—</td><td class="check-cell">R$ 10.625,00</td><td class="check-cell">—</td><td class="check-cell">Valor de tabela R$ 12.500,00, negociado para R$ 10.625,00. Cobrança única. Integração da API com o RM TOTVS.</td></tr>
           <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 111.419,00</td></tr>
         </table>
+        </div>
+        <script>
+          (function(){
+            var btns=document.querySelectorAll('.iup-cen-btn');
+            btns.forEach(function(b){b.addEventListener('click',function(){
+              var n=b.getAttribute('data-cen');
+              btns.forEach(function(x){x.classList.toggle('active',x===b);});
+              document.querySelectorAll('.iup-cen-panel').forEach(function(p){p.classList.toggle('active',p.getAttribute('data-cen-panel')===n);});
+            });});
+          })();
+        </script>
 
         <label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
           <div id="proposalPlaceholder">
