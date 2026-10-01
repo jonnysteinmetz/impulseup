@@ -247,6 +247,20 @@
   .investment-hero .label{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FF7FC8;margin-bottom:10px;}
   .investment-hero .value{font-size:36px;font-weight:700;color:#fff;}
   .investment-hero-meta{font-size:12.5px;color:var(--color-fg-muted);margin-bottom:32px;}
+  .proposal-switch-hint{font-size:12.5px;color:var(--color-fg-muted);margin:0 0 12px 0;display:flex;align-items:center;gap:8px;}
+  .proposal-switch{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+  .proposal-option{display:flex;flex-direction:column;align-items:flex-start;text-align:left;font-family:inherit;border:2px solid transparent;cursor:pointer;opacity:0.55;transition:opacity .2s,transform .2s,border-color .2s,box-shadow .2s;width:100%;}
+  .proposal-option:hover{opacity:0.85;transform:translateY(-2px);}
+  .proposal-option.active{opacity:1;border-color:var(--color-primary);box-shadow:0 10px 28px rgba(0,0,0,0.18);}
+  .proposal-option:focus-visible{outline:3px solid var(--color-primary);outline-offset:3px;}
+  .proposal-option .label,.proposal-option .value{display:block;}
+  .proposal-option-foot{display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.18);font-size:12.5px;color:rgba(255,255,255,0.8);}
+  .proposal-option-foot i{transition:transform .2s;}
+  .proposal-option:not(.active) .proposal-option-foot i{transform:rotate(-90deg);}
+  .proposal-panel{animation:proposalFade .25s ease;}
+  .proposal-panel-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:28px;align-items:start;}
+  @media (max-width:1300px){.proposal-panel-grid{grid-template-columns:1fr;}}
+  @keyframes proposalFade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
 
   .module-list{display:flex;flex-direction:column;gap:0;margin-bottom:32px;border:1px solid var(--color-border);border-radius:12px;overflow:hidden;}
   .module-row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 18px;border-bottom:1px solid var(--color-border);}
@@ -826,55 +840,93 @@
       </div>
 
       <div id="tab7ProposalWrap" style="display:block;">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
-          <div class="investment-hero">
-            <div class="label">1º ano · 100 usuários</div>
-            <div class="value">12x R$ 2.612,50</div>
-          </div>
-          <div class="investment-hero">
-            <div class="label">2º ano · expansão para 206 usuários</div>
-            <div class="value">12x R$ 3.540,85</div>
-          </div>
+        <p class="proposal-switch-hint"><i class="fa-regular fa-hand-pointer"></i>Clique em cada etapa do contrato para ver os módulos e o detalhamento de valores</p>
+        <div class="proposal-switch" role="tablist" aria-label="Etapas do contrato">
+          <button type="button" class="investment-hero proposal-option active" role="tab" aria-selected="true" aria-controls="proposalPanel1" data-target="proposalPanel1">
+            <span class="label">1º ano · 100 usuários</span>
+            <span class="value">12x R$ 2.612,50</span>
+            <span class="proposal-option-foot">Total do ano: R$ 31.350,00<i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <button type="button" class="investment-hero proposal-option" role="tab" aria-selected="false" aria-controls="proposalPanel2" data-target="proposalPanel2">
+            <span class="label">2º ano · expansão para 206 usuários</span>
+            <span class="value">12x R$ 3.540,85</span>
+            <span class="proposal-option-foot">Total do ano: R$ 42.490,20<i class="fa-solid fa-chevron-down"></i></span>
+          </button>
         </div>
         <p class="investment-hero-meta">Investimento total do contrato: R$ 73.840,20 · Validade da proposta: 5 dias · Duração do contrato: 24 meses</p>
 
-        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos no 1º ano</div>
-        <div class="module-list">
+        <div class="proposal-panel active" id="proposalPanel1" role="tabpanel">
+          <div class="proposal-panel-grid">
+            <div>
+              <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos no 1º ano</div>
+              <div class="module-list">
           <div class="module-row"><div class="module-row-main"><h4>Avaliações</h4><p>Ciclos 90/180/360°, avaliação de experiência e feedback contínuo</p></div><div class="module-row-users">100 usuários</div></div>
           <div class="module-row"><div class="module-row-main"><h4>Pesquisas</h4><p>Clima, pulso e engajamento</p></div><div class="module-row-users">100 usuários</div></div>
           <div class="module-row"><div class="module-row-main"><h4>Metas e OKRs</h4><p>Indicadores e gestão estratégica</p></div><div class="module-row-users">100 usuários</div></div>
           <div class="module-row"><div class="module-row-main"><h4>Desenvolvimento</h4><p>PDIs, feedbacks, reuniões 1:1, ações e iniciativas</p></div><div class="module-row-users">100 usuários</div></div>
           <div class="module-row"><div class="module-row-main"><h4>Plano de Serviço II</h4><p>Inclui a implementação de Avaliação de Desempenho, Metas e Pesquisas</p></div><div class="module-row-users"></div></div>
         </div>
-
-        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos no 2º ano</div>
-        <div class="module-list">
-          <div class="module-row"><div class="module-row-main"><h4>Avaliações</h4><p>Ciclos 90/180/360°, avaliação de experiência e feedback contínuo</p></div><div class="module-row-users">206 créditos</div></div>
-          <div class="module-row"><div class="module-row-main"><h4>Metas e OKRs</h4><p>Indicadores e gestão estratégica</p></div><div class="module-row-users">206 usuários</div></div>
-          <div class="module-row"><div class="module-row-main"><h4>Desenvolvimento</h4><p>PDIs, feedbacks, reuniões 1:1, ações e iniciativas</p></div><div class="module-row-users">206 usuários</div></div>
-          <div class="module-row"><div class="module-row-main"><h4>Plano de Serviço I</h4><p>Inclui a implementação de Avaliação de Desempenho e Metas para a expansão</p></div><div class="module-row-users"></div></div>
-        </div>
-
-        <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
-        <div style="overflow-x:auto;">
+            </div>
+            <div>
+              <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores do 1º ano (meses 1 a 12)</div>
+              <div style="overflow-x:auto;">
         <table class="rfp-table" id="proposalValuesTable">
           <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
-          <tr><td colspan="5" style="font-weight:700;background:var(--color-bg-alt);">1º ano (meses 1 a 12)</td></tr>
           <tr><td><div class="feat-name">Avaliações</div></td><td class="check-cell">100</td><td class="check-cell">R$ 11,43</td><td class="check-cell">R$ 1.143,50</td><td class="check-cell">Valor de tabela R$ 12,97, negociado para R$ 11,43</td></tr>
           <tr><td><div class="feat-name">Pesquisas</div></td><td class="check-cell">100</td><td class="check-cell">R$ 3,28</td><td class="check-cell">R$ 327,97</td><td class="check-cell">Valor de tabela R$ 3,72, negociado para R$ 3,28</td></tr>
           <tr><td><div class="feat-name">Metas e OKRs</div></td><td class="check-cell">100</td><td class="check-cell">R$ 6,12</td><td class="check-cell">R$ 611,86</td><td class="check-cell">Valor de tabela R$ 6,94, negociado para R$ 6,12</td></tr>
           <tr><td><div class="feat-name">Desenvolvimento</div></td><td class="check-cell">100</td><td class="check-cell">-</td><td class="check-cell">-</td><td class="check-cell">Incluso</td></tr>
           <tr><td><div class="feat-name">Plano de Serviço II</div></td><td class="check-cell">-</td><td class="check-cell">Incluso</td><td class="check-cell">-</td><td class="check-cell">Implementação de Avaliação de Desempenho, Metas e Pesquisas</td></tr>
           <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do 1º ano (12x R$ 2.612,50)</td><td class="check-cell" style="font-weight:700;">R$ 31.350,00</td></tr>
-          <tr><td colspan="5" style="font-weight:700;background:var(--color-bg-alt);">2º ano (meses 13 a 24)</td></tr>
+        </table>
+        </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proposal-panel" id="proposalPanel2" role="tabpanel" hidden>
+          <div class="proposal-panel-grid">
+            <div>
+              <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos no 2º ano</div>
+              <div class="module-list">
+          <div class="module-row"><div class="module-row-main"><h4>Avaliações</h4><p>Ciclos 90/180/360°, avaliação de experiência e feedback contínuo</p></div><div class="module-row-users">206 créditos</div></div>
+          <div class="module-row"><div class="module-row-main"><h4>Metas e OKRs</h4><p>Indicadores e gestão estratégica</p></div><div class="module-row-users">206 usuários</div></div>
+          <div class="module-row"><div class="module-row-main"><h4>Desenvolvimento</h4><p>PDIs, feedbacks, reuniões 1:1, ações e iniciativas</p></div><div class="module-row-users">206 usuários</div></div>
+          <div class="module-row"><div class="module-row-main"><h4>Plano de Serviço I</h4><p>Inclui a implementação de Avaliação de Desempenho e Metas para a expansão</p></div><div class="module-row-users"></div></div>
+        </div>
+            </div>
+            <div>
+              <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores do 2º ano (meses 13 a 24)</div>
+              <div style="overflow-x:auto;">
+        <table class="rfp-table" id="proposalValuesTable2">
+          <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
           <tr><td><div class="feat-name">Avaliações</div></td><td class="check-cell">206 créditos</td><td class="check-cell">R$ 93,42</td><td class="check-cell">-</td><td class="check-cell">Cobrança por crédito: R$ 19.244,52 no ano</td></tr>
           <tr><td><div class="feat-name">Metas e OKRs</div></td><td class="check-cell">206</td><td class="check-cell">R$ 8,19</td><td class="check-cell">R$ 1.687,14</td><td class="check-cell"></td></tr>
           <tr><td><div class="feat-name">Desenvolvimento</div></td><td class="check-cell">206</td><td class="check-cell">-</td><td class="check-cell">-</td><td class="check-cell">Incluso</td></tr>
           <tr><td><div class="feat-name">Plano de Serviço I</div></td><td class="check-cell">-</td><td class="check-cell">R$ 3.000,00</td><td class="check-cell">-</td><td class="check-cell">Cobrança única, implementação de Avaliação de Desempenho e Metas</td></tr>
           <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do 2º ano (12x R$ 3.540,85)</td><td class="check-cell" style="font-weight:700;">R$ 42.490,20</td></tr>
-          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (24 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 73.840,20</td></tr>
         </table>
         </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+        (function(){
+          var opts=document.querySelectorAll('#tab7ProposalWrap .proposal-option');
+          opts.forEach(function(btn){
+            btn.addEventListener('click',function(){
+              opts.forEach(function(b){
+                var on=(b===btn);
+                b.classList.toggle('active',on);
+                b.setAttribute('aria-selected',on?'true':'false');
+                var pnl=document.getElementById(b.dataset.target);
+                if(pnl){pnl.hidden=!on;pnl.classList.toggle('active',on);}
+              });
+            });
+          });
+        })();
+        </script>
 
         <label class="proposal-upload-slot" id="proposalSlot" style="margin-top:24px;">
           <div id="proposalPlaceholder">
