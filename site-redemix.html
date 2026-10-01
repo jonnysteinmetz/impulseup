@@ -747,9 +747,13 @@
     <!-- ABA 7 — PROPOSTA COMERCIAL -->
     <section class="tab-panel" id="tab-7">
       <h1 class="section-title">Proposta comercial</h1>
-      <p class="section-sub">Investimento para a Redemix · dois cenários para a sua decisão</p>
+      <p class="section-sub">Investimento para a Redemix · três cenários para a sua decisão</p>
       <style>
-        .iup-cen-switch{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px;}
+        .iup-cen-switch{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px;}
+        .iup-cen-btn{position:relative;}
+        .iup-cen-btn.recommended{border-color:var(--color-primary);}
+        .iup-cen-badge{display:inline-flex;align-items:center;gap:5px;background:var(--color-primary);color:#fff;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:999px;margin-left:8px;vertical-align:middle;}
+        .iup-cen-rec-note{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--color-primary);margin-bottom:10px;}
         @media (max-width:760px){.iup-cen-switch{grid-template-columns:1fr;}}
         .iup-cen-btn{all:unset;box-sizing:border-box;cursor:pointer;border:2px solid var(--color-border);border-radius:14px;padding:18px 20px;background:#fff;transition:border-color .15s, box-shadow .15s;}
         .iup-cen-btn:hover{border-color:var(--color-primary);}
@@ -765,21 +769,27 @@
       </style>
       <div id="tab7ProposalWrap">
         <div class="iup-cen-switch" role="tablist">
-          <button type="button" class="iup-cen-btn active" data-cen="1" role="tab">
+          <button type="button" class="iup-cen-btn" data-cen="1" role="tab">
             <div class="eb">Cenário 1</div>
             <div class="tt">Avaliações e Desenvolvimento</div>
             <div class="pv">R$ 1.973,67 <small>/mês (12x)</small></div>
             <div class="tv">Total do contrato: R$ 23.684,00</div>
           </button>
-          <button type="button" class="iup-cen-btn" data-cen="2" role="tab">
-            <div class="eb">Cenário 2</div>
+          <button type="button" class="iup-cen-btn active recommended" data-cen="2" role="tab">
+            <div class="eb">Cenário 2<span class="iup-cen-badge"><i class="fa-solid fa-star"></i>Recomendado</span></div>
+            <div class="tt">Avaliações, Desenvolvimento e Learning</div>
+            <div class="pv">R$ 6.715,87 <small>/mês (12x)</small></div>
+            <div class="tv">Total do contrato: R$ 80.590,40</div>
+          </button>
+          <button type="button" class="iup-cen-btn" data-cen="3" role="tab">
+            <div class="eb">Cenário 3</div>
             <div class="tt">Avaliações, Desenvolvimento e Learning</div>
             <div class="pv">R$ 9.284,92 <small>/mês (12x)</small></div>
             <div class="tv">Total do contrato: R$ 111.419,00</div>
           </button>
         </div>
 
-        <div class="iup-cen-panel active" data-cen-panel="1">
+        <div class="iup-cen-panel" data-cen-panel="1">
         <div class="investment-hero">
           <div class="label">Investimento mensal</div>
           <div class="value">R$ 1.973,67/mês (12x)</div>
@@ -812,7 +822,51 @@
         </table>
         </div>
 
-        <div class="iup-cen-panel" data-cen-panel="2">
+        <div class="iup-cen-panel active" data-cen-panel="2">
+        <div class="iup-cen-rec-note"><i class="fa-solid fa-star"></i>Cenário recomendado para a Redemix</div>
+        <div class="investment-hero">
+          <div class="label">Investimento mensal</div>
+          <div class="value">R$ 6.715,87/mês (12x)</div>
+        </div>
+        <p class="investment-hero-meta">Investimento total do contrato: R$ 80.590,40 (valor de tabela R$ 102.836,00, economia de R$ 22.245,60 ou 21,6%) · Validade da proposta: 5 dias · Duração do contrato: 12 meses</p>
+
+        <div class="block-title"><i class="fa-regular fa-layer-group"></i>Módulos e serviços incluídos</div>
+        <div class="module-list">
+          <div class="module-row">
+            <div class="module-row-main"><h4>Avaliações</h4><p>Ciclos 90/180/360°, Avaliação de Experiência e Feedback contínuo.</p></div>
+            <div class="module-row-users">200 créditos</div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Desenvolvimento</h4><p>PDIs, Feedbacks, Reuniões 1:1, Ações e Iniciativas.</p></div>
+            <div class="module-row-users">1.800 usuários</div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Learning</h4><p>Desenvolva cada colaborador no que mais precisam.</p></div>
+            <div class="module-row-users">1.800 usuários</div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Plano de Serviço III</h4><p>Implementação assistida, inclui Avaliação de Desempenho.</p></div>
+            <div class="module-row-users"></div>
+          </div>
+          <div class="module-row">
+            <div class="module-row-main"><h4>Integração</h4><p>Integração da API com o RM TOTVS.</p></div>
+            <div class="module-row-users"></div>
+          </div>
+        </div>
+
+        <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
+        <table class="rfp-table" id="proposalValuesTable2">
+          <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
+          <tr><td><div class="feat-name">Avaliações</div></td><td class="check-cell">200 créditos</td><td class="check-cell">R$ 93,42</td><td class="check-cell">—</td><td class="check-cell">Cobrança anual por créditos. Total: R$ 18.684,00</td></tr>
+          <tr><td><div class="feat-name">Desenvolvimento</div></td><td class="check-cell">1.800 usuários</td><td class="check-cell">—</td><td class="check-cell">—</td><td class="check-cell">Incluso</td></tr>
+          <tr><td><div class="feat-name">Learning</div></td><td class="check-cell">1.800 usuários</td><td class="check-cell">R$ 2,08</td><td class="check-cell">R$ 3.742,20</td><td class="check-cell">Valor de tabela R$ 2,97, negociado para R$ 2,08.</td></tr>
+          <tr><td><div class="feat-name">Plano de Serviço III</div></td><td class="check-cell">—</td><td class="check-cell">R$ 6.375,00</td><td class="check-cell">—</td><td class="check-cell">Valor de tabela R$ 7.500,00, negociado para R$ 6.375,00. Cobrança única. Inclui Avaliação de Desempenho.</td></tr>
+          <tr><td><div class="feat-name">Integração</div></td><td class="check-cell">—</td><td class="check-cell">R$ 10.625,00</td><td class="check-cell">—</td><td class="check-cell">Valor de tabela R$ 12.500,00, negociado para R$ 10.625,00. Cobrança única. Integração da API com o RM TOTVS.</td></tr>
+          <tr><td colspan="4" style="text-align:right;font-weight:600;">Total do contrato (12 meses)</td><td class="check-cell" style="font-weight:700;color:var(--color-primary);">R$ 80.590,40</td></tr>
+        </table>
+        </div>
+
+        <div class="iup-cen-panel" data-cen-panel="3">
         <div class="investment-hero">
           <div class="label">Investimento mensal</div>
           <div class="value">R$ 9.284,92/mês (12x)</div>
@@ -844,7 +898,7 @@
         </div>
 
         <div class="block-title"><i class="fa-regular fa-table"></i>Detalhamento de valores</div>
-        <table class="rfp-table" id="proposalValuesTable2">
+        <table class="rfp-table" id="proposalValuesTable3">
           <tr><th>Item</th><th>Usuários</th><th>Valor unitário</th><th>Valor mensal</th><th>Observação</th></tr>
           <tr><td><div class="feat-name">Avaliações</div></td><td class="check-cell">200 créditos</td><td class="check-cell">R$ 93,42</td><td class="check-cell">—</td><td class="check-cell">Cobrança anual por créditos. Total: R$ 18.684,00</td></tr>
           <tr><td><div class="feat-name">Desenvolvimento</div></td><td class="check-cell">2.500 usuários</td><td class="check-cell">—</td><td class="check-cell">—</td><td class="check-cell">Incluso</td></tr>
@@ -904,8 +958,7 @@
      é publicada (ver estrutura-abas.md, seção "Resumo executivo (HTML)"). Campos ausentes =
      seção correspondente omitida no arquivo exportado, nunca "A confirmar" ou dado inventado.
      `contexto: null` = botão avisa que a Aba 2 (Diagnóstico) ainda não foi publicada. -->
-<script type="application/json" id="execSummaryData">
-{
+<script type="application/json" id="execSummaryData">{
   "nomeEmpresa": "Redemix",
   "slugEmpresa": "redemix",
   "contexto": "Retomando contato com a impulseup após baixa aderência da implantação SAP (avaliação de desempenho + LMS). Proposta já apresentada e alinhada com Érica e Patrícia; decisão da diretoria prevista até setembro, com ciclo começando em março ou abril de 2026.",
@@ -932,10 +985,22 @@
     }
   ],
   "objetivos": [
-    {"titulo": "Trocar de plataforma sem perder a adesão que a Redemix já tinha", "estadoFuturoResumido": "Segundo ciclo roda com acompanhamento próximo, sem os transtornos do primeiro"},
-    {"titulo": "Eliminar o retrabalho manual de cadastro entre RM/TOTVS e a plataforma", "estadoFuturoResumido": "Cadastro sempre atualizado, sem replicar dado manualmente"},
-    {"titulo": "Padronizar formatos de avaliação por grupo de liderança, num único ciclo", "estadoFuturoResumido": "Formulário validado uma vez, reaproveitado ciclo a ciclo"},
-    {"titulo": "Dar à área de Gente visão gerencial e dados confiáveis para decisão", "estadoFuturoResumido": "Comparativos entre grupos e áreas, embasando decisões da diretoria"}
+    {
+      "titulo": "Trocar de plataforma sem perder a adesão que a Redemix já tinha",
+      "estadoFuturoResumido": "Segundo ciclo roda com acompanhamento próximo, sem os transtornos do primeiro"
+    },
+    {
+      "titulo": "Eliminar o retrabalho manual de cadastro entre RM/TOTVS e a plataforma",
+      "estadoFuturoResumido": "Cadastro sempre atualizado, sem replicar dado manualmente"
+    },
+    {
+      "titulo": "Padronizar formatos de avaliação por grupo de liderança, num único ciclo",
+      "estadoFuturoResumido": "Formulário validado uma vez, reaproveitado ciclo a ciclo"
+    },
+    {
+      "titulo": "Dar à área de Gente visão gerencial e dados confiáveis para decisão",
+      "estadoFuturoResumido": "Comparativos entre grupos e áreas, embasando decisões da diretoria"
+    }
   ],
   "pilaresDestaque": [
     {
@@ -952,16 +1017,33 @@
     }
   ],
   "comparativo": null,
-  "investimento": null,
+  "investimento": {
+    "parcelaValor": "R$ 6.715,87",
+    "duracaoContrato": "12 meses"
+  },
   "cronogramaMacro": [
-    {"data": "Concluída", "titulo": "Reunião de alinhamento e apresentação da proposta"},
-    {"data": "A definir", "titulo": "Teste guiado (dia 24 ou 28)"},
-    {"data": "A definir", "titulo": "Apresentação para diretoria"},
-    {"data": "Até setembro", "titulo": "Decisão e assinatura"},
-    {"data": "Mar/Abr 2026", "titulo": "Início do ciclo"}
+    {
+      "data": "Concluída",
+      "titulo": "Reunião de alinhamento e apresentação da proposta"
+    },
+    {
+      "data": "A definir",
+      "titulo": "Teste guiado (dia 24 ou 28)"
+    },
+    {
+      "data": "A definir",
+      "titulo": "Apresentação para diretoria"
+    },
+    {
+      "data": "Até setembro",
+      "titulo": "Decisão e assinatura"
+    },
+    {
+      "data": "Mar/Abr 2026",
+      "titulo": "Início do ciclo"
+    }
   ]
-}
-</script>
+}</script>
 
 <footer>
   <div class="wrap"><p>impulseup · Material preparado para Redemix</p></div>
