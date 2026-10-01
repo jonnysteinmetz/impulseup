@@ -656,15 +656,16 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Avícola Pato Branco</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">7 a 9%</div><div class="label">rotatividade ao mês, patamar que a Avícola nunca tinha vivido</div></div>
+          <div class="stat-card"><div class="num">75%</div><div class="label">dos colaboradores citaram salário e benefícios na pesquisa de clima</div></div>
+          <div class="stat-card"><div class="num">3 mil</div><div class="label">comentários abertos que chegaram em planilha para o RH analisar à mão</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -672,46 +673,17 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Resultado de clima consolidado, sem recorte por setor, e cerca de 3 mil comentários abertos tratados em planilha</td><td class="feat-name">Pesquisas + Análises e Relatórios</td><td>Resultados filtrados por setor, unidade e liderança, com IA lendo os comentários abertos e apontando os temas que mais pesam</td></tr>
+              <tr><td>Ações pós-pesquisa (marmita, EPI) acompanhadas num 5W2H, sem como medir se a percepção mudou</td><td class="feat-name">Pesquisas (pulso e planos de ação)</td><td>Plano de ação criado a partir do resultado e pesquisa de pulso só no setor envolvido, com comparativo histórico para provar o efeito</td></tr>
+              <tr><td>Adesão depende do RH ir até os setores e do gestor insistir com quem está na ponta</td><td class="feat-name">Pesquisas (envio por WhatsApp e SMS)</td><td>Colaborador da granja responde pelo WhatsApp, sem login e sem e-mail corporativo, e o RH ganha tempo para o estratégico</td></tr>
+              <tr><td>Avaliação da liderança feita em Excel, com modelo BARS em quatro quadrantes que alimenta a premiação</td><td class="feat-name">Avaliação de Desempenho + Matriz n-Box</td><td>Escala e competências no modelo da Avícola, matriz com os quatro quadrantes, calibração dos resultados e gaps conectados ao PDI</td></tr>
             </tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
-          <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
-               Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
-
-               Caso 1 — url_video já veio do closer (link de Drive ou YouTube) e foi reconhecida:
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap">
-                   <iframe src="{{embed_url}}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                 </div>
-               </div>
-
-               Caso 2 — url_video veio mas não foi possível gerar embed (ex: link de pasta do Drive,
-               sem permissão de embed): mostrar card de link em vez de iframe.
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-link-card">
-                   <i class="fa-brands fa-google-drive"></i>
-                   <p>Vídeo disponível para acesso externo</p>
-                   <a href="{{url_video}}" target="_blank" rel="noopener" class="video-link-btn">Assistir vídeo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
-               </div>
-
-               Caso 3 — vídeo ainda sem url_video: slot de colagem manual, para o closer colar o link
-               direto no site (fica salvo no localStorage do navegador via saveImage/loadStore).
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap video-embed-empty" data-video-idx="{{indice}}">
-                   <label class="video-paste-label">
-                     <i class="fa-regular fa-circle-play"></i>
-                     <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
-                   </label>
-                   <input type="text" class="video-url-input" data-video-idx="{{indice}}" placeholder="https://...">
-                 </div>
-               </div> -->
+<div class="video-card"><h4>Pesquisa de clima e pulso por setor</h4><p>Configuração, segmentação e envio pelo WhatsApp, do clima anual ao pulso de um setor específico.</p><div class="video-embed-wrap video-embed-empty" data-video-idx="0"><label class="video-paste-label"><i class="fa-regular fa-circle-play"></i><span>Cole aqui o link do vídeo (YouTube ou Drive)</span></label><input type="text" class="video-url-input" data-video-idx="0" placeholder="https://..."></div></div>
+<div class="video-card"><h4>Análises para tomada de decisão</h4><p>Leitura dos resultados por setor e liderança, IA nos comentários abertos e plano de ação a partir dos dados.</p><div class="video-embed-wrap video-embed-empty" data-video-idx="1"><label class="video-paste-label"><i class="fa-regular fa-circle-play"></i><span>Cole aqui o link do vídeo (YouTube ou Drive)</span></label><input type="text" class="video-url-input" data-video-idx="1" placeholder="https://..."></div></div>
+<div class="video-card"><h4>Avaliação de desempenho da liderança</h4><p>Ciclo no modelo da Avícola, com escala personalizada, matriz de quadrantes e conexão com o PDI.</p><div class="video-embed-wrap video-embed-empty" data-video-idx="2"><label class="video-paste-label"><i class="fa-regular fa-circle-play"></i><span>Cole aqui o link do vídeo (YouTube ou Drive)</span></label><input type="text" class="video-url-input" data-video-idx="2" placeholder="https://..."></div></div>
         </div>
       </div>
     </section>
@@ -823,7 +795,7 @@
       <p class="section-sub">Jornada de compra da Avícola Pato Branco</p>
       <div class="timeline">
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Entender contexto e desafios · Andressa Rodrigues</div></div></div>
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Mostrar solução aplicada aos desafios mapeados</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">01 out</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Pesquisa de clima e pulso por setor, análises e adesão · Andressa Rodrigues e Luiz Fernando</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Definir escopo e cenários de investimento</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Apresentação do projeto internamente</div></div></div>
         <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">A definir</span><div><span class="tl-desc">Aprovação da proposta</span></div></div>
@@ -885,7 +857,7 @@
       "titulo": "Reunião de Diagnóstico"
     },
     {
-      "data": "A definir",
+      "data": "01 out",
       "titulo": "Demonstração personalizada"
     },
     {
