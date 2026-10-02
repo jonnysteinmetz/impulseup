@@ -455,6 +455,69 @@
   .export-exec-btn:hover{background:var(--color-primary-hover);}
   .export-exec-btn:disabled{opacity:0.6;cursor:wait;}
   .export-exec-btn i{font-size:13px;}
+
+  /* ---------- ABA 5: blocos do projeto desenhado ---------- */
+  .ap-sec{margin:44px 0 0;}
+  .ap-kicker{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-primary);margin-bottom:6px;}
+  .ap-h2{font-size:22px;font-weight:700;margin:0 0 18px;color:var(--color-fg);}
+  .ap-grid{display:grid;gap:16px;}
+  .ap-g3{grid-template-columns:repeat(3,1fr);} .ap-g4{grid-template-columns:repeat(4,1fr);} .ap-g2{grid-template-columns:repeat(2,1fr);} .ap-g7{grid-template-columns:repeat(7,1fr);gap:10px;} .ap-g6{grid-template-columns:repeat(6,1fr);gap:10px;}
+  .ap-card{background:var(--color-bg-alt);border:1px solid var(--color-border);border-radius:14px;padding:20px;}
+  .ap-card.dark{background:#111;color:#fff;border-color:#111;}
+  .ap-card.dark p,.ap-card.dark li{color:rgba(255,255,255,.8);}
+  .ap-card h4{font-size:15px;font-weight:700;margin:0 0 8px;}
+  .ap-card p{font-size:13px;line-height:1.5;color:var(--color-fg-muted);margin:0;}
+  .ap-stat{font-size:52px;font-weight:800;line-height:1;color:var(--color-primary);margin-bottom:12px;}
+  .ap-signals{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;}
+  .ap-signal{display:flex;align-items:center;gap:10px;font-size:13px;background:#fff;border:1px solid var(--color-border);border-radius:999px;padding:8px 16px 8px 8px;}
+  .ap-ico{width:34px;height:34px;border-radius:50%;background:var(--color-primary);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;}
+  .ap-ico.lg{width:46px;height:46px;font-size:18px;margin-bottom:14px;}
+  .ap-quote{font-style:italic;font-size:14px;color:var(--color-fg-muted);margin-top:16px;}
+  .ap-step{background:#111;color:#fff;border-radius:14px;padding:16px 14px;display:flex;flex-direction:column;min-height:170px;}
+  .ap-step .n{font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--color-primary);margin:12px 0 6px;}
+  .ap-step h4{font-size:13.5px;font-weight:700;margin:0;line-height:1.3;}
+  .ap-step em{margin-top:auto;font-size:12px;color:rgba(255,255,255,.6);padding-top:10px;}
+  .ap-note{font-size:13px;color:var(--color-fg-muted);margin-top:12px;}
+  details.ap-acc{border:1px solid var(--color-border);border-radius:12px;margin-top:10px;background:#fff;}
+  details.ap-acc summary{cursor:pointer;padding:14px 18px;font-weight:700;font-size:14px;list-style:none;display:flex;align-items:center;gap:10px;}
+  details.ap-acc summary::-webkit-details-marker{display:none;}
+  details.ap-acc summary .tag{font-size:10px;font-weight:700;color:var(--color-primary);letter-spacing:.06em;min-width:62px;}
+  details.ap-acc summary::after{content:"+";margin-left:auto;color:var(--color-primary);font-size:18px;}
+  details.ap-acc[open] summary::after{content:"–";}
+  .ap-acc-body{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;padding:0 18px 18px;}
+  .ap-acc-body ol,.ap-acc-body ul{margin:0;padding-left:18px;font-size:13px;line-height:1.55;}
+  .ap-acc-body ul{list-style:none;padding-left:0;} .ap-acc-body ul li{padding-left:20px;position:relative;margin-bottom:4px;}
+  .ap-acc-body ul li::before{content:"\2713";position:absolute;left:0;color:var(--color-primary);font-weight:700;}
+  .ap-lbl{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-fg-muted);margin-bottom:8px;}
+  .ap-impact{grid-column:1/-1;background:#fbe9f4;border-radius:10px;padding:12px 16px;font-size:13.5px;font-weight:600;}
+  .ap-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+  .ap-chip{font-size:11px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--color-bg-alt);border:1px solid var(--color-border);color:var(--color-fg);}
+  .ap-chip.etapa{background:#fbe9f4;border-color:transparent;color:var(--color-primary);}
+  .ap-resolve{font-size:12px;font-weight:700;color:var(--color-primary);margin-top:12px;}
+  table.ap-table{width:100%;border-collapse:separate;border-spacing:0 6px;font-size:13.5px;}
+  table.ap-table th{text-align:left;padding:10px 16px;font-size:12px;}
+  table.ap-table th.hoje{background:var(--color-bg-alt);color:var(--color-fg-muted);border-radius:8px 0 0 8px;}
+  table.ap-table th.com{background:var(--color-primary);color:#fff;border-radius:0 8px 8px 0;}
+  table.ap-table td{padding:12px 16px;}
+  table.ap-table td.k{font-weight:700;width:18%;}
+  table.ap-table td.hoje{background:var(--color-bg-alt);color:var(--color-fg-muted);}
+  table.ap-table td.com{background:#fbe9f4;font-weight:600;}
+  .ap-checks{list-style:none;padding:0;margin:12px 0 0;} .ap-checks li{font-size:13px;line-height:1.45;padding-left:22px;position:relative;margin-bottom:10px;color:var(--color-fg-muted);}
+  .ap-checks li::before{content:"\2713";position:absolute;left:0;color:var(--color-primary);font-weight:800;}
+  .ap-card.dark .ap-checks li{color:rgba(255,255,255,.85);}
+  .ap-dec{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px;font-size:14px;line-height:1.45;}
+  .ap-dec .num{width:30px;height:30px;border-radius:50%;background:var(--color-primary);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .ap-tl{position:relative;}
+  .ap-tl .node{background:var(--color-bg-alt);border-radius:12px;padding:14px;border:1px solid var(--color-border);}
+  .ap-tl .node.hl{background:#fbe9f4;border-color:transparent;}
+  .ap-tl .when{font-weight:700;font-size:13px;margin-bottom:6px;} .ap-tl .node.hl .when{color:var(--color-primary);}
+  .ap-tl .what{font-size:12.5px;color:var(--color-fg-muted);line-height:1.45;}
+  .ap-tl .who{font-size:11px;font-style:italic;color:var(--color-fg-muted);margin-top:8px;}
+  .ap-closing{background:#111;color:#fff;border-radius:18px;padding:40px;margin-top:44px;}
+  .ap-closing h3{font-size:28px;font-weight:800;margin:0;line-height:1.2;} .ap-closing h3 span{color:var(--color-primary);}
+  .ap-closing p{color:rgba(255,255,255,.75);margin:12px 0 0;font-size:14px;}
+  @media(max-width:1100px){.ap-g7{grid-template-columns:repeat(4,1fr);} .ap-g6{grid-template-columns:repeat(3,1fr);} .ap-g4{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:760px){.ap-g3,.ap-g4,.ap-g2,.ap-g6,.ap-g7{grid-template-columns:1fr;} .ap-acc-body{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -761,8 +824,39 @@
         <p>Assim que os desafios forem mapeados, esta aba mostra os objetivos de negócio e RH por trás do projeto, o plano de ação com cronograma para chegar lá, e o estado futuro do negócio com a impulseup — pronta para embasar a apresentação à diretoria.</p>
       </div>
       <div id="tab5PlanoWrap" style="display:block;">
+      <div class="ap-sec" style="margin-top:8px;">
+        <div class="ap-kicker">Por que agora</div>
+        <h2 class="ap-h2">A Moni cresceu, e o desempenho precisa acompanhar</h2>
+        <div class="ap-grid ap-g3">
+          <div class="ap-card"><div class="ap-stat">87</div><p>profissionais, hoje avaliados cada um no formato da sua liderança</p></div>
+          <div class="ap-card"><div class="ap-stat">91%</div><p>de satisfação na pesquisa de clima: uma cultura forte que queremos proteger</p></div>
+          <div class="ap-card"><div class="ap-stat">Nov</div><p>é quando o ciclo acontece de qualquer forma, junto com o planejamento de fim de ano</p></div>
+        </div>
+        <div class="ap-lbl" style="margin-top:22px;">O que a pesquisa de clima já sinalizou</div>
+        <div class="ap-signals">
+          <div class="ap-signal"><span class="ap-ico"><i class="fa-solid fa-arrow-turn-up"></i></span>Mais clareza no plano de carreira</div>
+          <div class="ap-signal"><span class="ap-ico"><i class="fa-solid fa-comments"></i></span>Comunicação interna entre lideranças e setores</div>
+          <div class="ap-signal"><span class="ap-ico"><i class="fa-solid fa-heart"></i></span>Ações de saúde, segurança e bem-estar</div>
+        </div>
+        <p class="ap-quote">Uma área de RH recém-criada tem a chance rara de nascer estruturada, em vez de formalizar processos soltos e migrar tudo depois.</p>
+      </div>
+
+      <div class="ap-sec">
+        <div class="ap-kicker">Processo desenhado</div>
+        <h2 class="ap-h2">O ciclo de gestão de desempenho da Moni em 7 etapas</h2>
+        <div class="ap-grid ap-g7"><div class="ap-step"><span class="ap-ico"><i class="fa-solid fa-arrow-turn-up"></i></span><span class="n">ETAPA 1</span><h4>Estruturar cargos, níveis e competências</h4><em>A régua</em></div><div class="ap-step"><span class="ap-ico"><i class="fa-solid fa-clipboard-list"></i></span><span class="n">ETAPA 2</span><h4>Desenhar o modelo de avaliação</h4><em>O formulário</em></div><div class="ap-step"><span class="ap-ico"><i class="fa-solid fa-paper-plane"></i></span><span class="n">ETAPA 3</span><h4>Lançar e acompanhar o ciclo</h4><em>A execução</em></div><div class="ap-step"><span class="ap-ico"><i class="fa-solid fa-magnifying-glass-plus"></i></span><span class="n">ETAPA 4</span><h4>Analisar e calibrar</h4><em>A leitura</em></div><div class="ap-step"><span class="ap-ico"><i class="fa-solid fa-route"></i></span><span class="n">ETAPA 5</span><h4>Devolutiva e PDI</h4><em>O plano</em></div><div class="ap-step"><span class="ap-ico"><i class="fa-solid fa-chess"></i></span><span class="n">ETAPA 6</span><h4>Sucessão e carreira</h4><em>O futuro</em></div><div class="ap-step"><span class="ap-ico"><i class="fa-solid fa-handshake"></i></span><span class="n">ETAPA 7</span><h4>Feedback e 1:1 contínuos</h4><em>A cultura</em></div></div>
+        <p class="ap-note"><b>Etapas 1 a 6</b> formam o ciclo formal, com periodicidade semestral. <b>Etapa 7</b> roda o ano inteiro e mantém o desempenho vivo entre um ciclo e outro.</p>
+        <div class="ap-lbl" style="margin-top:20px;">Como cada etapa será executada</div>
+        <details class="ap-acc"><summary><span class="tag">ETAPA 1</span>Estruturar cargos, níveis e competências</summary><div class="ap-acc-body"><div><div class="ap-lbl">Como vamos executar</div><ol><li>Mapear com as lideranças de Desenvolvimento e Suporte o que diferencia cada degrau, do júnior 3 ao sênior</li><li>Definir as competências técnicas e comportamentais de cada cargo e o nível esperado em cada degrau</li><li>Importar colaboradores, cargos e níveis via planilha, sem cadastro manual</li><li>Criar campos de cadastro que a Moni quer usar nas análises (área, senioridade, tempo de casa)</li></ol></div><div><div class="ap-lbl">Ferramentas da plataforma</div><ul><li>Cadastro de cargos com descrição, requisitos e competências</li><li>Nível requerido por cargo e por nível</li><li>Importação de dados via planilha</li><li>Até 25 campos customizados para filtros e cruzamentos</li></ul></div><div class="ap-impact"><i class="fa-solid fa-bolt" style="color:var(--color-primary);margin-right:8px;"></i>O plano de carreira deixa de ser uma lista de títulos e passa a ser a régua da avaliação.</div></div></details><details class="ap-acc"><summary><span class="tag">ETAPA 2</span>Desenhar o modelo de avaliação</summary><div class="ap-acc-body"><div><div class="ap-lbl">Como vamos executar</div><ol><li>Um único formulário para a empresa, com competências segmentadas por cargo, área e nível</li><li>Primeiro ciclo com líder e autoavaliação; 360° a partir do segundo ciclo, após a sensibilização</li><li>Escala e pesos definidos pela Moni, com comentário obrigatório nas notas extremas</li><li>Resultado em conceito (ex.: "demanda desenvolvimento"), acompanhado de descritivo</li><li>Eixo de sucessão respondido só pelos gestores: pessoa-chave, risco de saída e impacto</li></ol></div><div><div class="ap-lbl">Ferramentas da plataforma</div><ul><li>Formatos 90°, 180° e 360°</li><li>Competências exclusivas por cargo e área no mesmo formulário</li><li>Escala personalizável e pesos por competência</li><li>Resultado em pontuação, percentual ou conceito</li></ul></div><div class="ap-impact"><i class="fa-solid fa-bolt" style="color:var(--color-primary);margin-right:8px;"></i>Todos são avaliados com a mesma lógica, mas cada público pelo que se espera dele.</div></div></details><details class="ap-acc"><summary><span class="tag">ETAPA 3</span>Lançar e acompanhar o ciclo</summary><div class="ap-acc-body"><div><div class="ap-lbl">Como vamos executar</div><ol><li>Comunicação do ciclo pela diretoria e lideranças, reforçando o propósito de desenvolvimento</li><li>Link enviado por e-mail, SMS ou WhatsApp; o gestor avalia toda a equipe na mesma tela</li><li>Prazos e lembretes automáticos para cada etapa do ciclo</li><li>Gestão de Pessoas acompanha em tempo real quem iniciou, respondeu ou está pendente</li></ol></div><div><div class="ap-lbl">Ferramentas da plataforma</div><ul><li>Envio por e-mail, SMS e WhatsApp</li><li>Painel de acompanhamento com reenvio e reabertura</li><li>Notificações e lembretes automáticos</li><li>Gestores acompanham o status da própria equipe</li></ul></div><div class="ap-impact"><i class="fa-solid fa-bolt" style="color:var(--color-primary);margin-right:8px;"></i>Adesão monitorada sem planilha paralela nem cobrança manual por mensagem.</div></div></details><details class="ap-acc"><summary><span class="tag">ETAPA 4</span>Analisar e calibrar</summary><div class="ap-acc-body"><div><div class="ap-lbl">Como vamos executar</div><ol><li>Análise prévia antes de qualquer devolutiva: gaps por área, cargo e nível</li><li>Identificar avaliadores lenientes ou rígidos demais e resultados fora do padrão</li><li>Comitê de calibração com a diretoria e a liderança acima de cada gestor</li><li>Posicionar cada profissional na matriz Nine Box, cruzando competências e potencial</li></ol></div><div><div class="ap-lbl">Ferramentas da plataforma</div><ul><li>Insights com IA, com perguntas em linguagem natural</li><li>Analytics com filtros e cruzamentos</li><li>Nine Box com eixos e quadrantes customizáveis</li><li>Calibração por quadrante, seção ou competência</li></ul></div><div class="ap-impact"><i class="fa-solid fa-bolt" style="color:var(--color-primary);margin-right:8px;"></i>Promoção e reconhecimento passam a ter base comparável entre áreas, e não só percepção.</div></div></details><details class="ap-acc"><summary><span class="tag">ETAPA 5</span>Devolutiva e PDI</summary><div class="ap-acc-body"><div><div class="ap-lbl">Como vamos executar</div><ol><li>Relatórios liberados primeiro para as lideranças e depois para os colaboradores</li><li>Devolutiva registrada na plataforma, com roteiro gerado por IA: pontos fortes, a desenvolver e sugestões</li><li>Cada gap relevante vira ação de PDI: da biblioteca, sugerida pela IA ou criada pela Moni</li><li>Metodologia 70-20-10 e checklist de execução, com prazos e lembretes</li></ol></div><div><div class="ap-lbl">Ferramentas da plataforma</div><ul><li>Liberação de relatórios por público</li><li>Devolutiva assistida por IA</li><li>PDI com biblioteca de ações e IA</li><li>Conexão dos gaps da avaliação com PDI e cursos</li></ul></div><div class="ap-impact"><i class="fa-solid fa-bolt" style="color:var(--color-primary);margin-right:8px;"></i>A avaliação deixa de terminar na nota: todo ciclo gera um plano de desenvolvimento acompanhado.</div></div></details><details class="ap-acc"><summary><span class="tag">ETAPA 6</span>Sucessão e carreira</summary><div class="ap-acc-body"><div><div class="ap-lbl">Como vamos executar</div><ol><li>Usar o eixo de sucessão para identificar pessoas-chave, risco de saída e impacto</li><li>Cruzar risco e impacto com a Nine Box para priorizar ações de retenção</li><li>Montar com a diretoria o organograma de sucessão: sucessores e tempo de prontidão</li><li>Decidir promoções comparando o resultado com o nível requerido do próximo degrau</li></ol></div><div><div class="ap-lbl">Ferramentas da plataforma</div><ul><li>Planejamento de carreira e sucessão</li><li>Organograma de sucessão com tempo de prontidão</li><li>Matriz n-Box disponível para gestores</li><li>Comparação de resultados por cargo e área</li></ul></div><div class="ap-impact"><i class="fa-solid fa-bolt" style="color:var(--color-primary);margin-right:8px;"></i>Promoções explicáveis ao colaborador e visibilidade do risco de perder quem sustenta a operação.</div></div></details><details class="ap-acc"><summary><span class="tag">ETAPA 7</span>Feedback e 1:1 contínuos</summary><div class="ap-acc-body"><div><div class="ap-lbl">Como vamos executar</div><ol><li>Categorias de feedback definidas pela Moni: reconhecimento, orientação e melhoria</li><li>Frequência mínima de one-on-one por área, registrada na plataforma</li><li>Colaborador confirma a leitura e pode comentar o feedback recebido</li><li>Lembretes para líderes sem registro recente e reconhecimento de quem mais pratica</li></ol></div><div><div class="ap-lbl">Ferramentas da plataforma</div><ul><li>Registro de feedbacks categorizados</li><li>Destinatário confirma e comenta o feedback</li><li>Reuniões de one-on-one registradas</li><li>IA para escrever feedbacks e gamificação</li></ul></div><div class="ap-impact"><i class="fa-solid fa-bolt" style="color:var(--color-primary);margin-right:8px;"></i>A proximidade continua; a diferença é que a conversa deixa registro e o colaborador tem ciência formal.</div></div></details>
+      </div>
+
+      <div class="ap-sec">
+        <div class="ap-kicker">Objetivos do projeto</div>
+        <h2 class="ap-h2">Quatro objetivos, com meta, plano de ação e indicador de sucesso</h2>
+      </div>
+
         <div class="objetivo-card">
-          <div class="objetivo-header"><span class="objetivo-num">01</span><div><h3>Padronizar e dar objetividade à avaliação de desempenho</h3><p>Levar a avaliação de um processo pessoal de cada liderança para um ciclo único, com critério e dados comparáveis entre todas as áreas.</p></div></div>
+          <div class="objetivo-header"><span class="objetivo-num">01</span><div><h3>Padronizar e dar objetividade à avaliação de desempenho</h3><p>Levar a avaliação de um processo pessoal de cada liderança para um ciclo único, com critério e dados comparáveis entre todas as áreas.</p><div class="ap-chips"><span class="ap-chip">Avaliação sem padronização</span><span class="ap-chip">Falta de objetividade</span><span class="ap-chip">Avaliação genérica</span><span class="ap-chip etapa">Etapa 2</span><span class="ap-chip etapa">Etapa 3</span><span class="ap-chip etapa">Etapa 4</span></div></div></div>
           <div class="objetivo-body">
             <div class="objetivo-compare-col">
               <div class="objetivo-compare-box atual"><span class="objetivo-compare-label">Situação atual</span><p>Cada liderança conduz a avaliação no seu próprio formato e critério, sem centralização, numa empresa que já soma 87 profissionais e que concentra as decisões de promoção e reconhecimento no fim do ano.</p></div>
@@ -825,7 +919,7 @@
           </div>
         </div>
         <div class="objetivo-card">
-          <div class="objetivo-header"><span class="objetivo-num">02</span><div><h3>Formalizar feedback e one-on-one sem perder a proximidade</h3><p>Transformar o cuidado com as pessoas, que hoje depende do perfil de cada líder, em um processo da empresa, preservando a proximidade que é marca da cultura da Moni.</p></div></div>
+          <div class="objetivo-header"><span class="objetivo-num">02</span><div><h3>Formalizar feedback e one-on-one sem perder a proximidade</h3><p>Transformar o cuidado com as pessoas, que hoje depende do perfil de cada líder, em um processo da empresa, preservando a proximidade que é marca da cultura da Moni.</p><div class="ap-chips"><span class="ap-chip">Feedback e 1:1 sem registro</span><span class="ap-chip etapa">Etapa 7</span></div></div></div>
           <div class="objetivo-body">
             <div class="objetivo-compare-col">
               <div class="objetivo-compare-box atual"><span class="objetivo-compare-label">Situação atual</span><p>Feedbacks e one-on-ones acontecem, mas de forma informal e com frequência diferente em cada área. Houve casos recentes de profissionais desligados que disseram não esperar, mesmo após meses de feedback.</p></div>
@@ -878,7 +972,7 @@
           </div>
         </div>
         <div class="objetivo-card">
-          <div class="objetivo-header"><span class="objetivo-num">03</span><div><h3>Estruturar o plano de carreira por nível</h3><p>Detalhar o que se espera em cada degrau, hoje descrito só por título, para que a carreira deixe de ser uma lista de cargos e passe a ser uma régua clara de evolução.</p></div></div>
+          <div class="objetivo-header"><span class="objetivo-num">03</span><div><h3>Estruturar o plano de carreira por nível</h3><p>Detalhar o que se espera em cada degrau, hoje descrito só por título, para que a carreira deixe de ser uma lista de cargos e passe a ser uma régua clara de evolução.</p><div class="ap-chips"><span class="ap-chip">Plano de carreira pouco detalhado</span><span class="ap-chip">Avaliação genérica</span><span class="ap-chip etapa">Etapa 1</span></div></div></div>
           <div class="objetivo-body">
             <div class="objetivo-compare-col">
               <div class="objetivo-compare-box atual"><span class="objetivo-compare-label">Situação atual</span><p>Os degraus existem (júnior 3, 2 e 1 até sênior), mas não descrevem o que muda entre eles. A clareza do plano de carreira apareceu entre os pontos de atenção da última pesquisa de clima.</p></div>
@@ -931,7 +1025,7 @@
           </div>
         </div>
         <div class="objetivo-card">
-          <div class="objetivo-header"><span class="objetivo-num">04</span><div><h3>Construir visão de sucessão e desenvolvimento individual</h3><p>Dar à diretoria um mapa de quem sustenta a operação, quem está pronto para crescer e quem precisa de atenção, hoje dependente da percepção de cada gestor.</p></div></div>
+          <div class="objetivo-header"><span class="objetivo-num">04</span><div><h3>Construir visão de sucessão e desenvolvimento individual</h3><p>Dar à diretoria um mapa de quem sustenta a operação, quem está pronto para crescer e quem precisa de atenção, hoje dependente da percepção de cada gestor.</p><div class="ap-chips"><span class="ap-chip">Plano de carreira pouco detalhado</span><span class="ap-chip">Potencial depende da percepção do gestor</span><span class="ap-chip etapa">Etapa 5</span><span class="ap-chip etapa">Etapa 6</span></div></div></div>
           <div class="objetivo-body">
             <div class="objetivo-compare-col">
               <div class="objetivo-compare-box atual"><span class="objetivo-compare-label">Situação atual</span><p>Não existe PDI nem mapeamento de sucessão. Saber quem tem potencial ou quem é crítico para a operação depende do que cada gestor relata.</p></div>
@@ -983,6 +1077,48 @@
             </div>
           </div>
         </div>
+      
+      <div class="ap-sec">
+        <div class="ap-kicker">Próxima fase · 2027</div>
+        <h2 class="ap-h2">Depois do 1º ciclo: dados operacionais e evolução</h2>
+        <div class="ap-grid ap-g4"><div class="ap-card" style="background:#fff;"><span class="ap-ico lg"><i class="fa-solid fa-bullseye"></i></span><h4>Metas</h4><p>Traz os indicadores de cada área (como tempo e satisfação de atendimento no Suporte) para dentro do processo, com pesos e cálculo automático do resultado individual.</p><div class="ap-resolve">Resolve: dados operacionais fora da avaliação</div></div><div class="ap-card" style="background:#fff;"><span class="ap-ico lg"><i class="fa-solid fa-crosshairs"></i></span><h4>Avaliação × Metas</h4><p>Cruzamento automático na Nine Box: quem é bem avaliado e não entrega, ou entrega e é mal avaliado. Sinal de meta mal calibrada ou de gap de liderança.</p><div class="ap-resolve">Resolve: falta de objetividade</div></div><div class="ap-card" style="background:#fff;"><span class="ap-ico lg"><i class="fa-solid fa-chart-simple"></i></span><h4>Pesquisas</h4><p>Clima com comparativo histórico, pulsos e pesquisa de onboarding automática pela data de admissão, com planos de ação a partir dos resultados.</p><div class="ap-resolve">Resolve: acompanhar os pontos do clima</div></div><div class="ap-card" style="background:#fff;"><span class="ap-ico lg"><i class="fa-solid fa-graduation-cap"></i></span><h4>Learning</h4><p>Trilhas, cursos e certificados, ligados aos gaps identificados na avaliação e no PDI.</p><div class="ap-resolve">Resolve: desenvolvimento direcionado</div></div></div>
+      </div>
+
+      <div class="ap-sec">
+        <div class="ap-kicker">Impactos no processo</div>
+        <h2 class="ap-h2">Como o processo de desempenho muda na prática</h2>
+        <div style="overflow-x:auto;"><table class="ap-table"><tr><th></th><th class="hoje">Hoje</th><th class="com">Com o projeto</th></tr><tr><td class="k">Critério</td><td class="hoje">Cada liderança no seu formato</td><td class="com">Ciclo único, com competências por cargo e nível</td></tr><tr><td class="k">Base da avaliação</td><td class="hoje">Observação do dia a dia</td><td class="com">Competências, nível requerido e, na fase 2, indicadores de metas</td></tr><tr><td class="k">Controle</td><td class="hoje">Planilhas e cobrança por mensagem</td><td class="com">Painel em tempo real e lembretes automáticos</td></tr><tr><td class="k">Pós-avaliação</td><td class="hoje">Nomes indicados à diretoria</td><td class="com">Calibração, devolutiva registrada e PDI</td></tr><tr><td class="k">Feedback</td><td class="hoje">Conversa informal, sem registro</td><td class="com">Registro com ciência e comentário do colaborador</td></tr><tr><td class="k">Carreira</td><td class="hoje">Degraus descritos só pelo título</td><td class="com">Régua clara do que é exigido para subir</td></tr></table></div>
+      </div>
+
+      <div class="ap-sec">
+        <div class="ap-kicker">Impactos para as áreas</div>
+        <h2 class="ap-h2">O que muda para quem vive o processo todos os dias</h2>
+        <div class="ap-grid ap-g3"><div class="ap-card dark"><span class="ap-ico lg"><i class="fa-solid fa-user-tie"></i></span><h4 style="font-size:17px;">Gestão de Pessoas</h4><ul class="ap-checks"><li>Tempo liberado de planilhas e controles para atuar no estratégico</li><li>Dados prontos quando a diretoria perguntar, em tempo real</li><li>Visão de todas as áreas com o mesmo critério</li><li>Credibilidade de conduzir um ciclo completo desde o início da área</li></ul></div><div class="ap-card"><span class="ap-ico lg"><i class="fa-solid fa-user-group"></i></span><h4 style="font-size:17px;">Lideranças</h4><ul class="ap-checks"><li>Avaliação de toda a equipe numa única tela</li><li>Painel da equipe com PDIs, feedbacks e histórico em um só lugar</li><li>Roteiro de devolutiva pronto, gerado pela IA</li><li>Critério claro para conversar sobre promoção</li></ul></div><div class="ap-card"><span class="ap-ico lg"><i class="fa-solid fa-users"></i></span><h4 style="font-size:17px;">Colaboradores</h4><ul class="ap-checks"><li>Sabem o que precisam desenvolver para subir de degrau</li><li>Recebem devolutiva e um PDI conectado ao próprio resultado</li><li>Feedback registrado, com direito de comentar</li><li>Histórico que acompanha a pessoa quando muda de área</li></ul></div></div>
+      </div>
+
+      <div class="ap-sec">
+        <div class="ap-kicker">Impactos para a empresa</div>
+        <h2 class="ap-h2">O que a Moni ganha como negócio</h2>
+        <div class="ap-grid ap-g2"><div class="ap-card dark" style="display:flex;gap:16px;"><span class="ap-ico lg" style="margin:0;"><i class="fa-solid fa-chart-line"></i></span><div><h4 style="font-size:16px;">Decisões de fim de ano com dado comparável</h4><p>Promoções, reconhecimento e planejamento orçamentário apoiados em resultado calibrado entre áreas, e não só em indicação informal.</p></div></div><div class="ap-card dark" style="display:flex;gap:16px;"><span class="ap-ico lg" style="margin:0;"><i class="fa-solid fa-shield-halved"></i></span><div><h4 style="font-size:16px;">Retenção de quem sustenta a operação</h4><p>Risco de saída e impacto mapeados para as pessoas-chave, com tempo de prontidão de cada sucessor.</p></div></div><div class="ap-card dark" style="display:flex;gap:16px;"><span class="ap-ico lg" style="margin:0;"><i class="fa-solid fa-gavel"></i></span><div><h4 style="font-size:16px;">Menos risco em desligamentos</h4><p>Feedbacks registrados e com ciência do colaborador reduzem surpresa e contestação.</p></div></div><div class="ap-card dark" style="display:flex;gap:16px;"><span class="ap-ico lg" style="margin:0;"><i class="fa-solid fa-heart"></i></span><div><h4 style="font-size:16px;">Crescer sem perder a cultura</h4><p>Responde aos pontos do clima (carreira e comunicação) e preserva a proximidade que é marca da Moni.</p></div></div></div>
+      </div>
+
+      <div class="ap-sec">
+        <div class="ap-kicker">Cronograma</div>
+        <h2 class="ap-h2">Do aprovado ao primeiro ciclo rodando em novembro</h2>
+        <div class="ap-grid ap-g6 ap-tl"><div class="node"><div class="when">A confirmar</div><div class="ap-lbl" style="color:var(--color-primary);margin-bottom:4px;">Aprovação</div><div class="what">Apresentação à diretoria e aprovação do projeto</div><div class="who">Responsável: Moni</div></div><div class="node"><div class="when">05/10 a 16/10</div><div class="ap-lbl" style="color:var(--color-primary);margin-bottom:4px;">Etapa 1</div><div class="what">Kickoff, importação de dados, cargos, níveis e competências</div><div class="who">Responsável: Conjunta</div></div><div class="node"><div class="when">19/10 a 30/10</div><div class="ap-lbl" style="color:var(--color-primary);margin-bottom:4px;">Etapa 2</div><div class="what">Formulário, regras do ciclo, treinamento das lideranças e comunicação</div><div class="who">Responsável: Conjunta</div></div><div class="node hl"><div class="when">Novembro</div><div class="ap-lbl" style="color:var(--color-primary);margin-bottom:4px;">Etapas 3 e 4</div><div class="what">Ciclo aberto, acompanhamento, análise e comitê de calibração</div><div class="who">Responsável: Moni</div></div><div class="node"><div class="when">Dezembro</div><div class="ap-lbl" style="color:var(--color-primary);margin-bottom:4px;">Etapas 5 e 7</div><div class="what">Devolutivas, PDIs e início do feedback e 1:1 registrados</div><div class="who">Responsável: Moni</div></div><div class="node"><div class="when">1º sem. 2027</div><div class="ap-lbl" style="color:var(--color-primary);margin-bottom:4px;">Etapa 6 e fase 2</div><div class="what">Mapa de sucessão, Metas, Pesquisas e 2º ciclo em 360°</div><div class="who">Responsável: Conjunta</div></div></div>
+        <p class="ap-note" style="font-style:italic;">Datas a confirmar com o time de implementação da impulseup no kickoff. O lançamento em novembro depende da aprovação a tempo do kickoff.</p>
+      </div>
+
+      <div class="ap-sec">
+        <div class="ap-kicker">Para aprovação</div>
+        <h2 class="ap-h2">Decisões da diretoria</h2>
+        <div class="ap-card" style="background:#fff;"><div class="ap-dec"><span class="num">1</span><span>Aprovar o projeto a tempo do kickoff, para garantir o ciclo de novembro</span></div><div class="ap-dec"><span class="num">2</span><span>Primeiro ciclo com líder e autoavaliação, evoluindo para 360° no segundo ciclo</span></div><div class="ap-dec"><span class="num">3</span><span>Definir quem avalia em cada área: gerente, coordenação técnica ou comportamental</span></div><div class="ap-dec"><span class="num">4</span><span>Posicionar o ciclo como desenvolvimento; promoção e reconhecimento como consequência dos dados</span></div><div class="ap-dec"><span class="num">5</span><span>Participação da diretoria no comitê de calibração</span></div></div>
+      </div>
+
+      <div class="ap-closing">
+        <h3>Um projeto da Moni,<br><span>para a Moni crescer do jeito que ela é.</span></h3>
+        <p>A plataforma é o meio. As regras, a cultura e as decisões continuam sendo da Moni.</p>
+      </div>
       </div>
     </section>
 
