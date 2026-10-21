@@ -494,11 +494,10 @@
         <button data-tab="2" title="Diagnóstico"><span class="num">02</span><span class="label-text">Diagnóstico</span></button>
         <button data-tab="3" title="Demonstração"><span class="num">03</span><span class="label-text">Demonstração</span></button>
         <button data-tab="4" title="Diferenciais impulseup"><span class="num">04</span><span class="label-text">Diferenciais impulseup</span></button>
-        <button data-tab="9" title="Piloto"><span class="num">05</span><span class="label-text">Piloto</span></button>
-        <button data-tab="5" title="Aprovação e plano de ação"><span class="num">06</span><span class="label-text">Aprovação e plano de ação</span></button>
-        <button data-tab="6" title="Processo de implementação"><span class="num">07</span><span class="label-text">Processo de implementação</span></button>
-        <button data-tab="7" title="Proposta comercial"><span class="num">08</span><span class="label-text">Proposta comercial</span></button>
-        <button data-tab="8" title="Próximos passos"><span class="num">09</span><span class="label-text">Próximos passos</span></button>
+        <button data-tab="5" title="Aprovação e plano de ação"><span class="num">05</span><span class="label-text">Aprovação e plano de ação</span></button>
+        <button data-tab="6" title="Processo de implementação"><span class="num">06</span><span class="label-text">Processo de implementação</span></button>
+        <button data-tab="7" title="Proposta comercial"><span class="num">07</span><span class="label-text">Proposta comercial</span></button>
+        <button data-tab="8" title="Próximos passos"><span class="num">08</span><span class="label-text">Próximos passos</span></button>
         <button type="button" id="exportExecHtmlBtn" class="export-exec-btn" title="Resumo executivo (HTML)">
           <i class="fa-regular fa-file-code"></i> <span class="label-text">Resumo executivo (HTML)</span>
         </button>
@@ -780,25 +779,6 @@
     </section>
 
     <!-- ABA PILOTO (id interno tab-9, exibida como 05 entre Diferenciais e Aprovação) -->
-    <section class="tab-panel" id="tab-9">
-      <h1 class="section-title">Piloto</h1>
-      <p class="section-sub">A MDS testa a impulseup na prática, a partir dos desafios do Diagnóstico</p>
-      <div class="empty-state" id="tab9EmptyState">
-        <i class="fa-solid fa-flask"></i>
-        <h3>Aba liberada quando o piloto for combinado</h3>
-        <p>Depois da Demonstração, esta aba recebe o roteiro do piloto: cada desafio mapeado no Diagnóstico vira uma tarefa prática na plataforma, com cronograma, participantes e o registro do resultado.</p>
-      </div>
-      <div id="tab9PilotoWrap" style="display:none;">
-        <div class="piloto-ponte" id="tab9Ponte">
-          <!--PONTE_PILOTO-->
-        </div>
-        <div class="piloto-frame-wrap">
-          <iframe id="pilotoFrame" title="Ferramenta de piloto" loading="lazy"></iframe>
-        </div>
-        <p class="piloto-nota">Os dados preenchidos no piloto ficam salvos neste navegador. Use o botão de exportar backup da própria ferramenta para guardar ou compartilhar o registro.</p>
-      </div>
-      <script type="text/plain" id="pilotoToolSrc"><!--PILOTO_B64--></script>
-    </section>
 
     <!-- ABA 5 — APROVAÇÃO E PLANO DE AÇÃO -->
     <section class="tab-panel" id="tab-5">
