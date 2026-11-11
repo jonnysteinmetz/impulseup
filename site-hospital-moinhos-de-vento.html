@@ -760,25 +760,20 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Hospital Moinhos de Vento</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
-        <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+      <div id="tab3Content">
+        <div class="stat-grid" id="tab3ImpactoGrid"><div class="stat-card"><div class="num">5.000</div><div class="label">colaboradores no ciclo de avaliação de desempenho</div></div><div class="stat-card"><div class="num">3</div><div class="label">avaliações (resultados, competências e potencial) que hoje abrem em momentos diferentes antes da calibragem</div></div><div class="stat-card"><div class="num">10%</div><div class="label">do time sem computador, que também participa da avaliação de competências</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
             <thead>
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
-            <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
-            </tbody>
+            <tbody><tr><td>Avaliações, PDI e Nine Box em telas separadas. A consultoria interna monta Excel para saber quem está pendente e cobra gestor por gestor.</td><td class="feat-name">Avaliações e Perfil 360</td><td>O gestor acompanha o status das respostas do próprio time e enxerga todas as informações de cada pessoa em uma única página, com a comparação entre ciclos.</td></tr><tr><td>Competências, resultados e potencial correm em etapas separadas, e quem não concluiu uma delas some da calibragem.</td><td class="feat-name">Nine Box e calibração</td><td>Avaliação e metas se cruzam automaticamente na matriz, com eixos e quadrantes no modelo do Moinhos e calibração por quadrante, seção ou competência.</td></tr><tr><td>Indicação de pares da enfermagem feita em planilha, porque turno e unidade definem quem convive de verdade.</td><td class="feat-name">Avaliações (indicação de pares)</td><td>Campos customizados como turno, unidade e BP alimentam a indicação automática de pares por critérios definidos pelo RH, com validação do gestor.</td></tr><tr><td>Cruzar desligamentos, desempenho e absenteísmo exige montar o quebra-cabeça manualmente para os fóruns com a direção.</td><td class="feat-name">Análises e IA</td><td>Resultados comparados por cargo, área e diretoria, com filtros customizados e inteligência artificial para gerar insights automáticos.</td></tr></tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
@@ -947,7 +942,7 @@
       <h1 class="section-title">Próximos passos</h1>
       <p class="section-sub">Jornada de compra da Hospital Moinhos de Vento</p>
       <div class="timeline">
-        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">28 out</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Contexto e desafios mapeados · Camila, Viviane, Patrícia e Anna</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">3 a 6 nov (a confirmar)</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Ciclo de avaliação, Nine Box, calibragem, PDI e visão do gestor; depois metas, analytics e learning</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Até 4 dez</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Escopo, requisitos técnicos e integração com a Senior</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">1ª quinzena de dez</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Projeto conectado ao ciclo 2027</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Até 15 dez</span><div><span class="tl-desc">Aprovação da proposta</span></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Até 18 dez</span><div><span class="tl-desc">Revisão jurídica</span></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Dez/26 · kickoff em jan/27</span><div><span class="tl-desc">Assinatura e kickoff</span><div class="tl-meta">Implantação para metas 2027 em março</div></div></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">28 out</span><div><span class="tl-desc">Reunião de Diagnóstico</span><div class="tl-meta">Contexto e desafios mapeados · Camila, Viviane, Patrícia e Anna</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">11 nov</span><div><span class="tl-desc">Demonstração personalizada</span><div class="tl-meta">Ciclo de avaliação: visão do gestor, pares, Nine Box, calibragem, devolutiva e PDI. Na sequência, metas, analytics e learning</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Até 4 dez</span><div><span class="tl-desc">Construção de projeto e proposta</span><div class="tl-meta">Escopo, requisitos técnicos e integração com a Senior</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">1ª quinzena de dez</span><div><span class="tl-desc">Apresentação para diretoria</span><div class="tl-meta">Projeto conectado ao ciclo 2027</div></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Até 15 dez</span><div><span class="tl-desc">Aprovação da proposta</span></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Até 18 dez</span><div><span class="tl-desc">Revisão jurídica</span></div></div><div class="tl-item"><span class="tl-dot"></span><span class="tl-date" contenteditable="true">Dez/26 · kickoff em jan/27</span><div><span class="tl-desc">Assinatura e kickoff</span><div class="tl-meta">Implantação para metas 2027 em março</div></div></div>
       </div>
     </section>
 
@@ -1004,7 +999,7 @@
       "titulo": "Diagnóstico"
     },
     {
-      "data": "3 a 6 nov",
+      "data": "11 nov",
       "titulo": "Demonstração personalizada"
     },
     {
