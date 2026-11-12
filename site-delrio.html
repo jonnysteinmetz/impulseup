@@ -721,15 +721,17 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da DelRio</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
+      <div id="tab3Content">
         <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+          <div class="stat-card"><div class="num">48%</div><div class="label">de turnover ao ano, cerca de 4% ao mês</div></div>
+          <div class="stat-card"><div class="num">50%</div><div class="label">dos desligamentos ligados a atestados recorrentes</div></div>
+          <div class="stat-card"><div class="num">80%</div><div class="label">dos gestores promovidos pela competência técnica</div></div>
+          <div class="stat-card"><div class="num">150</div><div class="label">gestores no primeiro ciclo de avaliação</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
@@ -737,8 +739,10 @@
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
             <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
+              <tr><td>Feedback informal, sem registro: o colaborador sai dizendo que ninguém falou que ele precisava melhorar</td><td class="feat-name">Desenvolvimento (Feedbacks)</td><td>Feedbacks registrados, categorizados e vinculados às competências, com apoio de IA para o gestor escrever</td></tr>
+              <tr><td>Nenhuma das unidades tem ciclo de avaliação estruturado</td><td class="feat-name">Avaliações</td><td>Avaliação 90 graus (gestor e autoavaliação) com competências técnicas e comportamentais específicas para a liderança</td></tr>
+              <tr><td>Gestores técnicos promovidos sem preparo para gerir pessoas</td><td class="feat-name">Desenvolvimento (PDI)</td><td>Gaps da avaliação conectados a PDIs construídos com biblioteca e IA, com acompanhamento periódico da execução</td></tr>
+              <tr><td>Carreira sem caminho visível, um dos motivos das saídas</td><td class="feat-name">Learning</td><td>Cursos organizados em trilhas de aprendizagem, conectados aos gaps identificados na avaliação</td></tr>
             </tbody>
           </table>
         </div>
