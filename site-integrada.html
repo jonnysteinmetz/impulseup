@@ -561,62 +561,23 @@
     <section class="tab-panel" id="tab-3">
       <h1 class="section-title">Demonstração</h1>
       <p class="section-sub">Vídeos da plataforma, orientados aos desafios da Integrada Cooperativa Agroindustrial</p>
-      <div class="empty-state" id="tab3EmptyState">
+      <div class="empty-state" id="tab3EmptyState" style="display:none;">
         <i class="fa-regular fa-circle-play"></i>
         <h3>Aba liberada após a reunião de Demo</h3>
         <p>O closer vai incluir aqui vídeos curtos mostrando a solução aplicada aos desafios mapeados no Diagnóstico.</p>
       </div>
-      <div id="tab3Content" style="display:none;">
-        <div class="stat-grid" id="tab3ImpactoGrid">
-          <!-- Preenchido pela skill a partir de "impacto" (estrutura-abas.md, Aba 3). Ex:
-               <div class="stat-card"><div class="num">32%</div><div class="label">redução no tempo de ciclo de avaliação</div></div> -->
+      <div id="tab3Content">
+        <div class="stat-grid" id="tab3ImpactoGrid"><div class="stat-card"><div class="num">1.800</div><div class="label">colaboradores no ciclo de avaliação de desempenho</div></div><div class="stat-card"><div class="num">~1.000</div><div class="label">colaboradores da produção que ficaram fora do ciclo por falta de acesso viável sem computador e sem e-mail</div></div><div class="stat-card"><div class="num">2 meses</div><div class="label">de antecedência pedidos pelo fornecedor atual para preparar cada novo ciclo</div></div>
         </div>
         <div style="overflow-x:auto;margin-bottom:40px;">
           <table class="rfp-table" id="tab3ComparativoTable">
             <thead>
               <tr><th>Situação atual</th><th>Módulo impulseup</th><th>Como fica</th></tr>
             </thead>
-            <tbody>
-              <!-- Preenchido pela skill a partir de "comparativo" (máx. 4 linhas). Ex:
-                   <tr><td>Avaliação só em planilha</td><td class="feat-name">Ciclos de avaliação</td><td>Fluxo 100% digital com lembretes automáticos</td></tr> -->
-            </tbody>
+            <tbody><tr><td>Formulários e etapas configurados pelo fornecedor, sem correção depois que o ciclo começa, e liberação manual de cada fase (inclusive do fluxo separado dos gerentes).</td><td class="feat-name">Avaliações</td><td>A própria DHO configura avaliações 90, 180 e 360 graus com fases e prazos customizáveis, competências por cargo, área ou liderança e indicação de pares pelo colaborador, gestor ou administrador.</td></tr><tr><td>Produção fora do ciclo: nem todos têm computador ou e-mail, e o acesso mobile prometido não foi liberado.</td><td class="feat-name">Avaliações (acesso e envio)</td><td>Acesso sem e-mail corporativo e envio das avaliações por SMS e WhatsApp, para incluir toda a operação no ciclo.</td></tr><tr><td>Cadastro atualizado por planilha extraída do TOTVS, formatada e enviada para o fornecedor importar.</td><td class="feat-name">Importação de dados</td><td>Importação de dados externos para manter o cadastro atualizado, com o desenho técnico validado junto ao TI da Integrada.</td></tr><tr><td>Realizado das metas do PPR sobe por planilha para cruzar com o Nine Box, e o PDI depende da etapa de feedback ser liberada.</td><td class="feat-name">Metas, Nine Box e PDI</td><td>A importação do realizado se mantém, com cruzamento automático de avaliação e metas na matriz, calibração por quadrante, seção ou competência e conexão dos gaps da avaliação com o PDI.</td></tr></tbody>
           </table>
         </div>
         <div class="video-grid" id="tab3VideoGrid">
-          <!-- Preenchido pela skill a partir de "videos" (estrutura-abas.md, Aba 3), um .video-card por vídeo.
-               Ver scripts/gerar_video_embed.py::gerar_bloco_video() para a lógica de geração.
-
-               Caso 1 — url_video já veio do closer (link de Drive ou YouTube) e foi reconhecida:
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap">
-                   <iframe src="{{embed_url}}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                 </div>
-               </div>
-
-               Caso 2 — url_video veio mas não foi possível gerar embed (ex: link de pasta do Drive,
-               sem permissão de embed): mostrar card de link em vez de iframe.
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-link-card">
-                   <i class="fa-brands fa-google-drive"></i>
-                   <p>Vídeo disponível para acesso externo</p>
-                   <a href="{{url_video}}" target="_blank" rel="noopener" class="video-link-btn">Assistir vídeo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
-               </div>
-
-               Caso 3 — vídeo ainda sem url_video: slot de colagem manual, para o closer colar o link
-               direto no site (fica salvo no localStorage do navegador via saveImage/loadStore).
-               <div class="video-card">
-                 <h4>{{titulo}}</h4><p>{{descricao}}</p>
-                 <div class="video-embed-wrap video-embed-empty" data-video-idx="{{indice}}">
-                   <label class="video-paste-label">
-                     <i class="fa-regular fa-circle-play"></i>
-                     <span>Cole aqui o link do vídeo (YouTube ou Drive)</span>
-                   </label>
-                   <input type="text" class="video-url-input" data-video-idx="{{indice}}" placeholder="https://...">
-                 </div>
-               </div> -->
         </div>
       </div>
     </section>
